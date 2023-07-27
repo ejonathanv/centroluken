@@ -42,6 +42,32 @@ h5{
     @apply text-base;
 }
 
+@media screen and (max-width: 767px){
+    h1.title{
+        font-size: 28px;
+    }
+
+    h1{
+        @apply text-2xl;
+    }
+
+    h2{
+        @apply text-xl;
+    }
+
+    h3{
+        @apply text-lg;
+    }
+
+    h4{
+        @apply text-base;
+    }
+
+    h5{
+        @apply text-sm;
+    }
+}
+
 .container{
     max-width: 1200px;
     @apply mx-auto px-3;
@@ -56,7 +82,7 @@ h5{
 }
 
 .website_header .container nav{
-    @apply flex items-center space-x-6;
+    @apply items-center space-x-6;
 }
 .website_header .container nav a{
     @apply font-semibold text-sm text-primary relative;
@@ -74,7 +100,7 @@ h5{
 }
 
 .website_footer{
-    @apply bg-primary pb-20 relative;
+    @apply bg-primary pb-10 md:pb-20 relative;
 }
 
 .website_footer_curves{
@@ -84,15 +110,26 @@ h5{
     height: 280px;
     width: 100%;
     position: absolute;
-    bottom: 100%;
+    bottom: calc(100% - 1px);
     left: 0;
     right: 0;
     z-index: 1;
 }
 
+@media screen and (max-width: 767px){
+    .website_footer_curves{
+        height: 100px;
+        bottom: calc(100% - 1px);
+    }
+}
+
 .website_footer_logo{
     width: 150px;
     @apply h-auto;
+}
+
+.website_footer > .container{
+    @apply relative z-10;
 }
 
 .btn{
@@ -116,6 +153,13 @@ h5{
     content: '';
 }
 
+@media screen and (max-width: 767px){
+    .full_bg_section{
+        @apply relative;
+        height: 40vh;
+    }
+}
+
 .slider_control{
     @apply w-10 h-10 bg-white rounded-md shadow-lg flex justify-center items-center text-primary text-xs;
 }
@@ -127,8 +171,20 @@ h5{
     @apply w-full py-10;
 }
 
+@media screen and (max-width: 767px){
+    .section_divider{
+        @apply py-6;
+    }
+}
+
 .slider_bg_block{
     @apply absolute bg-primary top-0 right-0 w-6/12 h-full rounded-l-lg bg-cover bg-repeat bg-center overflow-hidden;
+}
+
+@media screen and (max-width: 767px){
+    .slider_bg_block{
+        @apply w-full h-48 rounded-none top-auto bottom-20
+    }
 }
 
 .slider_bg_block:before{
@@ -144,6 +200,14 @@ h5{
     @apply absolute top-0 left-0 bottom-0 w-full h-full bg-primary opacity-25;
     content: '';
 }
+
+@media screen and (max-width: 767px){
+    .slide_item{
+        height: 300px;
+        @apply p-6;
+    }
+}
+
 .slide_item > div{
     @apply relative z-10;
 }

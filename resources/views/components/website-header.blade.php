@@ -1,6 +1,6 @@
 <header class="website_header">
     <div class="container">
-        <nav class="w-1/3">
+        <nav class="hidden md:flex w-1/3">
             <a href="#" class="active">
                 Inicio
             </a>
@@ -15,12 +15,18 @@
             </a>
         </div>
 
-        <nav class="w-1/3 justify-end">
+        <nav class="hidden md:flex w-1/3 justify-end">
             <a href="#">
                 Servicios
             </a>
             <a href="#" class="btn btn-primary btn-sm">
                 Contáctanos
+            </a>
+        </nav>
+
+        <nav class="block md:hidden ml-auto">
+            <a href="#">
+                <i class="fa fa-2x fa-bars"></i>
             </a>
         </nav>
     </div>
