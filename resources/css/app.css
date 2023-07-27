@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body{
+    font-family: 'Montserrat', sans-serif;
+    @apply font-normal text-base text-primary bg-primary;
+}
+
+body{
+    padding-top: 6rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+    @apply font-semibold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    @apply text-3xl;
+}
+
+h1.title{
+    font-size: 34px;
+}
+
+h2{
+    @apply text-2xl;
+}
+
+h3{
+    @apply text-xl;
+}
+
+h4{
+    @apply text-lg;
+}
+
+h5{
+    @apply text-base;
+}
+
+.container{
+    max-width: 1200px;
+    @apply mx-auto px-3;
+}
+
+.website_header{
+    @apply fixed top-0 left-0 right-0 flex justify-between items-center py-4 shadow z-50 border-t-4 border-secondary bg-white;
+}
+
+.website_header .container{
+    @apply flex justify-between items-center;
+}
+
+.website_header .container nav{
+    @apply flex items-center space-x-6;
+}
+.website_header .container nav a{
+    @apply font-semibold text-sm text-primary relative;
+}
+
+.website_header .container nav a.active:before{
+    @apply absolute left-0 w-full h-1 bg-secondary;
+    bottom: -31px;
+    content: '';
+}
+
+.website_logo{
+    width: 151px;
+    @apply h-auto;
+}
+
+.website_footer{
+    @apply bg-primary pb-20 relative;
+}
+
+.website_footer_curves{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 280px;
+    width: 100%;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.website_footer_logo{
+    width: 150px;
+    @apply h-auto;
+}
+
+.btn{
+    @apply border-2 rounded px-6 py-2 font-semibold text-sm inline-block;
+}
+
+.btn-primary{
+    @apply text-primary border-secondary;
+}
+
+.btn-primary:hover{
+    @apply bg-secondary text-white;
+}
+
+.full_bg_section{
+    @apply w-full h-full absolute top-0 left-0 bg-primary bg-cover bg-no-repeat bg-center;
+}
+
+.full_bg_section:before{
+    @apply absolute top-0 left-0 bottom-0 w-full h-full bg-primary opacity-25;
+    content: '';
+}
+
+.slider_control{
+    @apply w-10 h-10 bg-white rounded-md shadow-lg flex justify-center items-center text-primary text-xs;
+}
+.slider_control:hover{
+    @apply bg-secondary text-white;
+}
+
+.section_divider{
+    @apply w-full py-10;
+}
+
+.slider_bg_block{
+    @apply absolute bg-primary top-0 right-0 w-6/12 h-full rounded-l-lg bg-cover bg-repeat bg-center overflow-hidden;
+}
+
+.slider_bg_block:before{
+    @apply absolute top-0 left-0 bottom-0 w-full h-full bg-primary opacity-50;
+    content: '';
+}
+
+.slide_item{
+    height: 380px;
+    @apply w-full flex flex-col justify-end items-end p-10 bg-cover bg-no-repeat bg-center;
+}
+.slide_item:before{
+    @apply absolute top-0 left-0 bottom-0 w-full h-full bg-primary opacity-25;
+    content: '';
+}
+.slide_item > div{
+    @apply relative z-10;
+}
+
+.partner-logo{
+    @apply w-full h-auto rounded;
+}
