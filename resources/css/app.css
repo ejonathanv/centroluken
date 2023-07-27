@@ -215,3 +215,13 @@ h5{
 .partner-logo{
     @apply w-full h-auto rounded;
 }
+.team_member_avatar{
+    @apply w-full h-48 bg-gray-100 rounded bg-cover bg-no-repeat bg-center;
+}
+.team-member-card{
+    @apply p-4 block;
+    transition: all 0.2s ease-in-out;
+}
+.team-member-card:hover{
+    @apply bg-white rounded shadow-md;
+}

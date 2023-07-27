@@ -14,20 +14,15 @@
         </div>
     </section>
 
-    <section>
-        <div class="flex flex-col md:flex-row items-center justify-start relative">
-            <div class="full_bg_section" style="background-image: url('https://placehold.co/1600x900')"></div>
-            <div class="w-full md:w-1/3 text-white relative z-10 p-7 md:p-24 bg-primary bg-opacity-75 text-center md:text-left">
-                <h1 class="mb-7">
-                    ¿Qué Hacemos?
-                </h1>
-                <h4>
-                    Empleamos conocimiento práctico con base en experiencia técnica e investigación aplicada creando proyectos colaborativos para facilitar la toma de decisiones de entidades públicas y privadas.
-                </h4>
-                <hr class="w-1/2 mt-10 border-t-4 border-secondary mx-auto md:ml-0">
-            </div>
-        </div>
-    </section>
+    <x-split-seccion-info-left img="https://placehold.co/1600x900">
+        <h1 class="mb-7">
+            ¿Qué Hacemos?
+        </h1>
+        <h4>
+            Empleamos conocimiento práctico con base en experiencia técnica e investigación aplicada creando proyectos colaborativos para facilitar la toma de decisiones de entidades públicas y privadas.
+        </h4>
+        <hr class="w-1/2 mt-10 border-t-4 border-secondary mx-auto md:ml-0">
+    </x-split-seccion-info-left>
 
     <section class="py-10 md:py-20">
         <div class="container">
@@ -82,7 +77,7 @@
     </section>
 
     <section class="py-10 md:py-32 relative">
-        
+
         <div class="slider_bg_block" style="background-image: url('https://placehold.co/1600x900');"></div>
 
         <div class="container flex flex-col md:flex-row items-center justify-between relative z-10 space-y-10 md:space-y-0">
@@ -162,30 +157,5 @@
     </section>
 
     <section class="section_divider"></section>
-
-    <section class="bg-gray-100 pt-10 md:pt-20 pb-32 md:pb-64" style="border-top: 15px solid #eceff4">
-        <div class="container">
-            <div class="flex flex-wrap md:flex-no-wrap items-center -mx-3">
-                <div class="w-4/12 md:w-2/12 p-3">
-                    <img src="https://placehold.co/250x160" class="partner-logo" alt="">
-                </div>
-                <div class="w-4/12 md:w-2/12 p-3">
-                    <img src="https://placehold.co/250x160" class="partner-logo" alt="">
-                </div>
-                <div class="w-4/12 md:w-2/12 p-3">
-                    <img src="https://placehold.co/250x160" class="partner-logo" alt="">
-                </div>
-                <div class="w-4/12 md:w-2/12 p-3">
-                    <img src="https://placehold.co/250x160" class="partner-logo" alt="">
-                </div>
-                <div class="w-4/12 md:w-2/12 p-3">
-                    <img src="https://placehold.co/250x160" class="partner-logo" alt="">
-                </div>
-                <div class="w-4/12 md:w-2/12 p-3">
-                    <img src="https://placehold.co/250x160" class="partner-logo" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
 
 </x-guest-layout>

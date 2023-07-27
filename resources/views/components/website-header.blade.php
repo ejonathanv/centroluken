@@ -1,10 +1,10 @@
 <header class="website_header">
     <div class="container">
         <nav class="hidden md:flex w-1/3">
-            <a href="#" class="active">
+            <a href="{{ route('home') }}" class="@if (request()->routeIs('home')) active @endif">
                 Inicio
             </a>
-            <a href="#">
+            <a href="{{ route('about') }}" class="@if (request()->routeIs('about')) active @endif">
                 ¿Quiénes somos?
             </a>
         </nav>
