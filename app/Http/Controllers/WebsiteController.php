@@ -14,6 +14,10 @@ class WebsiteController extends Controller
         return view('website.about');
     }
 
+    public function member($member){
+        return view('website.member');
+    }
+
     public function contact(){
         return view('website.contact');
     }

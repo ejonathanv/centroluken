@@ -16,12 +16,13 @@
         <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}" />
 
         <!-- Scripts -->
+        <script src="https://kit.fontawesome.com/133291f590.js" crossorigin="anonymous"></script>
         <script src="{{ asset('js/jquery-3.7.0.min.js') }}" defer></script>
         <script src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
-        <script src="https://kit.fontawesome.com/133291f590.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans text-gray-900 antialiased bg-white">
+    <body class="font-sans text-gray-900 antialiased bg-white" id="app">
         <x-website-header />
         <div class="min-h-screen">
             {{ $slot }}

@@ -36,3 +36,19 @@ $(document).ready(function(){
         owlCarousel.trigger('next.owl.carousel');
     });
 });
+
+
+const { createApp } = Vue;
+
+createApp({
+    data() {
+        return {
+            showMobileMenu: false
+        }
+    },
+    methods: {
+        toggleMobileMenu() {
+            this.showMobileMenu = !this.showMobileMenu;
+        }
+    }
+}).mount('#app')

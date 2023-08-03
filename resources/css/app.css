@@ -225,3 +225,15 @@ h5{
 .team-member-card:hover{
     @apply bg-white rounded shadow-md;
 }
+
+.mobileMenu{
+    @apply fixed top-0 left-0 right-0 bottom-0 w-full h-full bg-white z-50 overflow-y-auto flex items-start flex-col space-y-16 p-10;
+}
+
+.mobileMenu nav{
+    @apply flex flex-col items-center w-full;
+}
+
+.mobileMenu nav a{
+    @apply font-semibold text-lg py-4 text-primary block w-full border-b-2 border-secondary hover:border-secondary;
+}

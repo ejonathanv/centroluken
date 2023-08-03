@@ -1,4 +1,4 @@
-<a href="#" class="team-member-card">
+<a href="{{ route('member', 'mario-delgado') }}" class="team-member-card">
 
     <div class="team_member_avatar">
     </div>

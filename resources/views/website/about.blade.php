@@ -36,7 +36,7 @@
 
     <section class="pb-10 md:pb-24">
         <div class="container">
-            <div class="flex flex-wrap -mx-4">
+            <div class="flex flex-wrap -md:mx-4">
                 <div class="w-1/2 md:w-1/5 mb-6">
                     <x-team-member-card />
                 </div>
