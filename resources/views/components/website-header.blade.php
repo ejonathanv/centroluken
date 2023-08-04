@@ -17,7 +17,7 @@
 
         <nav class="hidden md:flex w-1/3 justify-end">
             <a href="#">
-                Servicios
+                Proyectos
             </a>
             <a href="#" class="btn btn-primary btn-sm">
                 Contáctanos
@@ -54,7 +54,7 @@
             ¿Quiénes somos?
         </a>
         <a href="#">
-            Servicios
+            Proyectos
         </a>
         <a href="#">
             Contáctanos
