@@ -23,7 +23,11 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased bg-white" id="app">
+        @if(!$header)
         <x-website-header />
+        @else
+        <x-website-header2 />
+        @endif
         <div class="min-h-screen">
             {{ $slot }}
         </div>

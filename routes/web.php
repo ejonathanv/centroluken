@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebsiteController;
 
 Route::get('/', [WebsiteController::class, 'index'])->name('home');
+Route::get('/header-2', [WebsiteController::class, 'header2'])->name('header2');
 Route::get('/quienes-somos', [WebsiteController::class, 'about'])->name('about');
 Route::get('/quienes-somos/{member}', [WebsiteController::class, 'member'])->name('member');
 Route::get('/contacto', [WebsiteController::class, 'contact'])->name('contact');

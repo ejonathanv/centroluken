@@ -21,4 +21,8 @@ class WebsiteController extends Controller
     public function contact(){
         return view('website.contact');
     }
+
+    public function header2(){
+        return view('website.header2');
+    }
 }
