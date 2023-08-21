@@ -5,13 +5,13 @@
     <div class="container relative z-1">
        <div class="flex items-stretch md:items-center">
         <div class="w-4/12 py-5">
-            <a href="#" class="inline-block">
+            <a href="{{ route('home') }}" class="inline-block">
                 <img src="{{ asset('img/centro-luken-logo.svg') }}" class="website_logo" alt="Centro Luken - De Estrategias en Agua y Medio Ambiente">
             </a>
         </div>
         <div class="flex items-center justify-end w-8/12">
             <nav class="text-white text-sm font-bold flex items-center justify-end space-x-7 hidden md:block">
-                <a href="{{ route('home') }}" class="opacity-50 @if (request()->routeIs('header2')) !opacity-100 @endif">
+                <a href="{{ route('home') }}" class="opacity-50 @if (request()->routeIs('home')) !opacity-100 @endif">
                     Inicio
                 </a>
                 <a href="{{ route('about') }}" class="opacity-50 @if (request()->routeIs('about')) !opacity-100 @endif">

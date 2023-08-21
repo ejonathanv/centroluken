@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout header="header2">
 
     <section class="py-10 md:py-24">
         <div class="container">
@@ -14,7 +14,7 @@
         </div>
     </section>
 
-    <x-split-seccion-info-left img="https://placehold.co/1600x900">
+    <x-split-seccion-info-left img="{{ asset('img/riego_gota.jpg') }}">
         <h1 class="mb-7">
             ¿Qué Hacemos?
         </h1>
@@ -78,7 +78,7 @@
 
     <section class="py-10 md:py-32 relative">
 
-        <div class="slider_bg_block" style="background-image: url('https://placehold.co/1600x900');"></div>
+        <div class="slider_bg_block" style="background-image: url('{{ asset('img/sembradios.jpg') }}');"></div>
 
         <div class="container flex flex-col md:flex-row items-center justify-between relative z-10 space-y-10 md:space-y-0">
             <div class="w-full md:w-1/3 text-center md:text-left">

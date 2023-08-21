@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout header="header2">
 
     <section class="py-10 md:py-24">
         <div class="container">
@@ -14,7 +14,7 @@
         </div>
     </section>
 
-    <x-split-seccion-info-right img="https://placehold.co/1600x900">
+    <x-split-seccion-info-right img="{{ asset('img/plantatratadora.jpg') }}">
         <h1 class="mb-7">
             Talento Interdisciplinario
         </h1>
