@@ -12,17 +12,22 @@
         <div class="flex items-center justify-end w-8/12">
             <nav class="text-white text-sm font-bold flex items-center justify-end space-x-7 hidden md:block">
                 <a href="{{ route('home') }}" class="opacity-50 @if (request()->routeIs('home')) !opacity-100 @endif">
-                    Inicio
+                    ¿Qué hacemos?
                 </a>
                 <a href="{{ route('about') }}" class="opacity-50 @if (request()->routeIs('about')) !opacity-100 @endif">
                     ¿Quiénes somos?
                 </a>
-                <a href="{{ route('home') }}" class="opacity-50">
-                    Proyectos
-                </a>
-                <a href="#" class="bg-white text-primary px-5 py-2 rounded-full shadow">
-                    Contáctanos
-                </a>
+
+                {{--
+                    <!-- Se van a ocultar por el momento -->
+
+                    <a href="{{ route('home') }}" class="opacity-50">
+                        Proyectos
+                    </a>
+                    <a href="#" class="bg-white text-primary px-5 py-2 rounded-full shadow">
+                        Contáctanos
+                    </a>
+                --}}
             </nav>
 
             <a href="#" class="absolute top-0 right-0 mt-5 mr-5 md:hidden">

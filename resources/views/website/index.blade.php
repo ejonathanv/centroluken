@@ -2,13 +2,13 @@
 
     <section class="py-10 md:py-24">
         <div class="container">
-            <div class="w-10/12 md:w-7/12 mx-auto text-center">
+            <div class="w-10/12 md:w-8/12 mx-auto text-center">
                 <h1 class="text-primary title mb-10 !leading-tight">
-                    Imaginamos un futuro sostenible para el agua y el medio ambiente
+                Imaginamos un futuro sostenible, de un desarrollo en armonía con la naturaleza, el agua y el medio ambiente
                 </h1>
 
                 <h4 class="text-secondary">
-                    Por eso creamos vínculos entre la ciencia, la política y la práctica para influir en la toma de decisiones Y promover soluciones innovadoras para el armónico aprovechamiento del agua y los recursos naturales
+                Por eso creamos vínculos entre la ciencia, la política y la práctica para influir en la toma de decisiones y promover soluciones innovadoras para la coexistencia armónica de la humanidad con el agua y los recursos naturales.
                 </h4>
             </div>
         </div>
@@ -19,7 +19,7 @@
             ¿Qué Hacemos?
         </h1>
         <h4>
-            Empleamos conocimiento práctico con base en experiencia técnica e investigación aplicada creando proyectos colaborativos para facilitar la toma de decisiones de entidades públicas y privadas.
+            Empleamos conocimiento técnico con base en experiencia práctica e investigación aplicada para crear proyectos colaborativos que faciliten la toma de decisiones de entidades públicas y privadas.
         </h4>
         <hr class="w-1/2 mt-10 border-t-4 border-secondary mx-auto md:ml-0">
     </x-split-seccion-info-left>
@@ -63,7 +63,7 @@
                             Agencia
                         </h2>
                         <p>
-                            Poder de influencia en la toma de decisiones para promover soluciones en beneficio del agua y del medio ambiente.
+                            Poder de influencia en la toma de decisiones para promover soluciones en beneficio de las generaciones presente y futuras y su coexistencia con el agua y el medio ambiente.
                         </p>
                     </div>
                 </div>
@@ -95,15 +95,15 @@
 
             <div class="w-full md:w-7/12 relative">
                 <div class="slider relative md:top-10">
-                    <div class="flex items-end space-x-10 text-white owl-carousel rounded-md overflow-hidden bg-gray-100 shadow-xl">
+                    <div class="text-white owl-carousel rounded-md overflow-hidden bg-gray-100 shadow-xl">
                         <div class="slide_item" style="background-image: url('https://placehold.co/1600x900')">
-                            <div class="flex items-end justify-between">
-                                <div class="basis-9/12">
-                                    <h1 class="text-lg md:text-3xl font-bold m-0 !leading-tight">
-                                        Influencia en la Gestión del Agua y los Recursos Naturales
+                            <div class="flex items-end justify-between w-full">
+                                <div class="w-9/12">
+                                    <h1 class="text-base md:text-xl font-bold m-0 !leading-tight">
+                                        Influir en la conceptualización de los planes y programas en materia de agua y recursos naturales de los gobiernos nacionales y subnacionales, grupos intermedios de la sociedad civil y cámaras empresariales.
                                     </h1>
                                 </div>
-                                <div class="basis-3/12 text-right">
+                                <div class="w-3/12 text-right">
                                     <h1 class="text-2xl md:text-6xl font-bold m-0">
                                         01
                                     </h1>
@@ -112,10 +112,10 @@
                         </div>
 
                         <div class="slide_item" style="background-image: url('https://placehold.co/1600x900')">
-                            <div class="flex items-end justify-between">
+                            <div class="flex items-end justify-between w-full">
                                 <div class="basis-9/12">
-                                    <h1 class="text-lg md:text-3xl font-bold m-0 !leading-tight">
-                                        Influencia en la Gestión del Agua y los Recursos Naturales
+                                    <h1 class="text-base md:text-xl font-bold m-0 !leading-tight">
+                                        Contribuir a la continuidad de los programas encaminados a la captación, el almacenamiento, tratamiento y reúso del agua.
                                     </h1>
                                 </div>
                                 <div class="basis-3/12 text-right">
@@ -127,15 +127,60 @@
                         </div>
 
                         <div class="slide_item" style="background-image: url('https://placehold.co/1600x900')">
-                            <div class="flex items-end justify-between">
+                            <div class="flex items-end justify-between w-full">
                                 <div class="basis-9/12">
-                                    <h1 class="text-lg md:text-3xl font-bold m-0 !leading-tight">
-                                        Influencia en la Gestión del Agua y los Recursos Naturales
+                                    <h1 class="text-base md:text-xl font-bold m-0 !leading-tight">
+                                        Abogar porque los principios de eficiencia y justicia sean los pilares de la gobernanza del agua.
                                     </h1>
                                 </div>
                                 <div class="basis-3/12 text-right">
                                     <h1 class="text-2xl md:text-6xl font-bold m-0">
                                         03
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slide_item" style="background-image: url('https://placehold.co/1600x900')">
+                            <div class="flex items-end justify-between w-full">
+                                <div class="basis-9/12">
+                                    <h1 class="text-base md:text-xl font-bold m-0 !leading-tight text-left w-full">
+                                        Apoyar el desarrollo y la implementación de programas integrales de desarrollo sustentable para ahorrar y preservar los recursos naturales.
+                                    </h1>
+                                </div>
+                                <div class="basis-3/12 text-right">
+                                    <h1 class="text-2xl md:text-6xl font-bold m-0">
+                                        04
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slide_item" style="background-image: url('https://placehold.co/1600x900')">
+                            <div class="flex items-end justify-between w-full">
+                                <div class="basis-9/12">
+                                    <h1 class="text-base md:text-xl font-bold m-0 !leading-tight text-left w-full">
+                                        Guiar a las autoridades y ciudadanía para consolidar proyectos de sustentabilidad y resiliencia hídrica.
+                                    </h1>
+                                </div>
+                                <div class="basis-3/12 text-right">
+                                    <h1 class="text-2xl md:text-6xl font-bold m-0">
+                                        05
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slide_item" style="background-image: url('https://placehold.co/1600x900')">
+                            <div class="flex items-end justify-between w-full">
+                                <div class="basis-9/12">
+                                    <h1 class="text-base md:text-xl font-bold m-0 !leading-tight text-left w-full">
+                                        Servir como un puente entre las naciones en búsqueda de las mejores prácticas y acuerdos para satisfacer la demanda mundial de recursos. 
+                                    </h1>
+                                </div>
+                                <div class="basis-3/12 text-right">
+                                    <h1 class="text-2xl md:text-6xl font-bold m-0">
+                                        06
                                     </h1>
                                 </div>
                             </div>

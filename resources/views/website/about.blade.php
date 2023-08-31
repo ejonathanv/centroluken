@@ -28,56 +28,62 @@
         <div class="container">
             <div class="w-9/12 text-center mx-auto">
                 <h1>
-                Desarrollamos estrategias a partir de diagnósticos y análisis para el corto, mediano y largo plazos, con base en elementos de las ciencias del medio físico y social.
+                    Desarrollamos estrategias a partir de diagnósticos y análisis para el corto, mediano y largo plazos, con base en elementos de las ciencias del medio físico y social.
                 </h1>
             </div>
         </div>
     </section>
 
-    <section class="pb-10 md:pb-24">
-        <div class="container">
-            <div class="flex flex-wrap -md:mx-4">
-                <div class="w-1/2 md:w-1/5 mb-6">
-                    <x-team-member-card />
-                </div>
+    {{--
 
-                <div class="w-1/2 md:w-1/5 mb-6">
-                    <x-team-member-card />
-                </div>
+        <!-- Esta sección queda pendiente para cuando tengamos el equipo completo -->
 
-                <div class="w-1/2 md:w-1/5 mb-6">
-                    <x-team-member-card />
-                </div>
+        <section class="pb-10 md:pb-24">
+            <div class="container">
+                <div class="flex flex-wrap -md:mx-4">
+                    <div class="w-1/2 md:w-1/5 mb-6">
+                        <x-team-member-card />
+                    </div>
 
-                <div class="w-1/2 md:w-1/5 mb-6">
-                    <x-team-member-card />
-                </div>
+                    <div class="w-1/2 md:w-1/5 mb-6">
+                        <x-team-member-card />
+                    </div>
 
-                <div class="w-1/2 md:w-1/5 mb-6">
-                    <x-team-member-card />
-                </div>
+                    <div class="w-1/2 md:w-1/5 mb-6">
+                        <x-team-member-card />
+                    </div>
 
-                <div class="w-1/2 md:w-1/5 mb-6">
-                    <x-team-member-card />
-                </div>
+                    <div class="w-1/2 md:w-1/5 mb-6">
+                        <x-team-member-card />
+                    </div>
 
-                <div class="w-1/2 md:w-1/5 mb-6">
-                    <x-team-member-card />
-                </div>
+                    <div class="w-1/2 md:w-1/5 mb-6">
+                        <x-team-member-card />
+                    </div>
 
-                <div class="w-1/2 md:w-1/5 mb-6">
-                    <x-team-member-card />
-                </div>
+                    <div class="w-1/2 md:w-1/5 mb-6">
+                        <x-team-member-card />
+                    </div>
 
-                <div class="w-1/2 md:w-1/5 mb-6">
-                    <x-team-member-card />
-                </div>
+                    <div class="w-1/2 md:w-1/5 mb-6">
+                        <x-team-member-card />
+                    </div>
 
-                <div class="w-1/2 md:w-1/5 mb-6">
-                    <x-team-member-card />
+                    <div class="w-1/2 md:w-1/5 mb-6">
+                        <x-team-member-card />
+                    </div>
+
+                    <div class="w-1/2 md:w-1/5 mb-6">
+                        <x-team-member-card />
+                    </div>
+
+                    <div class="w-1/2 md:w-1/5 mb-6">
+                        <x-team-member-card />
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    --}}
 
 </x-guest-layout>
