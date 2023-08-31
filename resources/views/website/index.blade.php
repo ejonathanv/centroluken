@@ -88,9 +88,6 @@
                 <p>
                     En Centro Luken, estamos comprometidos con la promoción de un futuro sostenible y equilibrado en el manejo del agua y los recursos naturales. A través de nuestros objetivos, buscamos abordar los desafíos actuales y futuros relacionados con la gestión del agua, la preservación del medio ambiente y el desarrollo sostenible.
                 </p>
-                <a href="#" class="btn btn-primary mt-10">
-                    Continuar leyendo
-                </a>
             </div>
 
             <div class="w-full md:w-7/12 relative">
