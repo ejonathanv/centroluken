@@ -14,7 +14,7 @@
         </div>
     </section>
 
-    <x-split-seccion-info-right img="{{ asset('img/plantatratadora.jpg') }}">
+    <x-split-seccion-info-right img="{{ asset('img/plantatratadora.jpeg') }}">
         <h1 class="mb-7">
             Talento Interdisciplinario
         </h1>
