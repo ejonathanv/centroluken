@@ -1,5 +1,5 @@
 <header class="header-2 fixed z-40 top-0 left-0 right-0 bg-white shadow overflow-hidden">
-    <div class="w-2/12 md:w-8/12 bg-primary h-full absolute top-0 right-0">
+    <div class="w-2/12 md:w-7/12 bg-primary h-full absolute top-0 right-0">
         <img src="{{ asset('img/svg/header-2-curves.svg') }}" alt="" class="absolute w-auto right-full -mr-2 -mt-1" style="height: calc(100% + 7px); max-width: none">
     </div>
     <div class="container relative z-1">
@@ -30,10 +30,45 @@
                 --}}
             </nav>
 
-            <a href="#" class="absolute top-0 right-0 mt-5 mr-5 md:hidden">
+            <a href="#" class="absolute top-0 right-0 mt-5 mr-5 md:hidden" @click.prevent="toggleMobileMenu">
                 <i class="fas fa-bars text-white text-2xl md:hidden"></i>
             </a>
         </div>
        </div> 
     </div>
 </header>
+
+<div v-if="showMobileMenu" class="mobileMenu">
+    <div class="flex items-center justify-between w-full">
+        <div>
+            <a href="#">
+                <img src="{{ asset('img/centro-luken-logo.svg') }}" class="website_logo" alt="Centro Luken - De Estrategias en Agua y Medio Ambiente">
+            </a>
+        </div>
+
+        <div class="flex items-end">
+            <a href="#" class="inline-block" @click.prevent="toggleMobileMenu">
+                <i class="fa fa-2x fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <nav>
+        <a href="{{ route('home') }}" class="@if (request()->routeIs('home')) active @endif">
+            ¿Qué hacemos?
+        </a>
+        <a href="{{ route('about') }}" class="@if (request()->routeIs('about')) active @endif">
+            ¿Quiénes somos?
+        </a>
+        {{--
+            <a href="#">
+                Proyectos
+            </a>
+            <a href="#">
+                Contáctanos
+            </a>
+        --}}
+    </nav>
+    <p class="text-xs">
+        &copy; {{ date('Y') }} Centro Luken, Derechos Reservados.
+    </p>
+</div>

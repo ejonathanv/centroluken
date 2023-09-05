@@ -10,7 +10,7 @@ html, body{
 }
 
 body{
-    padding-top: 6rem;
+    padding-top: 6.3rem;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -95,7 +95,7 @@ h5{
 }
 
 .website_logo{
-    width: 151px;
+    width: 205px;
     @apply h-auto;
 }
 
