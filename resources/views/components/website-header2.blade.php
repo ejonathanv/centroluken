@@ -30,7 +30,7 @@
                 --}}
             </nav>
 
-            <a href="#" class="absolute top-0 right-0 mt-5 mr-5 md:hidden" @click.prevent="toggleMobileMenu">
+            <a href="#" class="absolute top-0 right-0 mt-8 mr-5 md:hidden" @click.prevent="toggleMobileMenu">
                 <i class="fas fa-bars text-white text-2xl md:hidden"></i>
             </a>
         </div>

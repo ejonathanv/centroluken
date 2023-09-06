@@ -96,7 +96,16 @@ h5{
 
 .website_logo{
     width: 205px;
+    max-width: 205px;
     @apply h-auto;
+}
+
+@media screen and (max-width: 640px){
+    .website_logo{
+        width: 150px;
+        max-width: 150px;
+        @apply h-auto;
+    }   
 }
 
 .website_footer{

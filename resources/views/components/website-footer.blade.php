@@ -1,3 +1,8 @@
+<section class="bg-white pt-10 md:pt-10 pb-10 md:pb-24">
+
+</section>
+
+{{--
 <section class="bg-gray-100 pt-10 md:pt-20 pb-32 md:pb-64" style="border-top: 15px solid #eceff4">
     <div class="container">
         <div class="flex flex-wrap md:flex-no-wrap items-center -mx-3">
@@ -22,6 +27,7 @@
         </div>
     </div>
 </section>
+--}}
 
 <footer class="website_footer">
     <div class="website_footer_curves" style="background-image: url({{ asset('img/footer-curves.svg') }})"></div>
