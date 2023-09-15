@@ -246,3 +246,7 @@ h5{
 .mobileMenu nav a{
     @apply font-semibold text-lg py-4 text-primary block w-full border-b-2 border-secondary hover:border-secondary;
 }
+
+.form-control{
+    @apply border-2 rounded px-6 py-2 font-semibold text-sm inline-block w-full;
+}

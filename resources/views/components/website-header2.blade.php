@@ -24,10 +24,10 @@
                     <a href="{{ route('home') }}" class="opacity-50">
                         Proyectos
                     </a>
-                    <a href="#" class="bg-white text-primary px-5 py-2 rounded-full shadow">
-                        Contáctanos
-                    </a>
                 --}}
+                <a href="{{ route('contact') }}" class="bg-white text-primary px-5 py-2 rounded-full shadow">
+                    Contáctanos
+                </a>
             </nav>
 
             <a href="#" class="absolute top-0 right-0 mt-8 mr-5 md:hidden" @click.prevent="toggleMobileMenu">
@@ -63,10 +63,10 @@
             <a href="#">
                 Proyectos
             </a>
-            <a href="#">
-                Contáctanos
-            </a>
         --}}
+        <a href="{{ route('contact') }}" class="bg-white text-primary px-5 py-2 rounded-full shadow">
+            Contáctanos
+        </a>
     </nav>
     <p class="text-xs">
         &copy; {{ date('Y') }} Centro Luken, Derechos Reservados.
