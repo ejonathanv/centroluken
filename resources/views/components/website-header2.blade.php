@@ -64,7 +64,7 @@
                 Proyectos
             </a>
         --}}
-        <a href="{{ route('contact') }}" class="bg-white text-primary px-5 py-2 rounded-full shadow">
+        <a href="{{ route('contact') }}" class="@if (request()->routeIs('contact')) active @endif">
             Contáctanos
         </a>
     </nav>
