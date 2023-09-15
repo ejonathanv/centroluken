@@ -46,7 +46,7 @@ class WebsiteController extends Controller
 
         Mail::to($request->email)->send(new SayThanks($request->all()));
 
-        Mail::to(env('MAIL_FROM_ADDRESS'))->send(new ContactMessage($request->all()));
+        Mail::to(env('MAIL_CONTACT_ADDRESS'))->send(new ContactMessage($request->all()));
 
         return redirect()->route('contact')->with('success', 'Tu mensaje ha sido enviado con éxito');
 
