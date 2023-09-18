@@ -8,14 +8,7 @@
                 </h1>
 
                 <h4 class="text-secondary">
-                    Llena el formulario y nos pondremos en contacto contigo ó bien
-                </h4>
-
-                <h4 class="text-secondary">
-                    Llámanos al <br> 
-                    <a class="text-primary text-2xl" href="tel:+526643865927">
-                    +52 (664) 386. 59. 27.
-                    </a>
+                    Envíanos un mensaje y nos pondremos en contacto contigo.
                 </h4>
 
                 <hr class="w-1/2 mx-auto mt-10 border-t-4 border-secondary">
@@ -32,7 +25,7 @@
 
                     <div class="form-group mb-7">
                         <label for="name" class="text-secondary text-sm font-bold">
-                            ¿Cual es tu nombre completo?
+                            ¿Cuál es tu nombre completo?
                         </label>
                         <input type="text" name="name" id="name" class="form-control" placeholder="Nombre" value="{{ old('name') }}">
                         @error('name')
@@ -42,7 +35,7 @@
 
                     <div class="form-group mb-7">
                         <label for="" class="text-secondary text-sm font-bold">
-                            ¿Cual es tu correo electrónico?
+                            ¿Cuál es tu correo electrónico?
                         </label>
                         <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico" value="{{ old('email') }}">
                         @error('email')
@@ -52,7 +45,7 @@
 
                     <div class="form-group mb-7">
                         <label for="" class="text-secondary text-sm font-bold">
-                            ¿Cual es tu número de teléfono?
+                            ¿Cuál es tu número de teléfono?
                         </label>
                         <input type="text" name="phone" id="phone" class="form-control" placeholder="Teléfono" value="{{ old('phone') }}">
                         @error('phone')

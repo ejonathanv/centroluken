@@ -1,8 +1,7 @@
 <x-mail::message>
 # Gracias por tu mensaje
 
-{{ $name }} te agradecemos por tu mensaje, en breve nos pondremos en contacto contigo.
-
+{{ $name }}, gracias por contactarnos. Nos pondremos en contacto contigo a la brevedad posible.
 
 Gracias,<br>
 {{ config('app.name') }}
