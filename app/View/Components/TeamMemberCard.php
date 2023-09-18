@@ -8,12 +8,20 @@ use Illuminate\View\Component;
 
 class TeamMemberCard extends Component
 {
+
+
+    public $name;
+    public $img;
+    public $jobTitle;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($name, $img, $jobTitle = null)
     {
-        //
+        $this->name = $name;
+        $this->img = $img;
+        $this->jobTitle = $jobTitle ? $jobTitle : 'Doctorado en Desarrollo Regional';
     }
 
     /**

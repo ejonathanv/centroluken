@@ -34,56 +34,35 @@
         </div>
     </section>
 
-    {{--
-
-        <!-- Esta sección queda pendiente para cuando tengamos el equipo completo -->
-
-        <section class="pb-10 md:pb-24">
-            <div class="container">
-                <div class="flex flex-wrap -md:mx-4">
-                    <div class="w-1/2 md:w-1/5 mb-6">
-                        <x-team-member-card />
-                    </div>
-
-                    <div class="w-1/2 md:w-1/5 mb-6">
-                        <x-team-member-card />
-                    </div>
-
-                    <div class="w-1/2 md:w-1/5 mb-6">
-                        <x-team-member-card />
-                    </div>
-
-                    <div class="w-1/2 md:w-1/5 mb-6">
-                        <x-team-member-card />
-                    </div>
-
-                    <div class="w-1/2 md:w-1/5 mb-6">
-                        <x-team-member-card />
-                    </div>
-
-                    <div class="w-1/2 md:w-1/5 mb-6">
-                        <x-team-member-card />
-                    </div>
-
-                    <div class="w-1/2 md:w-1/5 mb-6">
-                        <x-team-member-card />
-                    </div>
-
-                    <div class="w-1/2 md:w-1/5 mb-6">
-                        <x-team-member-card />
-                    </div>
-
-                    <div class="w-1/2 md:w-1/5 mb-6">
-                        <x-team-member-card />
-                    </div>
-
-                    <div class="w-1/2 md:w-1/5 mb-6">
-                        <x-team-member-card />
-                    </div>
+    <section class="pb-10 md:pb-24">
+        <div class="container">
+            <div class="w-full md:w-9/12 mx-auto">
+                <div class="w-full mb-10">
+                    <x-team-member-card name="Alberto Godínez" img="CELUK_AlbertoGodinez.png" />
+                </div>
+                <div class="w-full mb-10">
+                    <x-team-member-card name="Alfonso Camberos" img="CELUK_AlfonsoCamberos.png" />
+                </div>
+                <div class="w-full mb-10">
+                    <x-team-member-card name="Bertha Sandoval" img="CELUK_BerthaSandoval.png" />
+                </div>
+                <div class="w-full mb-10">
+                    <x-team-member-card name="Carlos De La Parra" img="CELUK_CarlosdelaParra.png" />
+                </div>
+                <div class="w-full mb-10">
+                    <x-team-member-card name="Efraín Niebla" img="CELUK_EfrainNiebla.png" />
+                </div>
+                <div class="w-full mb-10">
+                    <x-team-member-card name="Héctor Peterson" img="CELUK_HectorPeterson.png" />
+                </div>
+                <div class="w-full mb-10">
+                    <x-team-member-card name="Jaime Sánchez" img="CELUK_JaimeSanchez.png" />
+                </div>
+                <div class="w-full mb-10">
+                    <x-team-member-card name="Patricia Peterson" img="CELUK_PatriciaPeterson.png" />
                 </div>
             </div>
-        </section>
-
-    --}}
+        </div>
+    </section>
 
 </x-guest-layout>
