@@ -127,7 +127,7 @@
                             <div class="flex items-end justify-between w-full">
                                 <div class="basis-9/12">
                                     <h1 class="text-base md:text-xl font-bold m-0 !leading-tight">
-                                        Abogar porque los principios de eficiencia y justicia sean los pilares de la gobernanza del agua.
+                                        Abogar por que los principios de eficiencia y justicia sean los pilares de la gobernanza del agua.
                                     </h1>
                                 </div>
                                 <div class="basis-3/12 text-right">
