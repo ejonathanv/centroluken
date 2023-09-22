@@ -10,6 +10,7 @@ Route::get('/quienes-somos', [WebsiteController::class, 'about'])->name('about')
 Route::get('/quienes-somos/{member}', [WebsiteController::class, 'member'])->name('member');
 Route::get('/contacto', [WebsiteController::class, 'contact'])->name('contact');
 Route::post('/contacto', [WebsiteController::class, 'send'])->name('send-message');
+Route::view('/biografias', 'website.members');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
