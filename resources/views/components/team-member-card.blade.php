@@ -4,12 +4,10 @@
     </div>
     <div class="flex flex-col justify-center">
         <h4 class="text-primary mb-2">
-            <span class="text-lg md:text-xl">{{ $name }}</span> <br> <span class="text-secondary text-xs !md:text-sm">{{ $jobTitle }}</span>
+            <span class="text-lg md:text-xl">{{ $name }}</span> <br> <span class="text-secondary text-xs !md:text-sm">{{ $jobtitle }}</span>
         </h4>
         <p class="text-gray-500 text-sm">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam nihil nulla sed consequatur temporibus incidunt, placeat, repudiandae velit non aspernatur ipsum et rem ullam reprehenderit magnam mollitia provident amet.
-            Saepe dolor repellendus assumenda totam, repellat ipsam libero natus eaque quas maiores inventore eos illo reprehenderit, unde quidem molestias enim iusto error nostrum obcaecati? Assumenda asperiores veniam similique dolore ullam.
-            Necessitatibus animi.
+            {{ $slot }}
         </p>
     </div>
 </div>

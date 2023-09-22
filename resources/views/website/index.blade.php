@@ -28,7 +28,7 @@
         <div class="container">
 
             <h1 class="text-center mb-10 md:mb-12 text-primary">
-                Nos guíamos por:
+                Nos guiamos por:
             </h1>
 
             <div class="flex flex-col md:flex-row items-center md:items-stretch space-y-6 md:space-y-0 md:space-x-10">
