@@ -46,17 +46,6 @@
 
                 <div class="w-full mb-10">
                     <x-team-member-card 
-                        name="Roberto Fernando Salmón Castelo"
-                        jobtitle="Socio fundador"
-                        gender="male">
-
-                        Asesor de instituciones públicos y privadas en materia de gestión internacional del agua y manejo de recursos hídricos. Egresado de la Universidad de Arizona como ingeniero agrónomo, con maestría en economía agrícola y en proceso de titulación de estudios doctorales en Administración de Recursos Hidráulicos de la misma universidad. Se desempeñó como Comisionado mexicano ante la Comisión Internacional de Límites y Aguas entre México y Estados Unidos (CILA) desde abril de 2009 hasta mayo de 2020. Como líder de negociación del grupo mexicano, logró la firma de 11 acuerdos binacionales (Actas) con Estados Unidos, que son vinculantes y de cumplimiento obligatorio para ambos países. Ha sido funcionario en la Comisión Nacional del Agua como Gerente de la Región II Noroeste (2002 – 2006) y director general del Organismo de Cuenca Noroeste (2006 – 2009) y director de Planeación y Proyectos Especiales en el Centro de Investigaciones y Desarrollo de los Recursos Naturales del Estado de Sonora (CIDESON). 
-
-                    </x-team-member-card>
-                </div>
-
-                <div class="w-full mb-10">
-                    <x-team-member-card 
                         name="Carlos A. de la Parra Rentería"
                         jobtitle="Socio fundador"
                         img="CELUK_CarlosdelaParra.png"
@@ -81,6 +70,14 @@
 
                 <div class="w-full mb-10">
                     <x-team-member-card 
+                        name="Héctor Arias"
+                        jobtitle="Socio fundador"
+                        gender="male">
+                    </x-team-member-card>
+                </div>
+
+                <div class="w-full mb-10">
+                    <x-team-member-card 
                         name="Martín Alberto Delgado Saldívar"
                         jobtitle="Socio fundador"
                         gender="male">
@@ -92,9 +89,12 @@
 
                 <div class="w-full mb-10">
                     <x-team-member-card 
-                        name="Héctor Arias"
+                        name="Roberto Fernando Salmón Castelo"
                         jobtitle="Socio fundador"
                         gender="male">
+
+                        Asesor de instituciones públicos y privadas en materia de gestión internacional del agua y manejo de recursos hídricos. Egresado de la Universidad de Arizona como ingeniero agrónomo, con maestría en economía agrícola y en proceso de titulación de estudios doctorales en Administración de Recursos Hidráulicos de la misma universidad. Se desempeñó como Comisionado mexicano ante la Comisión Internacional de Límites y Aguas entre México y Estados Unidos (CILA) desde abril de 2009 hasta mayo de 2020. Como líder de negociación del grupo mexicano, logró la firma de 11 acuerdos binacionales (Actas) con Estados Unidos, que son vinculantes y de cumplimiento obligatorio para ambos países. Ha sido funcionario en la Comisión Nacional del Agua como Gerente de la Región II Noroeste (2002 – 2006) y director general del Organismo de Cuenca Noroeste (2006 – 2009) y director de Planeación y Proyectos Especiales en el Centro de Investigaciones y Desarrollo de los Recursos Naturales del Estado de Sonora (CIDESON). 
+
                     </x-team-member-card>
                 </div>
 
@@ -143,12 +143,10 @@
 
                 <div class="w-full mb-10">
                     <x-team-member-card 
-                        name="Carlos Orozco Riezgo"
+                        name="Alberto Godínez"
                         jobtitle="Asesor"
-                        img="CELUK_CarlosOrozco.png"
+                        img="CELUK_AlbertoGodinez.png"
                         gender="male">
-                        
-                        Doctor en ciencias agrícolas con maestría en uso y gestión de agua de riego en regiones áridas. Es una autoridad en el uso de tecnologías innovadoras para la mejora de producción de cultivos como forrajes, aceitunas y trigo. Es pionero en la instalación de sistemas de drenaje agrícola subterráneos; en 1997 implementó un programa para instalar un sistema de drenaje subterráneo en el Valle de Mexicali. Ocupó el cargo de Subsecretario en la Secretaría de Agricultura y Ganadería de Baja California, y en dos ocasiones el cargo de director de Agricultura, así como director de Infraestructura de Irrigación Agrícola. En 2003 planificó y supervisó la instalación del “Sistema de Información en el Manejo del Agua de Riego de Baja California” (SIMARBC), para proveer de información actualizada sobre el clima a los agricultores. 
                         
                     </x-team-member-card>
                 </div>
@@ -167,11 +165,28 @@
 
                 <div class="w-full mb-10">
                     <x-team-member-card 
-                        name="Juan Jaime Sánchez Meza"
+                        name="Carlos Orozco Riezgo"
                         jobtitle="Asesor"
+                        img="CELUK_CarlosOrozco.png"
                         gender="male">
                         
-                        Es licenciado en Derecho egresado de la Universidad de Sonora. Cuenta además con estudios sobre Población y Desarrollo del Fondo de las Naciones Unidas para Actividades en Materia de Población. Es también especialista en Administración Pública Municipal del Instituto Sonorense de Administración Pública. En el Colegio de Sonora obtuvo una especialidad en la Gestión Integrada de Cuencas Hidrográficas. Posteriormente obtuvo un diplomado en Gobierno y Gestión Local por el Centro de Investigación y Docencia Económica (CIDE) y cursó el diplomado Dr. Jorge Carpizo en Derechos Humanos del Instituto de Investigaciones Jurídicas de la UNAM.
+                        Doctor en ciencias agrícolas con maestría en uso y gestión de agua de riego en regiones áridas. Es una autoridad en el uso de tecnologías innovadoras para la mejora de producción de cultivos como forrajes, aceitunas y trigo. Es pionero en la instalación de sistemas de drenaje agrícola subterráneos; en 1997 implementó un programa para instalar un sistema de drenaje subterráneo en el Valle de Mexicali. Ocupó el cargo de Subsecretario en la Secretaría de Agricultura y Ganadería de Baja California, y en dos ocasiones el cargo de director de Agricultura, así como director de Infraestructura de Irrigación Agrícola. En 2003 planificó y supervisó la instalación del “Sistema de Información en el Manejo del Agua de Riego de Baja California” (SIMARBC), para proveer de información actualizada sobre el clima a los agricultores. 
+                        
+                    </x-team-member-card>
+                </div>
+
+                <div class="w-full mb-10">
+                    <x-team-member-card 
+                        name="Efraín Carlos Nieblas Ortiz"
+                        jobtitle="Asesor"
+                        img="CELUK_EfrainNiebla.png"
+                        gender="male">
+                        
+                        El Dr. Nieblas es Biólogo, maestro en Ingeniería de Sistemas y Doctor en Ciencias, por la Universidad Autónoma de Baja California, donde es investigador de tiempo completo adscrito al Instituto de Ingeniería de la Universidad Autónoma de Baja California, donde también fue nombrado primer coordinador de proyectos de Gestión Ambiental, implementó la Política Ambiental de la UABC, así como el Plan Institucional de Gestión Ambiental, y el Programa Cero Residuos. <br><br>
+
+                        En el Sector Público, ha sido director de Auditoría Ambiental, director de Gestión Ambiental y secretario de Protección al Ambiente del Gobierno del Estado de Baja California. También fungió como director de Protección al Ambiente del 23ro. Ayuntamiento de Mexicali. Actualmente se desempeña como director Operativo de Consorcio Ambiental S.C., firma de consultoría y asesoría en materia de cumplimiento ambiental, seguridad e higiene y protección civil. Se encuentra inscrito en el Padrón Estatal de Auditores Ambientales de Baja California, así como en el Padrón Estatal de Peritos en Monitoreo Ambiental de Baja California. <br><br>
+
+                        Ha sido Consejero Honorario de Organismos de la Sociedad Civil dedicados a actividades de educación ambiental y de restauración ecológica, como: Fundación Hélice, Restauremos el Colorado y Proyecto Fronterizo de Educación Ambiental. En el ámbito gremial, ha sido presidente de la Asociación de Biólogos de Mexicali (BIOMAC); y fue presidente del Primer Consejo Directivo del Colegio de Biólogos de Baja California (CBBC) y ocupa en la actualidad la presidencia del Consejo Técnico Consultivo. En noviembre de 2022, el Dr. Nieblas recibió el Reconocimiento Nacional al Mérito Profesional en las Ciencias Biológicas, así como la Medalla Juan Luis Cifuentes Lemus, otorgados por la Federación Mexicana de Colegios de Biólogos (FEMCOBI).
                         
                     </x-team-member-card>
                 </div>
@@ -189,16 +204,12 @@
 
                 <div class="w-full mb-10">
                     <x-team-member-card 
-                        name="Efraín Carlos Nieblas Ortiz"
+                        name="Juan Jaime Sánchez Meza"
                         jobtitle="Asesor"
-                        img="CELUK_EfrainNiebla.png"
+                        img="CELUK_JaimeSanchez.png"
                         gender="male">
                         
-                        El Dr. Nieblas es Biólogo, maestro en Ingeniería de Sistemas y Doctor en Ciencias, por la Universidad Autónoma de Baja California, donde es investigador de tiempo completo adscrito al Instituto de Ingeniería de la Universidad Autónoma de Baja California, donde también fue nombrado primer coordinador de proyectos de Gestión Ambiental, implementó la Política Ambiental de la UABC, así como el Plan Institucional de Gestión Ambiental, y el Programa Cero Residuos. <br><br>
-
-                        En el Sector Público, ha sido director de Auditoría Ambiental, director de Gestión Ambiental y secretario de Protección al Ambiente del Gobierno del Estado de Baja California. También fungió como director de Protección al Ambiente del 23ro. Ayuntamiento de Mexicali. Actualmente se desempeña como director Operativo de Consorcio Ambiental S.C., firma de consultoría y asesoría en materia de cumplimiento ambiental, seguridad e higiene y protección civil. Se encuentra inscrito en el Padrón Estatal de Auditores Ambientales de Baja California, así como en el Padrón Estatal de Peritos en Monitoreo Ambiental de Baja California. <br><br>
-
-                        Ha sido Consejero Honorario de Organismos de la Sociedad Civil dedicados a actividades de educación ambiental y de restauración ecológica, como: Fundación Hélice, Restauremos el Colorado y Proyecto Fronterizo de Educación Ambiental. En el ámbito gremial, ha sido presidente de la Asociación de Biólogos de Mexicali (BIOMAC); y fue presidente del Primer Consejo Directivo del Colegio de Biólogos de Baja California (CBBC) y ocupa en la actualidad la presidencia del Consejo Técnico Consultivo. En noviembre de 2022, el Dr. Nieblas recibió el Reconocimiento Nacional al Mérito Profesional en las Ciencias Biológicas, así como la Medalla Juan Luis Cifuentes Lemus, otorgados por la Federación Mexicana de Colegios de Biólogos (FEMCOBI).
+                        Es licenciado en Derecho egresado de la Universidad de Sonora. Cuenta además con estudios sobre Población y Desarrollo del Fondo de las Naciones Unidas para Actividades en Materia de Población. Es también especialista en Administración Pública Municipal del Instituto Sonorense de Administración Pública. En el Colegio de Sonora obtuvo una especialidad en la Gestión Integrada de Cuencas Hidrográficas. Posteriormente obtuvo un diplomado en Gobierno y Gestión Local por el Centro de Investigación y Docencia Económica (CIDE) y cursó el diplomado Dr. Jorge Carpizo en Derechos Humanos del Instituto de Investigaciones Jurídicas de la UNAM.
                         
                     </x-team-member-card>
                 </div>
