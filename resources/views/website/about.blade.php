@@ -1,3 +1,5 @@
+@section('title', '¿Quiénes somos?')
+
 <x-guest-layout header="header2">
 
     <section class="py-10 md:py-24">
