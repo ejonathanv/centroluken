@@ -72,9 +72,12 @@
 
                 <div class="w-full mb-10">
                     <x-team-member-card 
-                        name="Héctor Arias"
+                        name="Héctor M. Arias Rojo"
                         jobtitle="Socio fundador"
+                        img="CELUK_HectorArias.png"
                         gender="male">
+                        Es químico con maestría en Física de Suelos y doctorado en Manejo de Cuencas Hidrográficas. Ha sido director de Sustentabilidad y Fortalecimiento, así como líder del proyecto Estimulación de Lluvia para mitigar la sequía en las Zonas Áridas dentro de la Comisión Nacional de las Zonas Áridas. También fue director del Instituto para la Gestión Integral de Cuencas Hidrográficas, donde se estudia y gestionan los temas de Drenaje Parcelario, Protección Ambiental, y Manejo de Cuencas Hidrográficas con enfoque a productores agrícolas, comunidades indígenas, agencias internacionales y nacionales, organizaciones gubernamentales y no gubernamentales. Ha colaborado con la Comisión Nacional del Agua, la Comisión de Áreas Naturales Protegidas, la Comisión Nacional Forestal, la Comisión Internacional de Límites y Aguas, la Secretaría de Relaciones Exteriores, la empresa minera Peñoles-México, el Natural Heritage Institute-San Francisco, y los gobiernos de Chihuahua y Sonora, entre otras. <br><br>
+                        Es Investigador Nacional Nivel II dentro del Sistema Nacional de Investigadores, con más de 70 publicaciones sobre temas de Manejo de Cuencas Hidrográficas, Conservación de Suelos y Recursos Naturales. También es coautor del libro “Alternative Futures for Changing Landscapes.  The Upper San Pedro River Basin in Arizona and Sonora”, editado por Harvard Univerity Press, esfuerzo multi-institucional con las universidades de Harvard, Arizona e IMADES en el río San Pedro, Sonora, México, y Arizona, Estados Unidos.
                     </x-team-member-card>
                 </div>
 
@@ -145,11 +148,13 @@
 
                 <div class="w-full mb-10">
                     <x-team-member-card 
-                        name="Alberto Godínez"
+                        name="Alberto Godínez Placencia"
                         jobtitle="Asesor"
                         img="CELUK_AlbertoGodinez.png"
                         gender="male">
-                        
+                        Doctor en Economía Agrícola por El Colegio de Posgraduados (COLPOS), maestro en Desarrollo Regional por el Colegio de la Frontera Norte (COLEF), e Ingeniero Agrónomo con especialidad en Economía Agrícola por la Universidad Autónoma Chapingo (UACH). <br><br>
+                        Cuenta con amplia experiencia en investigación económica cuantitativa aplicando los conceptos y herramientas de Economía Matemática, Matemática Financiera, Econometría y Estadística Matemática. En su carrera se ha especializado en la formulación, implementación, seguimiento, evaluación y mejora de Planes Estratégicos, Programas Operativo-Financieros anuales, así como en la formulación y evaluación de Proyectos de inversión empresarial, tanto en el sector privado, instituciones científico-académicas, agencias gubernamentales y organizaciones no gubernamentales. <br><br>
+                        Se ha desempeñado como Agribusiness Intelligence Manager en Gebyacc Agrícola, como director de Planificación Estratégica y Monitoreo de la Inversión Pública en la Secretaría de Desarrollo Agropecuario del Gobierno del Estado de Baja California, y como director académico en Fundación Rafael Preciado Hernández, A.C. También ha sido profesor-investigar en la Universidad Autónoma de Baja California y en El Colegio de la Frontera Norte.
                     </x-team-member-card>
                 </div>
 
