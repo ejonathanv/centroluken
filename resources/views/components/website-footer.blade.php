@@ -43,6 +43,7 @@
                 </p>
             </div>
             <div class="flex items-center space-x-4">
+                {{--
                 <a href="#">
                     <i class="fab fa-facebook-square text-white text-2xl"></i>
                 </a>
@@ -52,6 +53,7 @@
                 <a href="#">
                     <i class="fab fa-linkedin text-white text-2xl"></i>
                 </a>
+                --}}
             </div>
         </div>
     </div>

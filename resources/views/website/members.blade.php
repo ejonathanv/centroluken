@@ -18,7 +18,7 @@
 
     <x-split-seccion-info-right img="{{ asset('img/plantatratadora.jpeg') }}">
         <h1 class="mb-7">
-            Talento Interdisciplinario
+            Enfoque interdisciplinario
         </h1>
         <h4>
             Somos un equipo de especialistas con más de 30 años de experiencia en la gestión del agua y los recursos naturales.
@@ -111,6 +111,7 @@
                     <x-team-member-card 
                         name="Andrea Alonso López"
                         jobtitle="Colaboradora"
+                        img="CELUK_AndreaAlonso.jpg"
                         gender="female">
                         
                         Con más de 10 años de experiencia en la coordinación y supervisión de proyectos,  ha participado en el desarrollo de programas, planes, estudios y proyectos binacionales en materia recursos hídricos y desarrollo urbano. Ingeniera química por la UABC con maestría en ciencias con especialidad en Sistemas Ambientales en el área de acentuación de Manejo Sostenible del Agua en por el Instituto Tecnológico y de Estudios Superiores de Monterrey. Ha trabajado en el sector privado y colaborado con la sociedad civil; se desempeñó como servidora pública en el Instituto Metropolitano de Planeación de Tijuana en el área ambiental del 2019 al 2022. Ha enfocado su carrera a integrar los aspectos sociales y ambientales en el desarrollo de estrategias e implementación de herramientas que fomenten un desarrollo urbano sostenible, a través de esfuerzos participativos y multidisciplinarios.

@@ -18,7 +18,7 @@
 
     <x-split-seccion-info-right img="{{ asset('img/plantatratadora.jpeg') }}">
         <h1 class="mb-7">
-            Talento Interdisciplinario
+            Enfoque interdisciplinario
         </h1>
         <h4>
             Somos un equipo de especialistas con más de 30 años de experiencia en la gestión del agua y los recursos naturales.
