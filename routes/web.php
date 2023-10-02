@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebsiteController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', [WebsiteController::class, 'index'])->name('home');
 Route::get('/header-2', [WebsiteController::class, 'header2'])->name('header2');
@@ -10,11 +11,12 @@ Route::get('/quienes-somos', [WebsiteController::class, 'about'])->name('about')
 Route::get('/quienes-somos/{member}', [WebsiteController::class, 'member'])->name('member');
 Route::get('/contacto', [WebsiteController::class, 'contact'])->name('contact');
 Route::post('/contacto', [WebsiteController::class, 'send'])->name('send-message');
+Route::get('/blog', [WebsiteController::class, 'blog'])->name('blog');
 Route::view('/biografias', 'website.members');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::group(['prefix' => 'dashboard'], function(){
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

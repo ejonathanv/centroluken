@@ -250,3 +250,16 @@ h5{
 .form-control{
     @apply border-2 rounded px-6 py-2 font-semibold text-sm inline-block w-full;
 }
+
+.article_card{
+    @apply bg-white rounded shadow-md overflow-hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.article_card_image{
+    @apply w-full h-56 bg-gray-100 rounded-t bg-cover bg-no-repeat bg-center overflow-hidden;
+}
+
+.article_card_content{
+    @apply p-6;
+}

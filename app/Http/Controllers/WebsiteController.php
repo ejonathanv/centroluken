@@ -25,6 +25,10 @@ class WebsiteController extends Controller
         return view('website.contact');
     }
 
+    public function blog(){
+        return view('website.blog');
+    }
+
     public function send(Request $request){
 
         $request->validate([

@@ -17,6 +17,9 @@
                 <a href="{{ route('about') }}" class="opacity-50 @if (request()->routeIs('about')) !opacity-100 @endif">
                     ¿Quiénes somos?
                 </a>
+                <a href="{{ route('blog') }}" class="opacity-50 @if (request()->routeIs('blog')) !opacity-100 @endif">
+                    Blog
+                </a>
 
                 {{--
                     <!-- Se van a ocultar por el momento -->
@@ -58,6 +61,9 @@
         </a>
         <a href="{{ route('about') }}" class="@if (request()->routeIs('about')) active @endif">
             ¿Quiénes somos?
+        </a>
+        <a href="{{ route('blog') }}" class="@if (request()->routeIs('about')) active @endif">
+            Blog
         </a>
         {{--
             <a href="#">
