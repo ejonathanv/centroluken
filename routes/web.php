@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\DashboardController;
@@ -14,8 +15,9 @@ Route::post('/contacto', [WebsiteController::class, 'send'])->name('send-message
 Route::get('/blog', [WebsiteController::class, 'blog'])->name('blog');
 Route::view('/biografias', 'website.members');
 
-Route::group(['prefix' => 'dashboard'], function(){
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'verified']], function(){
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('articles', ArticleController::class);
 });
 
 Route::middleware('auth')->group(function () {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\SayThanks;
+use App\Models\Article;
 use App\Mail\ContactMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -26,7 +27,8 @@ class WebsiteController extends Controller
     }
 
     public function blog(){
-        return view('website.blog');
+        $articles = Article::latest()->paginate(9);
+        return view('website.blog', compact('articles'));
     }
 
     public function send(Request $request){

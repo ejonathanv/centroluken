@@ -27,7 +27,7 @@
                     @endif
 
                     <div class="form-group mb-7">
-                        <label for="name" class="text-secondary text-sm font-bold">
+                        <label for="name">
                             ¿Cuál es tu nombre completo?
                         </label>
                         <input type="text" name="name" id="name" class="form-control" placeholder="Nombre" value="{{ old('name') }}">

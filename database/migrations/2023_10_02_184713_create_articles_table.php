@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('body')->nullable();
             $table->string('cover')->nullable();
             $table->string('slug')->unique();
-            $table->string('category')->nullable();
+            $table->string('category_id')->nullable();
             $table->boolean('published')->default(false);
             $table->timestamp('published_at')->nullable();
             $table->timestamps();

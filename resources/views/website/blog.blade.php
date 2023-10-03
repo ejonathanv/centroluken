@@ -18,9 +18,11 @@
     <section>
         <div class="container">
             <div class="flex items-stretch flex-wrap -my-5 -mx-5">
+                @foreach($articles as $article)
                 <div class="w-4/12 p-5">
                     <x-article-card :article="$article" />
                 </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -11,6 +11,24 @@
         </div>
         <div class="flex items-center justify-end w-8/12">
             <nav class="text-white text-sm font-bold flex items-center justify-end space-x-7 hidden md:block">
+                @if($admin)
+
+                <a href="{{ route('dashboard') }}" class="opacity-50 @if (request()->routeIs('dashboard')) !opacity-100 @endif">
+                    Artículos
+                </a>
+
+                <a href="{{ route('home') }}" class="opacity-50">
+                    Volver al sitio
+                </a>
+
+                <form action="{{ route('logout') }}" method="POST" class="inline-block">
+                    @csrf
+                    <button type="submit" class="opacity-50">
+                        Cerrar sesión
+                    </button>
+                </form>
+
+                @else
                 <a href="{{ route('home') }}" class="opacity-50 @if (request()->routeIs('home')) !opacity-100 @endif">
                     ¿Qué hacemos?
                 </a>
@@ -28,9 +46,17 @@
                         Proyectos
                     </a>
                 --}}
+
+                @auth
+                <a href="{{ route('dashboard') }}" class="opacity-50">
+                    Admin
+                </a>
+                @endauth
+
                 <a href="{{ route('contact') }}" class="bg-white text-primary px-5 py-2 rounded-full shadow">
                     Contáctanos
                 </a>
+                @endif
             </nav>
 
             <a href="#" class="absolute top-0 right-0 mt-8 mr-5 md:hidden" @click.prevent="toggleMobileMenu">
@@ -56,6 +82,23 @@
         </div>
     </div>
     <nav>
+        @if($admin)
+        <a href="{{ route('dashboard') }}" class="">
+            Artículos
+        </a>
+        <a href="{{ route('home') }}">
+            Volver al sitio
+        </a>
+
+        <form action="{{ route('logout') }}" method="POST" class="w-full">
+            @csrf
+            <a href="#">
+                <button type="submit">
+                    Cerrar sesión
+                </button>
+            </a>
+        </form>
+        @else
         <a href="{{ route('home') }}" class="@if (request()->routeIs('home')) active @endif">
             ¿Qué hacemos?
         </a>
@@ -70,9 +113,15 @@
                 Proyectos
             </a>
         --}}
+        @auth
+        <a href="{{ route('dashboard') }}">
+            Admin
+        </a>
+        @endauth
         <a href="{{ route('contact') }}" class="@if (request()->routeIs('contact')) active @endif">
             Contáctanos
         </a>
+        @endif
     </nav>
     <p class="text-xs">
         &copy; {{ date('Y') }} Centro Luken, Derechos Reservados.

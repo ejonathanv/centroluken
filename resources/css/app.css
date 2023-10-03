@@ -247,12 +247,16 @@ h5{
     @apply font-semibold text-lg py-4 text-primary block w-full border-b-2 border-secondary hover:border-secondary;
 }
 
+.form-group{
+    @apply mb-7;
+}
+
 .form-control{
     @apply border-2 rounded px-6 py-2 font-semibold text-sm inline-block w-full;
 }
 
 .article_card{
-    @apply bg-white rounded shadow-md overflow-hidden;
+    @apply flex flex-col bg-white rounded shadow-md overflow-hidden h-full;
     transition: all 0.2s ease-in-out;
 }
 
@@ -262,4 +266,24 @@ h5{
 
 .article_card_content{
     @apply p-6;
+}
+
+.table-responsive{
+    @apply overflow-x-auto;
+}
+
+.table{
+    @apply w-full text-left border-collapse;
+}
+
+.table thead th{
+    @apply px-6 py-4 text-sm font-semibold text-primary border-b-2 border-secondary;
+}
+
+.table tbody td{
+    @apply px-6 py-4 text-sm text-primary border-b;
+}
+
+label{
+    @apply text-secondary text-sm font-bold;
 }
