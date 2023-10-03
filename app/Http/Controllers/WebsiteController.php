@@ -48,6 +48,8 @@ class WebsiteController extends Controller
 
         Mail::to(env('MAIL_CONTACT_ADDRESS'))->send(new ContactMessage($request->all()));
 
+        Mail::to(env('MAIL_SECONDARY_CONTACT_ADDRESS'))->send(new ContactMessage($request->all()));
+
         return redirect()->route('contact')->with('success', 'Tu mensaje ha sido enviado con éxito');
 
     }
