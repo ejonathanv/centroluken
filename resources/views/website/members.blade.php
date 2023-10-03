@@ -85,6 +85,7 @@
                     <x-team-member-card 
                         name="Martín Alberto Delgado Saldívar"
                         jobtitle="Socio fundador"
+                        img="CELUK_MartinDelgado.jpg"
                         gender="male">
 
                         Experiencia en presupuestos gubernamentales basados en evaluación por resultados y planeación participativa, evaluación de proyectos, análisis de costo y beneficio y valuación de empresas. Ingeniero Industrial (ITSON) con Maestría en Ingeniería Industrial (Texas A&M University), Diplomado en Alta Dirección de Empresas (IPADE) y Doctor en Desarrollo Regional (CIAD). Actualmente participa como asesor externo del H. Ayuntamiento de Hermosillo y el H. Ayuntamiento de Yécora. Ha realizado trabajos de consultoría para las empresas o instituciones como SICTUHSA, SOLISON, GOODNESS, MERCAMAR, CIAD-CONAGUA, PRODEREM, WWF, CILA, Consejo de Educación de Puebla, US-AID, CONAGUA, PEÑOLES, CONAFOR, CEA-Sonora, y la OMM-ONU entre otras. Fue Jefe del Departamento de Administración en la Universidad de Sonora e imparte materias en las Maestría en Administración y en Comercio Exterior y Aduanas además de las Licenciaturas del Finanzas y Negocios Internacionales. Fue Director General del Instituto del Medio Ambiente y el Desarrollo Sustentable del Estado de Sonora, del Centro de Investigación y Desarrollo de los Recursos Naturales de Sonora y del Centro Ecológico de Sonora, de Blazer Internacional (Cananea-Naco-Besbee), Fábrica de Tubos Vibroprensados S.A, FATUVISA (Hermosillo) y Poliestireno de Sonora (Ciudad Obregón). 
@@ -96,6 +97,7 @@
                     <x-team-member-card 
                         name="Roberto Fernando Salmón Castelo"
                         jobtitle="Socio fundador"
+                        img="CELUK_RobertoSalmon.jpg"
                         gender="male">
 
                         Asesor de instituciones públicos y privadas en materia de gestión internacional del agua y manejo de recursos hídricos. Egresado de la Universidad de Arizona como ingeniero agrónomo, con maestría en economía agrícola y en proceso de titulación de estudios doctorales en Administración de Recursos Hidráulicos de la misma universidad. Se desempeñó como Comisionado mexicano ante la Comisión Internacional de Límites y Aguas entre México y Estados Unidos (CILA) desde abril de 2009 hasta mayo de 2020. Como líder de negociación del grupo mexicano, logró la firma de 11 acuerdos binacionales (Actas) con Estados Unidos, que son vinculantes y de cumplimiento obligatorio para ambos países. Ha sido funcionario en la Comisión Nacional del Agua como Gerente de la Región II Noroeste (2002 – 2006) y director general del Organismo de Cuenca Noroeste (2006 – 2009) y director de Planeación y Proyectos Especiales en el Centro de Investigaciones y Desarrollo de los Recursos Naturales del Estado de Sonora (CIDESON). 
