@@ -43,12 +43,16 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            showMobileMenu: false
+            showMobileMenu: false,
+            showLanguage: false
         }
     },
     methods: {
         toggleMobileMenu() {
             this.showMobileMenu = !this.showMobileMenu;
+        },
+        toggleLanguage(){
+            this.showLanguage = !this.showLanguage;
         }
     }
 }).mount('#app')

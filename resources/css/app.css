@@ -250,3 +250,32 @@ h5{
 .form-control{
     @apply border-2 rounded px-6 py-2 font-semibold text-sm inline-block w-full;
 }
+
+
+.langSelector{
+    @apply fixed bg-gray-900 bg-opacity-50 top-0 left-0 right-0 bottom-0 w-full h-full z-50 flex justify-center items-center;
+}
+
+.langSelector .content{
+    @apply bg-white rounded p-16 shadow-md relative;
+}
+
+.langSelector .content h4{
+    @apply text-xl font-semibold text-primary mb-7 text-center
+}
+
+.langSelector .content nav{
+    @apply flex flex-row items-center space-x-10
+}
+
+.langSelector .content a{
+    @apply flex flex-row items-center space-x-4 text-primary font-semibold;
+}
+
+.langSelector .content a:hover{
+    @apply text-secondary;
+}
+
+.langSelector .content .close{
+    @apply absolute top-0 right-3 p-4 cursor-pointer;
+}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\SayThanks;
 use App\Mail\ContactMessage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Mail;
 
 class WebsiteController extends Controller
