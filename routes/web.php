@@ -13,6 +13,7 @@ Route::get('/quienes-somos/{member}', [WebsiteController::class, 'member'])->nam
 Route::get('/contacto', [WebsiteController::class, 'contact'])->name('contact');
 Route::post('/contacto', [WebsiteController::class, 'send'])->name('send-message');
 Route::get('/blog', [WebsiteController::class, 'blog'])->name('blog');
+Route::get('/blog/{article:slug}', [WebsiteController::class, 'article'])->name('article');
 Route::view('/biografias', 'website.members');
 
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'verified']], function(){

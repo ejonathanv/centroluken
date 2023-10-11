@@ -37,7 +37,6 @@ $(document).ready(function(){
     });
 });
 
-
 const { createApp } = Vue;
 
 createApp({
@@ -45,6 +44,13 @@ createApp({
         return {
             showMobileMenu: false
         }
+    },
+    mounted() {
+        ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
     },
     methods: {
         toggleMobileMenu() {

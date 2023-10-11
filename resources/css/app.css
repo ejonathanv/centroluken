@@ -287,3 +287,9 @@ h5{
 label{
     @apply text-secondary text-sm font-bold;
 }
+
+.articleThumb{
+    width: 100px;
+    height: 100px;
+    @apply bg-gray-100 rounded bg-cover bg-no-repeat bg-center overflow-hidden shadow;
+}

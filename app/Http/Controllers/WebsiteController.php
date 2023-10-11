@@ -31,6 +31,11 @@ class WebsiteController extends Controller
         return view('website.blog', compact('articles'));
     }
 
+    public function article(Article $article){
+        $relatedArticles = Article::where('id', '<>', $article->id)->latest()->take(5)->get();
+        return view('website.article', compact('article', 'relatedArticles'));
+    }
+
     public function send(Request $request){
 
         $request->validate([

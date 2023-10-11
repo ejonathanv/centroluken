@@ -1,5 +1,5 @@
 <div class="article_card">
-    <a href="#">
+    <a href="{{ route('article', $article) }}">
     <div class="article_card_image" style="background-image: url({{ $article->cover }});">
     </div>
     </a>
@@ -14,7 +14,7 @@
             {{ $article->excerpt }}
         </p>
         <div class="mt-auto">
-            <a href="#" class="btn btn-primary btn-sm">
+            <a href="{{ route('article', $article) }}" class="btn btn-primary btn-sm">
                 Leer más
             </a>
         </div>

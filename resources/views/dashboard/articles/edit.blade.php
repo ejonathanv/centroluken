@@ -51,7 +51,10 @@
                         <label for="">
                             Contenido
                         </label>
-                        <textarea name="body" class="form-control" rows="10">{{ old('body', $article->body) }}</textarea>
+                        <div id="editor">
+                            {{ old('body', $article->body) }}
+                        </div>
+                        
                         @error('body')
                             <span class="text-xs text-red-500">{{ $message }}</span>
                         @enderror
@@ -90,4 +93,7 @@
             </div>
         </div>
     </section>
+
+    <section class="section_divider"></section>
+    <section class="section_divider"></section>
 </x-app-layout>

@@ -17,6 +17,8 @@
     <script src="{{ asset('js/jquery-3.7.0.min.js') }}" defer></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
