@@ -17,6 +17,10 @@
                     Artículos
                 </a>
 
+                <a href="{{ route('dashboard') }}" class="opacity-50 @if (request()->routeIs('dashboard')) !opacity-100 @endif">
+                    Temas de interés
+                </a>
+
                 <a href="{{ route('home') }}" class="opacity-50">
                     Volver al sitio
                 </a>
@@ -37,6 +41,9 @@
                 </a>
                 <a href="{{ route('blog') }}" class="opacity-50 @if (request()->routeIs('blog')) !opacity-100 @endif">
                     Blog
+                </a>
+                <a href="{{ route('topics') }}" class="opacity-50 @if (request()->routeIs('topics')) !opacity-100 @endif">
+                    Temas de interés
                 </a>
 
                 {{--

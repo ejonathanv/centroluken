@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Topic;
 use App\Mail\SayThanks;
 use App\Models\Article;
 use App\Mail\ContactMessage;
+use App\Models\TopiCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -34,6 +36,17 @@ class WebsiteController extends Controller
     public function article(Article $article){
         $relatedArticles = Article::where('id', '<>', $article->id)->latest()->take(5)->get();
         return view('website.article', compact('article', 'relatedArticles'));
+    }
+
+    public function topics(){
+        return redirect()->route('topicCategory', TopiCategory::first());
+    }
+
+    public function topicCategory(TopiCategory $category){
+        $topics = Topic::where('category_id', $category->id)->latest()->paginate(9);
+        $categories = TopiCategory::all();
+        $currentCategory = $category;
+        return view('website.topics', compact('topics', 'currentCategory', 'categories'));
     }
 
     public function send(Request $request){

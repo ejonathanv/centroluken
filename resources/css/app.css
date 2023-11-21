@@ -293,3 +293,19 @@ label{
     height: 100px;
     @apply bg-gray-100 rounded bg-cover bg-no-repeat bg-center overflow-hidden shadow;
 }
+
+.topicsNav{
+    @apply flex flex-col;
+}
+.topicsNav a{
+    @apply text-gray-400 font-semibold text-sm flex py-3 border-b border-gray-200;
+}
+.topicsNav a i{
+    @apply text-gray-300 mr-2;
+}
+.topicsNav a.active{
+    @apply text-secondary;
+}
+.topicsNav a.active i{
+    @apply text-secondary;
+}

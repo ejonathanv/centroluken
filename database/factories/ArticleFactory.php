@@ -20,12 +20,13 @@ class ArticleFactory extends Factory
 
         $title = $this->faker->sentence;
         $category = Category::inRandomOrder()->first();
+        $cover = 'https://picsum.photos/1200/600?random=' . $this->faker->numberBetween(1, 1000);
 
         return [
             'title' => $title,
             'excerpt' => $this->faker->paragraph,
             'body' => $this->faker->paragraphs(3, true),
-            'cover' => $this->faker->imageUrl(640, 480),
+            'cover' => $cover,
             'slug' => \Str::slug($title),
             'category_id' => $category->id,
             'published' => $this->faker->boolean,
