@@ -39,7 +39,7 @@
                 </a>
 
                 <p class="text-white mt-7 md:mt-16 text-sm">
-                    &copy; {{ date('Y') }} Centro Luken, Derechos Reservados.
+                    &copy; {{ date('Y') }} {{ __('global.footer') }}
                 </p>
             </div>
             <div class="flex items-center space-x-4">

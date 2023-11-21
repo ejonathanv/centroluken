@@ -8,6 +8,7 @@ use App\Models\Article;
 use App\Mail\ContactMessage;
 use App\Models\TopiCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Mail;
 
 class WebsiteController extends Controller
@@ -71,6 +72,8 @@ class WebsiteController extends Controller
         Mail::to($request->email)->send(new SayThanks($request->all()));
 
         Mail::to(env('MAIL_CONTACT_ADDRESS'))->send(new ContactMessage($request->all()));
+
+        Mail::to(env('MAIL_SECONDARY_CONTACT_ADDRESS'))->send(new ContactMessage($request->all()));
 
         return redirect()->route('contact')->with('success', 'Tu mensaje ha sido enviado con éxito');
 

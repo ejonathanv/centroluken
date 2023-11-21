@@ -6,11 +6,11 @@
         <div class="container">
             <div class="w-10/12 md:w-8/12 mx-auto text-center">
                 <h1 class="text-primary title mb-10 !leading-tight">
-                Imaginamos un futuro sostenible, de un desarrollo en armonía con la naturaleza, el agua y el medio ambiente
+                {{ __('home.cover.title') }}
                 </h1>
 
                 <h4 class="text-secondary">
-                Por eso creamos vínculos entre la ciencia, la política y la práctica para influir en la toma de decisiones y promover soluciones innovadoras para la coexistencia armónica de la humanidad con el agua y los recursos naturales.
+                {{ __('home.cover.subtitle') }}
                 </h4>
             </div>
         </div>
@@ -18,10 +18,10 @@
 
     <x-split-seccion-info-left img="{{ asset('img/riegogota.jpeg') }}">
         <h1 class="mb-7">
-            ¿Qué Hacemos?
+            {{ __('home.intro.title') }}
         </h1>
         <h4>
-            Empleamos conocimiento técnico con base en experiencia práctica e investigación aplicada para crear proyectos colaborativos que faciliten la toma de decisiones de entidades públicas y privadas.
+            {{ __('home.intro.description') }}
         </h4>
         <hr class="w-1/2 mt-10 border-t-4 border-secondary mx-auto md:ml-0">
     </x-split-seccion-info-left>
@@ -30,7 +30,7 @@
         <div class="container">
 
             <h1 class="text-center mb-10 md:mb-12 text-primary">
-                Nos guiamos por:
+                {{ __('home.values.title') }}
             </h1>
 
             <div class="flex flex-col md:flex-row items-center md:items-stretch space-y-6 md:space-y-0 md:space-x-10">
@@ -38,10 +38,10 @@
                     <div class="border-4 border-secondary px-7 py-16 text-center h-full rounded-md">
                         <i class="fas fa-atom text-gray-200 mb-10" style="font-size: 80px;"></i>
                         <h2 class="text-secondary mb-5">
-                            Ciencia
+                            {{ __('home.values.one.title') }}
                         </h2>
                         <p>
-                            Conocimiento riguroso y basado en evidencia científica para abordar desafíos ambientales.
+                            {{ __('home.values.one.description') }}
                         </p>
                     </div>
                 </div>
@@ -50,10 +50,10 @@
                     <div class="border-4 border-secondary px-7 py-16 text-center h-full rounded-md">
                         <i class="fas fa-users text-gray-200 mb-10" style="font-size: 80px;"></i>
                         <h2 class="text-secondary mb-5">
-                            Experiencia
+                            {{ __('home.values.two.title') }}
                         </h2>
                         <p>
-                            Equipo multidisciplinario de especialistas con más de 30 años de experiencia en la gestión del agua y el medio ambiente.
+                            {{ __('home.values.two.description') }}
                         </p>
                     </div>
                 </div>
@@ -62,17 +62,17 @@
                     <div class="border-4 border-secondary px-7 py-16 text-center h-full rounded-md">
                         <i class="fas fa-bullhorn text-gray-200 mb-10" style="font-size: 80px;"></i>
                         <h2 class="text-secondary mb-5">
-                            Agencia
+                            {{ __('home.values.three.title') }}
                         </h2>
                         <p>
-                            Poder de influencia en la toma de decisiones para promover soluciones en beneficio de las generaciones presente y futuras y su coexistencia con el agua y el medio ambiente.
+                            {{ __('home.values.three.description') }}
                         </p>
                     </div>
                 </div>
             </div>
 
             <h1 class="text-center mt-10 md:mt-12 text-primary">
-                Promovemos soluciones innovadoras
+                {{ __('home.slogan') }}
             </h1>
 
         </div>
@@ -85,10 +85,10 @@
         <div class="container flex flex-col md:flex-row items-center justify-between relative z-10 space-y-10 md:space-y-0">
             <div class="w-full md:w-1/3 text-center md:text-left">
                 <h1 class="text-primary mb-10 !leading-tight">
-                    Nuestros Objetivos
+                    {{ __('home.objectives.title') }}
                 </h1>
                 <p>
-                    En Centro Luken, estamos comprometidos con la promoción de un futuro sostenible y equilibrado en el manejo del agua y los recursos naturales. A través de nuestros objetivos, buscamos abordar los desafíos actuales y futuros relacionados con la gestión del agua, la preservación del medio ambiente y el desarrollo sostenible.
+                    {{ __('home.objectives.description') }}
                 </p>
             </div>
 
@@ -99,7 +99,7 @@
                             <div class="flex items-end justify-between w-full">
                                 <div class="w-9/12">
                                     <h1 class="text-base md:text-xl font-bold m-0 !leading-tight">
-                                        Influir en la conceptualización de los planes y programas en materia de agua y recursos naturales de los gobiernos nacionales y subnacionales, grupos intermedios de la sociedad civil y cámaras empresariales.
+                                        {{ __('home.objectives.one') }}
                                     </h1>
                                 </div>
                                 <div class="w-3/12 text-right">
@@ -114,7 +114,7 @@
                             <div class="flex items-end justify-between w-full">
                                 <div class="basis-9/12">
                                     <h1 class="text-base md:text-xl font-bold m-0 !leading-tight">
-                                        Contribuir a la continuidad de los programas encaminados a la captación, el almacenamiento, tratamiento y reúso del agua.
+                                        {{ __('home.objectives.two') }}
                                     </h1>
                                 </div>
                                 <div class="basis-3/12 text-right">
@@ -129,7 +129,7 @@
                             <div class="flex items-end justify-between w-full">
                                 <div class="basis-9/12">
                                     <h1 class="text-base md:text-xl font-bold m-0 !leading-tight">
-                                        Abogar por que los principios de eficiencia y justicia sean los pilares de la gobernanza del agua.
+                                        {{ __('home.objectives.three') }}
                                     </h1>
                                 </div>
                                 <div class="basis-3/12 text-right">
@@ -144,7 +144,7 @@
                             <div class="flex items-end justify-between w-full">
                                 <div class="basis-9/12">
                                     <h1 class="text-base md:text-xl font-bold m-0 !leading-tight text-left w-full">
-                                        Apoyar el desarrollo y la implementación de programas integrales de desarrollo sustentable para ahorrar y preservar los recursos naturales.
+                                        {{ __('home.objectives.four') }}
                                     </h1>
                                 </div>
                                 <div class="basis-3/12 text-right">
@@ -159,7 +159,7 @@
                             <div class="flex items-end justify-between w-full">
                                 <div class="basis-9/12">
                                     <h1 class="text-base md:text-xl font-bold m-0 !leading-tight text-left w-full">
-                                        Guiar a las autoridades y ciudadanía para consolidar proyectos de sustentabilidad y resiliencia hídrica.
+                                        {{ __('home.objectives.five') }}
                                     </h1>
                                 </div>
                                 <div class="basis-3/12 text-right">
@@ -174,7 +174,7 @@
                             <div class="flex items-end justify-between w-full">
                                 <div class="basis-9/12">
                                     <h1 class="text-base md:text-xl font-bold m-0 !leading-tight text-left w-full">
-                                        Servir como un puente entre las naciones en búsqueda de las mejores prácticas y acuerdos para satisfacer la demanda mundial de recursos. 
+                                        {{ __('home.objectives.six') }}
                                     </h1>
                                 </div>
                                 <div class="basis-3/12 text-right">
