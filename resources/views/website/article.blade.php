@@ -4,25 +4,25 @@
     <section class="py-10 md:pt-24 md:pb-16">
         <div class="container flex items-start space-x-20">
             <div class="w-full md:w-8/12 text-left">
+                <img src="{{ asset($article->cover) }}" class="w-full h-auto mb-10" alt="{{ $article->title }}">
+
                 <h1 class="text-primary title mb-4 !leading-tight">
                     {{ $article->title }}
                 </h1>
 
-                <h6 class="text-secondary mb-10">
+                <h6 class="text-secondary mb-7">
                     {{ $article->date }} | {{ $article->category_name }}
                 </h6>
 
-                <h4>
+                <h4 class="mb-7">
                     {{ $article->excerpt }}
                 </h4>
-
-                <img src="{{ asset($article->cover) }}" class="w-full h-auto my-10" alt="">
 
                 {!! $article->body !!}
             </div>
 
             <div class="w-full md:w-4/12">
-                <h3 class="mt-1 mb-7">
+                <h3 class="mb-7">
                     Artículos relacionados
                 </h3>
 

@@ -43,6 +43,10 @@
                 </p>
             </div>
             <div class="flex items-center space-x-4">
+                <a href="{{ route('dashboard') }}" class="text-white text-sm font-bold">
+                    Administración
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
                 {{--
                 <a href="#">
                     <i class="fab fa-facebook-square text-white text-2xl"></i>

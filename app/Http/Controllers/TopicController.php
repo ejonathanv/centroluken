@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Topic;
+use App\Models\TopiCategory;
 use App\Http\Requests\StoreTopicRequest;
 use App\Http\Requests\UpdateTopicRequest;
-use App\Models\Topic;
 
 class TopicController extends Controller
 {
@@ -13,7 +14,7 @@ class TopicController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.topics.index');
     }
 
     /**
@@ -21,7 +22,8 @@ class TopicController extends Controller
      */
     public function create()
     {
-        //
+        $categories = TopiCategory::orderBy('name')->get();
+        return view('dashboard.topics.create', compact('categories'));
     }
 
     /**
@@ -29,7 +31,32 @@ class TopicController extends Controller
      */
     public function store(StoreTopicRequest $request)
     {
-        //
+        $topic = new Topic();
+        $topic->title = $request->title;
+        $topic->title_en = $request->title_en;
+        $topic->description = $request->description;
+        $topic->description_en = $request->description_en;
+        $topic->url = $request->url;
+        $topic->source = $request->source;
+        $topic->author = $request->author;
+        $topic->published_at = $request->published_at;
+
+        if($request->new_category) {
+            $category = new TopiCategory();
+            $category->name = $request->new_category;
+            $category->name_en = $request->new_category_en;
+            $category->save();
+
+            $topic->category_id = $category->id;
+        } else {
+            $topic->category_id = $request->category_id;
+        }
+
+
+        $topic->save();
+
+        return redirect()->route('topics.edit', $topic)->with('success', 'El enlace se creó con éxito');
+
     }
 
     /**
@@ -45,7 +72,8 @@ class TopicController extends Controller
      */
     public function edit(Topic $topic)
     {
-        //
+        $categories = TopiCategory::orderBy('name')->get();
+        return view('dashboard.topics.edit', compact('topic', 'categories'));
     }
 
     /**
@@ -53,7 +81,29 @@ class TopicController extends Controller
      */
     public function update(UpdateTopicRequest $request, Topic $topic)
     {
-        //
+        $topic->title = $request->title;
+        $topic->title_en = $request->title_en;
+        $topic->description = $request->description;
+        $topic->description_en = $request->description_en;
+        $topic->url = $request->url;
+        $topic->source = $request->source;
+        $topic->author = $request->author;
+        $topic->published_at = $request->published_at;
+
+        if($request->new_category) {
+            $category = new TopiCategory();
+            $category->name = $request->new_category;
+            $category->name_en = $request->new_category_en;
+            $category->save();
+
+            $topic->category_id = $category->id;
+        } else {
+            $topic->category_id = $request->category_id;
+        }
+
+        $topic->save();
+
+        return redirect()->back()->with('success', 'El enlace se actualizó con éxito');
     }
 
     /**
@@ -61,6 +111,8 @@ class TopicController extends Controller
      */
     public function destroy(Topic $topic)
     {
-        //
+        $topic->delete();
+
+        return redirect()->route('topics.index')->with('success', 'El tema de interés se eliminó con éxito');
     }
 }

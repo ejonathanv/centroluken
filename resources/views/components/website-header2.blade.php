@@ -17,7 +17,7 @@
                         Artículos
                     </a>
 
-                    <a href="{{ route('dashboard') }}" class="opacity-50 @if (request()->routeIs('dashboard')) !opacity-100 @endif">
+                    <a href="{{ route('topics.index') }}" class="opacity-50 @if (request()->routeIs('topics*')) !opacity-100 @endif">
                         Temas de interés
                     </a>
 
@@ -40,17 +40,11 @@
                         {{ __('global.menu.about') }}
                     </a>
                     <a href="{{ route('blog') }}" class="opacity-50 @if (request()->routeIs('blog')) !opacity-100 @endif">
-                        Blog
+                        {{ __('global.menu.blog') }}
                     </a>
                     <a href="{{ route('topics') }}" class="opacity-50 @if (request()->routeIs('topics')) !opacity-100 @endif">
-                        Temas de interés
+                        {{ __('global.menu.topics') }}
                     </a>
-
-                    @auth
-                    <a href="{{ route('dashboard') }}" class="opacity-50">
-                        Admin
-                    </a>
-                    @endauth
 
                     <a href="{{ route('contact') }}" class="bg-white text-primary px-5 py-2 rounded-full shadow">
                         {{ __('global.menu.contact') }}
@@ -136,16 +130,6 @@
         <a href="{{ route('blog') }}" class="@if (request()->routeIs('about')) active @endif">
             Blog
         </a>
-        {{--
-            <a href="#">
-                Proyectos
-            </a>
-        --}}
-        @auth
-        <a href="{{ route('dashboard') }}">
-            Admin
-        </a>
-        @endauth
         <a href="{{ route('contact') }}" class="@if (request()->routeIs('contact')) active @endif">
             {{ __('global.menu.contact') }}
         </a>

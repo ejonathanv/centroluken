@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TopicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebsiteController;
@@ -30,6 +31,7 @@ Route::view('/biografias', 'website.members');
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'verified']], function(){
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('articles', ArticleController::class);
+    Route::resource('topics', TopicController::class);
 });
 
 Route::middleware('auth')->group(function () {

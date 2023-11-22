@@ -11,7 +11,7 @@ class StoreTopicRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,17 @@ class StoreTopicRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required',
+            'title_en' => 'required',
+            'category_id' => 'nullable|exists:topi_categories,id',
+            'new_category' => 'nullable|string',
+            'new_category_en' => 'nullable|string|required_with:new_category',
+            'description' => 'nullable',
+            'description_en' => 'nullable',
+            'url' => 'required',
+            'source' => 'required',
+            'author' => 'nullable',
+            'published_at' => 'required',
         ];
     }
 }
