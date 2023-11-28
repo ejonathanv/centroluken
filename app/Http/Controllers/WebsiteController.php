@@ -40,7 +40,12 @@ class WebsiteController extends Controller
     }
 
     public function topics(){
-        return redirect()->route('topicCategory', TopiCategory::first());
+
+        // Obtenemos el primer topicCategory, pero si no hay ningun creamos una instancia vacía
+
+        $topiCategory = TopiCategory::first() ?? new TopiCategory();
+
+        return redirect()->route('topicCategory', $topiCategory);
     }
 
     public function topicCategory(TopiCategory $category){
