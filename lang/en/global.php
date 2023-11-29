@@ -9,6 +9,9 @@ return [
         'blog' => 'Blog',
         'topics' => 'Interesting Topics'
     ],
+    'topics' => [
+        'empty' => 'There are no topics yet'
+    ],
     'footer' => 'Centro Luken, All Rights Reserved.'
 ];
 

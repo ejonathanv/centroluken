@@ -3,6 +3,7 @@
 <x-guest-layout header="header2">
 
     <section class="py-10 md:py-24">
+        @isset($currentCategory)
         <div class="container">
             <div class="flex items-start space-x-16">
                 <div class="w-4/12">
@@ -25,6 +26,7 @@
                     </nav>
                 </div>
                 <div class="w-8/12">
+                    @if($topics->count() > 0)
                     <h1 class="text-primary mb-7 leading-relaxed">
                         @if(session()->get('locale') == 'es')
                         {{ $currentCategory->name }}
@@ -68,9 +70,21 @@
                         </li>
                         @endforeach
                     </ul>
+                    @else
+                    <p class="text-center text-gray-500 text-lg">
+                        {{ __('global.topics.empty') }}
+                    </p>
+                    @endif
                 </div>
             </div>
         </div>
+        @else
+        <div class="container">
+            <p class="text-center text-gray-500 text-lg">
+                {{ __('global.topics.empty') }}
+            </p>
+        </div>
+        @endif
     </section>
 
     <section class="section_divider"></section>

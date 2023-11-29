@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             ArticleSeeder::class,
             TopiCategorySeeder::class,
-            TopicSeeder::class,
+            // TopicSeeder::class,
         ]);
     }
 }
