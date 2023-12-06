@@ -15,7 +15,12 @@
                 </h1>
 
                 <h6 class="text-secondary mb-7">
-                    {{ $article->date }} | {{ $article->category_name }}
+                    {{ $article->date }} | 
+                    @if(session()->get('locale') == 'es')
+                    {{ $article->category_name }}
+                    @else
+                    {{ $article->category_name_en }}
+                    @endif
                 </h6>
 
                 <h4 class="mb-7">

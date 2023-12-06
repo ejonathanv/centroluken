@@ -15,7 +15,8 @@ return [
     'blog' => [
         'title' => 'Welcome to Centro Luken\'s Blog',
         'subtitle' => 'Explore innovative ideas and practical solutions for water and natural resources management.',
-        'related' => 'Related Articles'
+        'related' => 'Related Articles',
+        'read' => 'Read more'
     ],
     'footer' => 'Centro Luken, All Rights Reserved.'
 ];

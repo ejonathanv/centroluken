@@ -15,14 +15,17 @@ class CategorySeeder extends Seeder
     {
         Category::factory()->create([
             'name' => 'Noticias',
+            'name_en' => 'News',
         ]);
 
         Category::factory()->create([
             'name' => 'Artículos',
+            'name_en' => 'Articles',
         ]);
 
         Category::factory()->create([
             'name' => 'Comunicados',
+            'name_en' => 'Press Releases',
         ]);
     }
 }

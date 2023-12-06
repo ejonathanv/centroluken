@@ -15,7 +15,8 @@ return [
     'blog' => [
         'title' => 'Bienvenidos al Blog de Centro Luken',
         'subtitle' => 'Explora ideas innovadoras y soluciones prácticas para el manejo del agua y los recursos naturales.',
-        'related' => 'Artículos relacionados'
+        'related' => 'Artículos relacionados',
+        'read' => 'Leer más'
     ],
     'footer' => 'Centro Luken, Derechos Reservados. '
 ];

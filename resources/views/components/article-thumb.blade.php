@@ -13,7 +13,7 @@
             @endif
         </h5>
         <a href="{{ route('article', $article) }}" class="text-secondary font-bold text-sm">
-            Leer más
+            {{ __('global.blog.read') }}
         </a>
     </div>
 </div>

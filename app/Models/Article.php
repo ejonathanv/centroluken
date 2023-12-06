@@ -26,4 +26,8 @@ class Article extends Model
     public function getCategoryNameAttribute(){
         return $this->category->name;
     }
+
+    public function getCategoryNameEnAttribute(){
+        return $this->category->name_en;
+    }
 }
