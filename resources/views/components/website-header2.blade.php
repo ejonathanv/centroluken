@@ -39,11 +39,9 @@
                     <a href="{{ route('about') }}" class="opacity-50 @if (request()->routeIs('about')) !opacity-100 @endif">
                         {{ __('global.menu.about') }}
                     </a>
-                    {{--
                     <a href="{{ route('blog') }}" class="opacity-50 @if (request()->routeIs('blog')) !opacity-100 @endif">
                         {{ __('global.menu.blog') }}
                     </a>
-                    --}}
                     <a href="{{ route('topics') }}" class="opacity-50 @if (request()->routeIs('topics')) !opacity-100 @endif">
                         {{ __('global.menu.topics') }}
                     </a>
@@ -129,11 +127,9 @@
         <a href="{{ route('about') }}" class="@if (request()->routeIs('about')) active @endif">
             {{ __('global.menu.about') }}
         </a>
-        {{--
         <a href="{{ route('blog') }}" class="@if (request()->routeIs('about')) active @endif">
             Blog
         </a>
-        --}}
         <a href="{{ route('topics') }}" class="@if (request()->routeIs('topics')) active @endif">
             {{ __('global.menu.topics') }}
         </a>

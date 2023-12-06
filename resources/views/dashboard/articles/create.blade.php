@@ -10,14 +10,13 @@
 
                 <div class="flex items-center justify-between border-b border-gray-200 pb-5 mt-7">
                     <h4>
-                        Editar articulo
+                        Crear un nuevo articulo
                     </h4>
                 </div>
 
-                <form action="{{ route('articles.update', $article) }}" method="POST" class="mt-7" enctype="multipart/form-data">
+                <form action="{{ route('articles.store') }}" method="POST" class="mt-7" enctype="multipart/form-data">
 
                     @csrf
-                    @method('PUT')
 
                     <div class="form-group">
                         <label>
@@ -28,17 +27,11 @@
                         </div>
                     </div>
 
-                    @if($article->cover)
-                    <div class="mb-7">
-                        <img src="{{ asset($article->cover) }}" class="w-64 mt-4">
-                    </div>
-                    @endif
-
                     <div class="form-group">
                         <label for="">
                             Titulo del articulo
                         </label>
-                        <input type="text" class="form-control" name="title" value="{{ old('title', $article->title) }}">
+                        <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                         @error('title')
                             <span class="text-xs text-red-500">{{ $message }}</span>
                         @enderror
@@ -48,7 +41,7 @@
                         <label for="">
                             Título en inglés
                         </label>
-                        <input type="text" class="form-control" name="title_en" value="{{ old('title_en', $article->title_en) }}">
+                        <input type="text" class="form-control" name="title_en" value="{{ old('title_en') }}">
                         @error('title_en')
                             <span class="text-xs text-red-500">{{ $message }}</span>
                         @enderror
@@ -58,7 +51,7 @@
                         <label for="">
                             Resumen
                         </label>
-                        <textarea name="excerpt" class="form-control" rows="3">{{ old('excerpt', $article->excerpt) }}</textarea>
+                        <textarea name="excerpt" class="form-control" rows="3">{{ old('excerpt') }}</textarea>
                         @error('excerpt')
                             <span class="text-xs text-red-500">{{ $message }}</span>
                         @enderror
@@ -68,7 +61,7 @@
                         <label for="">
                             Resumen en inglés
                         </label>
-                        <textarea name="excerpt_en" class="form-control" rows="3">{{ old('excerpt_en', $article->excerpt_en) }}</textarea>
+                        <textarea name="excerpt_en" class="form-control" rows="3">{{ old('excerpt_en') }}</textarea>
                         @error('excerpt_en')
                             <span class="text-xs text-red-500">{{ $message }}</span>
                         @enderror
@@ -78,9 +71,9 @@
                         <label for="">
                             Contenido
                         </label>
-                        <input type="hidden" name="body" id="postEditor" value="{{ $article->body }}">
+                        <input type="hidden" name="body" id="postEditor" value="{{ old('body') }}">
                         <div id="editor">
-                            {!! $article->body !!}
+                            {!! old('body') !!}
                         </div>
                         
                         @error('body')
@@ -92,9 +85,9 @@
                         <label for="">
                             Contenido en inglés
                         </label>
-                        <input type="hidden" name="body_en" id="postEditorEn" value="{{ $article->body_en }}">
+                        <input type="hidden" name="body_en" id="postEditorEn" value="{{ old('body_en') }}">
                         <div id="editor_en">
-                            {!! $article->body_en !!}
+                            {!! old('body_en') !!}
                         </div>
                         @error('body_en')
                             <span class="text-xs text-red-500">{{ $message }}</span>
@@ -108,7 +101,9 @@
                         <select name="category_id" class="form-control">
                             <option value="">Seleccione una categoría</option>
                             @foreach($categories as $category)
-                            <option value="{{ $category->id }}" {{ old('category_id', $article->category_id) == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                            <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                                {{ $category->name }}
+                            </option>
                             @endforeach
                         </select>
                         @error('category_id')
@@ -121,8 +116,8 @@
                             Estado
                         </label>
                         <select name="published" class="form-control">
-                            <option value="1" {{ old('status', $article->published ? '' : 'selected') }}>Borrador</option>
-                            <option value="2" {{ old('status', $article->published ? 'selected' : '') }}>Publicado</option>
+                            <option value="1" {{ old('status') == 1 ? 'selected' : '' }}>Borrador</option>
+                            <option value="2" {{ old('status') == 2 ? 'selected' : '' }}>Publicado</option>
                         </select>
                         @error('status')
                             <span class="text-xs text-red-500">{{ $message }}</span>
@@ -133,7 +128,7 @@
                         <label for="">
                             Fecha de publicación
                         </label>
-                        <input type="date" name="published_at" class="form-control" value="{{ old('published_at', $article->published_at->format('Y-m-d')) }}">
+                        <input type="date" name="published_at" class="form-control" value="{{ old('published_at') }}">
                         @error('published_at')
                             <span class="text-xs text-red-500">{{ $message }}</span>
                         @enderror
@@ -141,25 +136,7 @@
 
                     <button class="btn btn-primary btn-block" type="submit">
                         <i class="fas fa-save mr-2"></i>
-                        Actualizar articulo
-                    </button>
-                </form>
-
-                <hr class="my-7">
-
-                <form action="{{ route('articles.destroy', $article) }}" method="POST" onsubmit="return confirm('¿Está seguro de eliminar este articulo?')">
-
-                    @csrf
-
-                    @method('DELETE')
-
-                    <p class="text-red-500 text-xs mt-5 mb-4">
-                        Al eliminar este articulo, se eliminará de forma permanente y no se podrá recuperar.
-                    </p>
-
-                    <button class="btn btn-danger btn-block text-red-400" type="submit">
-                        <i class="fas fa-trash mr-2"></i>
-                        Eliminar articulo
+                        Crear articulo
                     </button>
                 </form>
             </div>

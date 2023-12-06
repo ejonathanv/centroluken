@@ -11,7 +11,7 @@ class StoreArticleRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,16 @@ class StoreArticleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required|string|max:255|unique:articles',
+            'title_en' => 'required|string|max:255|unique:articles',
+            'excerpt' => 'required|string|max:255',
+            'excerpt_en' => 'required|string|max:255',
+            'body' => 'required|string',
+            'body_en' => 'required|string',
+            'category_id' => 'required|exists:categories,id',
+            'cover' => 'nullable|image',
+            'published' => 'required|in:1,2',
+            'published_at' => 'required|date',
         ];
     }
 }

@@ -6,7 +6,11 @@
     </div>
     <div>
         <h5 class="text-primary mb-2 !text-sm">
+            @if(session()->get('locale') == 'es')
             {{ $article->title }}
+            @else
+            {{ $article->title_en }}
+            @endif
         </h5>
         <a href="{{ route('article', $article) }}" class="text-secondary font-bold text-sm">
             Leer más

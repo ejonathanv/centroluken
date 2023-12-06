@@ -5,11 +5,11 @@
         <div class="container">
             <div class="w-10/12 md:w-7/12 mx-auto text-center">
                 <h1 class="text-primary title mb-10 !leading-tight">
-                    Bienvenidos al Blog de Centro Luken
+                    {{ __('global.blog.title') }}
                 </h1>
 
                 <h4 class="text-secondary">
-                    Explora ideas innovadoras y soluciones prácticas para el manejo del agua y los recursos naturales.
+                    {{ __('global.blog.subtitle') }}
                 </h4>
             </div>
         </div>

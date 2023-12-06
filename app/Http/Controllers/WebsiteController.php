@@ -30,7 +30,7 @@ class WebsiteController extends Controller
     }
 
     public function blog(){
-        $articles = Article::latest()->paginate(9);
+        $articles = Article::latest()->where('published', true)->get();
         return view('website.blog', compact('articles'));
     }
 

@@ -5,7 +5,7 @@
                 <h4>
                     Hola, estos son los articulos publicados en nuestro blog.
                 </h4>
-                <a href="#" class="btn btn-primary">
+                <a href="{{ route('articles.create') }}" class="btn btn-primary">
                     <i class="fas fa-plus mr-2"></i>
                     Nuevo articulo
                 </a>
@@ -15,4 +15,7 @@
 
         </div>
     </section>
+
+    <section class="section_divider"></section>
+    <section class="section_divider"></section>
 </x-app-layout>

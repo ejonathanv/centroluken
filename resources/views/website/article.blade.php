@@ -7,7 +7,11 @@
                 <img src="{{ asset($article->cover) }}" class="w-full h-auto mb-10" alt="{{ $article->title }}">
 
                 <h1 class="text-primary title mb-4 !leading-tight">
+                    @if(session()->get('locale') == 'es')
                     {{ $article->title }}
+                    @else
+                    {{ $article->title_en }}
+                    @endif
                 </h1>
 
                 <h6 class="text-secondary mb-7">
@@ -15,15 +19,23 @@
                 </h6>
 
                 <h4 class="mb-7">
+                    @if(session()->get('locale') == 'es')
                     {{ $article->excerpt }}
+                    @else
+                    {{ $article->excerpt_en }}
+                    @endif
                 </h4>
 
+                @if(session()->get('locale') == 'es')
                 {!! $article->body !!}
+                @else
+                {!! $article->body_en !!}
+                @endif
             </div>
 
             <div class="w-full md:w-4/12">
                 <h3 class="mb-7">
-                    Artículos relacionados
+                    {{ __('global.blog.related') }}
                 </h3>
 
                 <ul class="flex flex-col space-y-5">

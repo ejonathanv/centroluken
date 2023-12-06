@@ -9,6 +9,12 @@ class Article extends Model
 {
     use HasFactory;
 
+    protected $dates = ['published_at'];
+
+    protected $casts = [
+        'published_at' => 'datetime',
+    ];
+
     public function getDateAttribute(){
         return \Carbon\Carbon::parse($this->published_at)->format('d M, Y');
     }

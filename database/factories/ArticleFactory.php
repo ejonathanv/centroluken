@@ -24,8 +24,11 @@ class ArticleFactory extends Factory
 
         return [
             'title' => $title,
+            'title_en' => $title . ' (en)',
             'excerpt' => $this->faker->paragraph,
+            'excerpt_en' => $this->faker->paragraph . ' (en)',
             'body' => $this->faker->paragraphs(3, true),
+            'body_en' => $this->faker->paragraphs(3, true) . ' (en)',
             'cover' => $cover,
             'slug' => \Str::slug($title),
             'category_id' => $category->id,

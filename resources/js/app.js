@@ -48,7 +48,33 @@ createApp({
     },
     mounted() {
         ClassicEditor
-        .create( document.querySelector( '#editor' ) )
+        .create( document.querySelector( '#editor' ), {
+            toolbar: [ 'heading', '|', 'bold', 'italic'],
+            placeholder: 'Escribe tu contenido aquí...'
+        } )
+        .then( editor => {
+
+            editor.model.document.on( 'change:data', () => {
+                let input = document.querySelector( '#postEditor' );
+                input.value = editor.getData();
+            });
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+
+        ClassicEditor
+        .create( document.querySelector( '#editor_en' ), {
+            toolbar: [ 'heading', '|', 'bold', 'italic'],
+            placeholder: 'Escribe tu contenido aquí...'
+        } )
+        .then( editor => {
+
+            editor.model.document.on( 'change:data', () => {
+                let input = document.querySelector( '#postEditorEn' );
+                input.value = editor.getData();
+            });
+        } )
         .catch( error => {
             console.error( error );
         } );

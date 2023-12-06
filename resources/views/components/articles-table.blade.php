@@ -12,7 +12,8 @@
     <tbody>
         @foreach($articles as $article)
         <tr>
-            <td>
+            <td class="flex items-center space-x-2">
+                <img src="{{ $article->cover }}" alt="" class="w-16 h-16 object-cover rounded">
                 <a href="{{ route('articles.edit', $article) }}" class="underline">
                 {{ $article->title }}
                 </a>
