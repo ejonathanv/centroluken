@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\TopicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
@@ -14,6 +15,13 @@ Route::get('/setlocale/{locale}', function ($locale) {
     session()->put('locale', $locale);
     return redirect()->back();
 })->name('set-locale');
+
+// Necesitamos una ruta para correr las migraciones de forma manual:
+Route::get('/migrate', function () {
+    Artisan::call('migrate');
+    $response = Artisan::output();
+    return '<pre>'.$response.'</pre>';
+});
 
 Route::get('/', [WebsiteController::class, 'index'])->name('home');
 Route::get('/header-2', [WebsiteController::class, 'header2'])->name('header2');
