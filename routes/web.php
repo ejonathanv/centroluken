@@ -23,6 +23,11 @@ Route::get('/migrate', function () {
     return '<pre>'.$response.'</pre>';
 });
 
+
+Route::post('hide-banner-intro', function () {
+    return redirect()->back()->cookie('hide-banner-intro', 'true', 10);
+})->name('hide-banner-intro');
+
 Route::get('/', [WebsiteController::class, 'index'])->name('home');
 Route::get('/header-2', [WebsiteController::class, 'header2'])->name('header2');
 Route::get('/quienes-somos', [WebsiteController::class, 'about'])->name('about');

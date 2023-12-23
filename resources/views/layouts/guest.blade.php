@@ -43,6 +43,11 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased bg-white" id="app">
+
+        @if(!Cookie::get('hide-banner-intro'))
+        <x-banner-intro />
+        @endif
+
         @if(!$header)
         <x-website-header />
         @else
