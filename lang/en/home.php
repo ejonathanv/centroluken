@@ -28,7 +28,7 @@ return [
     'slogan' => 'We foster innovative solutions.',
     'objectives' => [
         'title' => 'Our goals',
-        'description' => 'At Centro Luken, we are committed to promoting a sustainable and balanced future in the management of water and natural resources. Through our objectives, we seek to address current and future challenges related to water management, environmental preservation, and sustainable development.',
+        'description' => 'At Centro Luken, we are committed to promoting a sustainable and balanced future in managing water and natural resources. Our objectives aim to address current and future challenges related to water management, environmental preservation, and sustainable development.',
         'one' => 'Influence the conceptualization of national and subnational governments water and natural resources plans and programs, intermediate civil society groups, and business chambers.',
         'two' => 'Contribute to the continuity of programs to collect, store, treat, and reuse water.',
         'three' => 'Advocate for efficiency and justice as the pillars of water governance.',
