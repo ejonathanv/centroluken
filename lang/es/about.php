@@ -2,12 +2,12 @@
 
 return [
     'cover' => [
-        'title' => 'Nos dedicamos a estudiar, diseñar, proponer e implementar estrategias y acciones.',
+        'title' => 'Somos un equipo de especialistas con más de 30 años de experiencia en la gestión del agua y los recursos naturales. ',
         'subtitle' => 'Buscamos la preservación, administración responsable y aprovechamiento del agua y los recursos naturales en alianza con entidades públicas y privadas.'
     ],
     'intro' => [
         'title' => 'Enfoque interdisciplinario',
-        'description' => 'Somos un equipo de especialistas con más de 30 años de experiencia en la gestión del agua y los recursos naturales.'
+        'description' => 'Nos dedicamos a estudiar, diseñar, proponer e implementar estrategias y acciones.'
     ],
     'slogan' => 'Desarrollamos estrategias a partir de diagnósticos y análisis para el corto, mediano y largo plazos, con base en elementos de las ciencias del medio físico y social.',
     'team' => [

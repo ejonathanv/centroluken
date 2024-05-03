@@ -2,12 +2,12 @@
 
 return [
     'cover' => [
-        'title' => 'We focus on studying, designing, proposing, and implementing strategies and actions.',
+        'title' => 'We are a team of specialists with more than 30 years of experience in water and natural resources management.',
         'subtitle' => 'We seek the preservation, responsible management, and use of water and natural resources in partnership with public and private entities.'
     ],
     'intro' => [
         'title' => 'Interdisciplinary talent',
-        'description' => 'We are a team of specialists with more than 30 years of experience in water and natural resources management.'
+        'description' => 'We focus on studying, designing, proposing, and implementing strategies and actions.'
     ],
     'slogan' => 'We develop strategies based on diagnoses and analysis for the short, medium, and long term, based on physical and social sciences elements.',
     'team' => [
