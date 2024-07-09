@@ -47,10 +47,12 @@
                     <a href="{{ route('topics') }}" class="opacity-50 @if (request()->segment(1) == 'temas-de-interes') !opacity-100 @endif">
                         {{ __('global.menu.topics') }}
                     </a>
-
+                    
+                    {{--
                     <a href="https://landgisdesign.maps.arcgis.com/apps/webappviewer/index.html?id=37d9a4e05e594b0394fcafbd7bf700d5" class="opacity-50" target="_blank">
                         {{ __('global.menu.agrogeografia') }}
                     </a>
+                    --}}
 
                     <a href="{{ route('contact') }}" class="bg-white text-primary px-5 py-2 rounded-full shadow">
                         {{ __('global.menu.contact') }}
@@ -141,9 +143,11 @@
         <a href="{{ route('topics') }}" class="@if (request()->routeIs('topics')) active @endif">
             {{ __('global.menu.topics') }}
         </a>
+        {{--
         <a href="https://landgisdesign.maps.arcgis.com/apps/webappviewer/index.html?id=37d9a4e05e594b0394fcafbd7bf700d5" target="_blank">
             {{ __('global.menu.agrogeografia') }}
         </a>
+        --}}
         <a href="{{ route('contact') }}" class="@if (request()->routeIs('contact')) active @endif">
             {{ __('global.menu.contact') }}
         </a>
