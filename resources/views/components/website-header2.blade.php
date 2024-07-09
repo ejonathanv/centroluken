@@ -48,7 +48,7 @@
                         {{ __('global.menu.topics') }}
                     </a>
 
-                    <a href="https://maps.app.goo.gl/cxxwa3onYnquaj78A?g_st=iw" class="opacity-50" target="_blank">
+                    <a href="https://landgisdesign.maps.arcgis.com/apps/webappviewer/index.html?id=37d9a4e05e594b0394fcafbd7bf700d5" class="opacity-50" target="_blank">
                         {{ __('global.menu.agrogeografia') }}
                     </a>
 
@@ -141,7 +141,7 @@
         <a href="{{ route('topics') }}" class="@if (request()->routeIs('topics')) active @endif">
             {{ __('global.menu.topics') }}
         </a>
-        <a href="https://maps.app.goo.gl/cxxwa3onYnquaj78A?g_st=iw" target="_blank">
+        <a href="https://landgisdesign.maps.arcgis.com/apps/webappviewer/index.html?id=37d9a4e05e594b0394fcafbd7bf700d5" target="_blank">
             {{ __('global.menu.agrogeografia') }}
         </a>
         <a href="{{ route('contact') }}" class="@if (request()->routeIs('contact')) active @endif">
