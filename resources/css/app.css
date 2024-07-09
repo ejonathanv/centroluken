@@ -116,6 +116,7 @@ h5{
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom center;
     height: 280px;
     width: 100%;
     position: absolute;

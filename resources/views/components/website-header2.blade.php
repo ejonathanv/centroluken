@@ -10,7 +10,7 @@
                 </a>
             </div>
             <div class="flex items-center justify-end w-8/12">
-                <nav class="text-white text-sm font-bold flex items-center justify-end space-x-7 hidden md:block">
+                <nav class="text-white text-xs font-bold flex items-center justify-end space-x-5 hidden md:block">
                     @if($admin)
 
                     <a href="{{ route('dashboard') }}" class="opacity-50 @if (request()->routeIs('dashboard')) !opacity-100 @endif">
@@ -44,8 +44,12 @@
                         {{ __('global.menu.blog') }}
                     </a>
                     --}}
-                    <a href="{{ route('topics') }}" class="opacity-50 @if (request()->routeIs('topics')) !opacity-100 @endif">
+                    <a href="{{ route('topics') }}" class="opacity-50 @if (request()->segment(1) == 'temas-de-interes') !opacity-100 @endif">
                         {{ __('global.menu.topics') }}
+                    </a>
+
+                    <a href="https://maps.app.goo.gl/cxxwa3onYnquaj78A?g_st=iw" class="opacity-50" target="_blank">
+                        {{ __('global.menu.agrogeografia') }}
                     </a>
 
                     <a href="{{ route('contact') }}" class="bg-white text-primary px-5 py-2 rounded-full shadow">

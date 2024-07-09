@@ -2,36 +2,9 @@
 
 </section>
 
-{{--
-<section class="bg-gray-100 pt-10 md:pt-20 pb-32 md:pb-64" style="border-top: 15px solid #eceff4">
-    <div class="container">
-        <div class="flex flex-wrap md:flex-no-wrap items-center -mx-3">
-            <div class="w-4/12 md:w-2/12 p-3">
-                <img src="https://placehold.co/250x160" class="partner-logo" alt="">
-            </div>
-            <div class="w-4/12 md:w-2/12 p-3">
-                <img src="https://placehold.co/250x160" class="partner-logo" alt="">
-            </div>
-            <div class="w-4/12 md:w-2/12 p-3">
-                <img src="https://placehold.co/250x160" class="partner-logo" alt="">
-            </div>
-            <div class="w-4/12 md:w-2/12 p-3">
-                <img src="https://placehold.co/250x160" class="partner-logo" alt="">
-            </div>
-            <div class="w-4/12 md:w-2/12 p-3">
-                <img src="https://placehold.co/250x160" class="partner-logo" alt="">
-            </div>
-            <div class="w-4/12 md:w-2/12 p-3">
-                <img src="https://placehold.co/250x160" class="partner-logo" alt="">
-            </div>
-        </div>
-    </div>
-</section>
---}}
-
 <footer class="website_footer">
-    <div class="website_footer_curves" style="background-image: url({{ asset('img/footer-curves.svg') }})"></div>
-    <div class="container">
+    <img src="{{ asset('img/footer-curves.svg') }}" class="w-full h-auto absolute z-9" alt="Footer Curves" style="bottom: calc(100% - 40px)">
+    <div class="container relative z-10">
         <div class="flex flex-col md:flex-row items-start md:items-end space-y-6 md:space-y-0 justify-between">
             <div>
                 <a href="#">

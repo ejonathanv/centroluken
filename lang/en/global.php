@@ -7,7 +7,8 @@ return [
         'about' => 'Who We Are',
         'contact' => 'Contact Us',
         'blog' => 'Blog',
-        'topics' => 'Interesting Topics'
+        'topics' => 'Interesting Topics',
+        'agrogeografia' => 'Agrogeography',
     ],
     'topics' => [
         'empty' => 'There are no topics yet'
