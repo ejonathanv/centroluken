@@ -3,7 +3,7 @@
 </section>
 
 <footer class="website_footer">
-    <img src="{{ asset('img/footer-curves.svg') }}" class="w-full h-auto absolute z-9" alt="Footer Curves" style="bottom: calc(100% - 40px)">
+    <img src="{{ asset('img/footer-curves.svg') }}" alt="Footer Curves" class="footerCurves">
     <div class="container relative z-10">
         <div class="flex flex-col md:flex-row items-start md:items-end space-y-6 md:space-y-0 justify-between">
             <div>

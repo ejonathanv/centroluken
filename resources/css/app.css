@@ -339,3 +339,17 @@ label{
 .langSelector .content .close{
     @apply absolute top-0 right-3 p-4 cursor-pointer;
 }
+
+.footerCurves{
+    bottom: calc(100% - 40px);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 9;
+}
+
+@media screen and (max-width: 767px){
+    .footerCurves{
+        bottom: calc(100% - 2px);
+    }
+}
