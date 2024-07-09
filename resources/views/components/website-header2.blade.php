@@ -141,6 +141,9 @@
         <a href="{{ route('topics') }}" class="@if (request()->routeIs('topics')) active @endif">
             {{ __('global.menu.topics') }}
         </a>
+        <a href="https://maps.app.goo.gl/cxxwa3onYnquaj78A?g_st=iw" target="_blank">
+            {{ __('global.menu.agrogeografia') }}
+        </a>
         <a href="{{ route('contact') }}" class="@if (request()->routeIs('contact')) active @endif">
             {{ __('global.menu.contact') }}
         </a>
