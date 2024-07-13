@@ -24,7 +24,7 @@
 
 <body class="font-sans text-gray-900 antialiased bg-white" id="app">
     <x-website-header2 admin="true" />
-    <div class="min-h-screen">
+    <div class="min-h-screen relative z-10">
         {{ $slot }}
     </div>
     <x-website-footer />
