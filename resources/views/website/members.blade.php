@@ -77,7 +77,7 @@
                         img="CELUK_HectorArias.png"
                         gender="male">
                         Es químico con maestría en Física de Suelos y doctorado en Manejo de Cuencas Hidrográficas. Ha sido director de Sustentabilidad y Fortalecimiento, así como líder del proyecto Estimulación de Lluvia para mitigar la sequía en las Zonas Áridas dentro de la Comisión Nacional de las Zonas Áridas. También fue director del Instituto para la Gestión Integral de Cuencas Hidrográficas, donde se estudia y gestionan los temas de Drenaje Parcelario, Protección Ambiental, y Manejo de Cuencas Hidrográficas con enfoque a productores agrícolas, comunidades indígenas, agencias internacionales y nacionales, organizaciones gubernamentales y no gubernamentales. Ha colaborado con la Comisión Nacional del Agua, la Comisión de Áreas Naturales Protegidas, la Comisión Nacional Forestal, la Comisión Internacional de Límites y Aguas, la Secretaría de Relaciones Exteriores, la empresa minera Peñoles-México, el Natural Heritage Institute-San Francisco, y los gobiernos de Chihuahua y Sonora, entre otras. <br><br>
-                        Es Investigador Nacional Nivel II dentro del Sistema Nacional de Investigadores, con más de 70 publicaciones sobre temas de Manejo de Cuencas Hidrográficas, Conservación de Suelos y Recursos Naturales. También es coautor del libro “Alternative Futures for Changing Landscapes.  The Upper San Pedro River Basin in Arizona and Sonora”, editado por Harvard Univerity Press, esfuerzo multi-institucional con las universidades de Harvard, Arizona e IMADES en el río San Pedro, Sonora, México, y Arizona, Estados Unidos.
+                        Es Investigador Nacional Nivel II dentro del Sistema Nacional de Investigadores, con más de 70 publicaciones sobre temas de Manejo de Cuencas Hidrográficas, Conservación de Suelos y Recursos Naturales. También es coautor del libro "Alternative Futures for Changing Landscapes. The Upper San Pedro River Basin in Arizona and Sonora", editado por Harvard Univerity Press, esfuerzo multi-institucional con las universidades de Harvard, Arizona e IMADES en el río San Pedro, Sonora, México, y Arizona, Estados Unidos.
                     </x-team-member-card>
                 </div>
 
@@ -93,7 +93,8 @@
                     </x-team-member-card>
                 </div>
 
-                <div class="w-full mb-10">
+                <div class="w-full mb-10 relative">
+                    <img src="{{ asset('img/luto.png') }}" alt="Moño de luto" class="absolute top-0 right-0 w-24 z-10">
                     <x-team-member-card 
                         name="Roberto Fernando Salmón Castelo"
                         jobtitle="Socio fundador"
@@ -181,7 +182,7 @@
                             img="CELUK_CarlosOrozco.png"
                             gender="male">
                             
-                            Doctor en ciencias agrícolas con maestría en uso y gestión de agua de riego en regiones áridas. Es una autoridad en el uso de tecnologías innovadoras para la mejora de producción de cultivos como forrajes, aceitunas y trigo. Es pionero en la instalación de sistemas de drenaje agrícola subterráneos; en 1997 implementó un programa para instalar un sistema de drenaje subterráneo en el Valle de Mexicali. Ocupó el cargo de Subsecretario en la Secretaría de Agricultura y Ganadería de Baja California, y en dos ocasiones el cargo de director de Agricultura, así como director de Infraestructura de Irrigación Agrícola. En 2003 planificó y supervisó la instalación del “Sistema de Información en el Manejo del Agua de Riego de Baja California” (SIMARBC), para proveer de información actualizada sobre el clima a los agricultores. 
+                            Doctor en ciencias agrícolas con maestría en uso y gestión de agua de riego en regiones áridas. Es una autoridad en el uso de tecnologías innovadoras para la mejora de producción de cultivos como forrajes, aceitunas y trigo. Es pionero en la instalación de sistemas de drenaje agrícola subterráneos; en 1997 implementó un programa para instalar un sistema de drenaje subterráneo en el Valle de Mexicali. Ocupó el cargo de Subsecretario en la Secretaría de Agricultura y Ganadería de Baja California, y en dos ocasiones el cargo de director de Agricultura, así como director de Infraestructura de Irrigación Agrícola. En 2003 planificó y supervisó la instalación del "Sistema de Información en el Manejo del Agua de Riego de Baja California" (SIMARBC), para proveer de información actualizada sobre el clima a los agricultores. 
                             
                         </x-team-member-card>
                     </div>
