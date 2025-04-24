@@ -13,7 +13,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
-    <script src="https://kit.fontawesome.com/133291f590.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1b2e97ddb1.js" crossorigin="anonymous"></script>
     <script src="{{ asset('js/jquery-3.7.0.min.js') }}" defer></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
