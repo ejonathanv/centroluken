@@ -1,5 +1,9 @@
 @section('title', 'Temas de Interés')
 
+@php
+    $locale = session()->has('locale') ? session()->get('locale') : config('app.locale');
+@endphp
+
 <x-guest-layout header="header2">
 
     <section class="py-10 md:py-24">
@@ -14,11 +18,7 @@
                         @foreach($categories as $category)
                         <a href="{{ route('topicCategory', $category) }}" class="flex justify-between items-center space-x-6 @if($currentCategory->id == $category->id) active @endif">
                             <span class="text-base">
-                                @if(session()->get('locale') == 'es')
-                                {{ $category->name }}
-                                @else
-                                {{ $category->name_en }}
-                                @endif
+                                {{ $locale == 'es' ? $category->name : $category->name_en }}
                             </span>
                             <i class="fas fa-chevron-right"></i>
                         </a>
@@ -28,37 +28,25 @@
                 <div class="w-8/12">
                     @if($topics->count() > 0)
                     <h1 class="text-primary mb-7 leading-relaxed">
-                        @if(session()->get('locale') == 'es')
-                        {{ $currentCategory->name }}
-                        @else
-                        {{ $currentCategory->name_en }}
-                        @endif
+                        {{ $locale == 'es' ? $currentCategory->name : $currentCategory->name_en }}
                     </h1>
                     <ul class="space-y-9">
                         @foreach($topics as $topic)
                         <li>
                             <a href="{{ $topic->url }}" class="text-secondary" target="_blank">
                                 <h4>
-                                    @if(session()->get('locale') == 'es')
-                                    {{ $topic->title }}
-                                    @else
-                                    {{ $topic->title_en }}
-                                    @endif
+                                    {{ $locale == 'es' ? $topic->title : $topic->title_en }}
                                 </h4>
                             </a>
-                            @if(session()->get('locale') == 'es')
-                                @if($topic->description)
-                                    <p class="text-gray-500 text-sm my-3">
-                                        {{ $topic->description }}
-                                    </p>
-                                @endif
+                            @if($locale == 'es' && $topic->description)
+                                <p class="text-gray-500 text-sm my-3">
+                                    {{ $topic->description }}
+                                </p>
                             @endif
-                            @if(session()->get('locale') == 'en')
-                                @if($topic->description_en)
-                                    <p class="text-gray-500 text-sm my-3">
-                                        {{ $topic->description_en }}
-                                    </p>
-                                @endif
+                            @if($locale == 'en' && $topic->description_en)
+                                <p class="text-gray-500 text-sm my-3">
+                                    {{ $topic->description_en }}
+                                </p>
                             @endif
                             <p class="text-gray-500 text-sm">
                                 @if($topic->author) 
