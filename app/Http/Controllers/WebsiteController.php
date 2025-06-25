@@ -58,6 +58,10 @@ class WebsiteController extends Controller
         return view('website.topics', compact('topics', 'currentCategory', 'categories'));
     }
 
+    public function viewPdfTopic(Topic $topic){
+        return view('website.view-pdf-topic', compact('topic'));
+    }
+
     public function send(Request $request){
 
         $request->validate([

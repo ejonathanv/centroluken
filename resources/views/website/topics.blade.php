@@ -32,30 +32,57 @@
                     </h1>
                     <ul class="space-y-9">
                         @foreach($topics as $topic)
-                        <li>
-                            <a href="{{ $topic->url }}" class="text-secondary" target="_blank">
-                                <h4>
-                                    {{ $locale == 'es' ? $topic->title : $topic->title_en }}
-                                </h4>
-                            </a>
-                            @if($locale == 'es' && $topic->description)
-                                <p class="text-gray-500 text-sm my-3">
-                                    {{ $topic->description }}
-                                </p>
-                            @endif
-                            @if($locale == 'en' && $topic->description_en)
-                                <p class="text-gray-500 text-sm my-3">
-                                    {{ $topic->description_en }}
-                                </p>
-                            @endif
-                            <p class="text-gray-500 text-sm">
-                                @if($topic->author) 
-                                {{ $topic->author }} |
+                            @if($topic->type === 'article')
+                            <li>
+                                <a href="{{ $topic->url }}" class="text-secondary" target="_blank">
+                                    <h4>
+                                        {{ $locale == 'es' ? $topic->title : $topic->title_en }}
+                                    </h4>
+                                </a>
+                                @if($locale == 'es' && $topic->description)
+                                    <p class="text-gray-500 text-sm my-3">
+                                        {{ $topic->description }}
+                                    </p>
                                 @endif
-                                {{ $topic->source }} | 
-                                {{ $topic->published_at->format('d/m/Y') }}
-                            </p>
-                        </li>
+                                @if($locale == 'en' && $topic->description_en)
+                                    <p class="text-gray-500 text-sm my-3">
+                                        {{ $topic->description_en }}
+                                    </p>
+                                @endif
+                                <p class="text-gray-500 text-sm">
+                                    @if($topic->author) 
+                                    {{ $topic->author }} |
+                                    @endif
+                                    {{ $topic->source }} | 
+                                    {{ $topic->published_at->format('d/m/Y') }}
+                                </p>
+                            </li>
+                            @else
+                            <li>
+                                <a href="{{ route('view-pdf-topic', $topic) }}" class="text-secondary">
+                                    <h4>
+                                        {{ $locale == 'es' ? $topic->title : $topic->title_en }}
+                                    </h4>
+                                </a>
+                                @if($locale == 'es' && $topic->description)
+                                    <p class="text-gray-500 text-sm my-3">
+                                        {{ $topic->description }}
+                                    </p>
+                                @endif
+                                @if($locale == 'en' && $topic->description_en)
+                                    <p class="text-gray-500 text-sm my-3">
+                                        {{ $topic->description_en }}
+                                    </p>
+                                @endif
+                                <p class="text-gray-500 text-sm">
+                                    @if($topic->author) 
+                                    {{ $topic->author }} |
+                                    @endif
+                                    {{ $topic->source }} | 
+                                    {{ $topic->published_at->format('d/m/Y') }}
+                                </p>
+                            </li>
+                            @endif
                         @endforeach
                     </ul>
                     @else
