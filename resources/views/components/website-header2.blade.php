@@ -1,6 +1,6 @@
-<header class="header-2 fixed z-40 top-0 left-0 right-0 bg-white shadow overflow-hidden">
+<header class="header-2 fixed z-40 top-0 left-0 right-0 bg-white shadow">
     <div class="w-2/12 md:w-7/12 bg-primary h-full absolute top-0 right-0">
-        <img src="{{ asset('img/svg/header-2-curves.svg') }}" alt="" class="absolute w-auto right-full -mr-2 -mt-1" style="height: calc(100% + 7px); max-width: none">
+        <img src="{{ asset('img/svg/header-2-curves.svg') }}" alt="" class="absolute w-auto bottom-0 right-full -mr-2 -mt-1" style="height: calc(100% + 7px); max-width: none">
     </div>
     <div class="container relative z-1">
         <div class="flex items-stretch md:items-center">
@@ -17,9 +17,20 @@
                         Artículos
                     </a>
 
-                    <a href="{{ route('topics.index') }}" class="opacity-50 @if (request()->routeIs('topics*')) !opacity-100 @endif">
-                        Temas de interés
-                    </a>
+                    <div class="relative inline-block" x-data="{ open: false }">
+                        <button x-on:click="open = !open" class="opacity-50 @if (request()->routeIs('topics*')) !opacity-100 @endif">
+                            Temas de interés
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div x-show="open" x-on:click.away="open = false" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 text-gray-700">
+                            <a href="{{ route('topics.index') }}?type=article" class="block px-4 py-2 hover:bg-gray-100">
+                                Artículos
+                            </a>
+                            <a href="{{ route('topics.index') }}?type=pdf" class="block px-4 py-2 hover:bg-gray-100">
+                                PDF's
+                            </a>
+                        </div>
+                    </div>
 
                     <a href="{{ route('home') }}" class="opacity-50">
                         Volver al sitio

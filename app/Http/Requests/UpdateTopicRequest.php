@@ -22,17 +22,19 @@ class UpdateTopicRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required',
-            'title_en' => 'required',
-            'category_id' => 'nullable|exists:topi_categories,id|required_without:new_category',
-            'new_category' => 'nullable|string',
-            'new_category_en' => 'nullable|string|required_with:new_category',
-            'description' => 'nullable',
-            'description_en' => 'nullable',
-            'url' => 'required',
-            'source' => 'required',
-            'author' => 'nullable',
-            'published_at' => 'required',
+            'title' => 'required|string|max:255',
+            'title_en' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'description_en' => 'nullable|string',
+            'url' => 'nullable|url|max:255',
+            'source' => 'required|string|max:255',
+            'author' => 'nullable|string|max:255',
+            'published_at' => 'required|date',
+            'category_id' => 'required_without:new_category|exists:topi_categories,id',
+            'new_category' => 'required_without:category_id|string|max:255|nullable',
+            'new_category_en' => 'required_with:new_category|string|max:255|nullable',
+            'type' => 'required|in:article,PDF',
+            'pdf_file' => 'nullable|file|mimes:pdf|max:10240', // opcional en actualización, máximo 10MB
         ];
     }
 }

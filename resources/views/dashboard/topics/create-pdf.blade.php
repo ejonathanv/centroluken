@@ -9,24 +9,24 @@
 
                 <div class="flex items-center justify-between border-b border-gray-200 pb-5 mt-7">
                     <h4>
-                        Nuevo enlace
+                        Nuevo PDF
                     </h4>
                 </div>
 
-                <form action="{{ route('topics.store') }}" class="mt-7" method="POST">
+                <form action="{{ route('topics.store') }}" class="mt-7" method="POST" enctype="multipart/form-data">
                     @csrf
 
-                    @if($errors->any())
-                        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-                            <ul class="list-disc list-inside">
-                                @foreach($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+                    <input type="hidden" name="type" value="PDF">
 
-                    <input type="hidden" name="type" value="{{ request()->get('type') ?? 'article' }}">
+                    <div class="form-group">
+                        <label for="">
+                            Selecciona el archivo PDF:
+                        </label>
+                        <input type="file" name="pdf_file" class="form-control" accept=".pdf">
+                        @error('pdf_file')
+                        <span class="text-red-500 text-xs">{{ $message }}</span>
+                        @enderror
+                    </div>
 
                     <!-- Título principal del tema en español -->
                     <div class="form-group">
@@ -116,17 +116,6 @@
                         </div>
                     </div>
 
-                    <!-- URL del recurso o enlace -->
-                    <div class="form-group">
-                        <label for="">
-                            URL:
-                        </label>
-                        <input type="text" name="url" class="form-control" value="{{ old('url') }}">
-                        @error('url')
-                        <span class="text-red-500 text-xs">{{ $message }}</span>
-                        @enderror
-                    </div>
-
                     <!-- Fuente o origen del contenido -->
                     <div class="form-group">
                         <label for="">
@@ -161,7 +150,7 @@
                     </div>
 
                     <button class="btn btn-primary btn-block">
-                        Crear enlace
+                        Crear articulo PDF
                     </button>
                 </form>
             </div>

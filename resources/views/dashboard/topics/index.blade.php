@@ -5,10 +5,17 @@
                 <h4>
                     Temas de interés
                 </h4>
+                @if(request()->get('type') == 'article')
                 <a href="{{ route('topics.create') }}" class="btn btn-primary">
                     <i class="fas fa-plus mr-2"></i>
-                    Nuevo enlace
+                    Nuevo artículo
                 </a>
+                @else
+                <a href="{{ route('create-pdf-topic') }}" class="btn btn-primary">
+                    <i class="fas fa-plus mr-2"></i>
+                    Nuevo PDF
+                </a>
+                @endif
             </div>
 
             <x-topics-table />

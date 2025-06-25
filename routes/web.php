@@ -45,6 +45,8 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'verified']], fu
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('articles', ArticleController::class);
     Route::resource('topics', TopicController::class);
+    Route::get('create-pdf-topic', [TopicController::class, 'createPdf'])->name('create-pdf-topic');
+    Route::get('edit-pdf-topic/{topic}', [TopicController::class, 'editPdf'])->name('edit-pdf-topic');
 });
 
 Route::middleware('auth')->group(function () {

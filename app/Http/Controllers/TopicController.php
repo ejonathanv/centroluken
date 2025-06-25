@@ -6,6 +6,8 @@ use App\Models\Topic;
 use App\Models\TopiCategory;
 use App\Http\Requests\StoreTopicRequest;
 use App\Http\Requests\UpdateTopicRequest;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class TopicController extends Controller
 {
@@ -26,6 +28,12 @@ class TopicController extends Controller
         return view('dashboard.topics.create', compact('categories'));
     }
 
+    public function createPdf()
+    {
+        $categories = TopiCategory::orderBy('name')->get();
+        return view('dashboard.topics.create-pdf', compact('categories'));
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -40,6 +48,7 @@ class TopicController extends Controller
         $topic->source = $request->source;
         $topic->author = $request->author;
         $topic->published_at = $request->published_at;
+        $topic->type = $request->type;
 
         if($request->new_category) {
             $category = new TopiCategory();
@@ -52,11 +61,40 @@ class TopicController extends Controller
             $topic->category_id = $request->category_id;
         }
 
-
         $topic->save();
 
-        return redirect()->route('topics.edit', $topic)->with('success', 'El enlace se creó con éxito');
+        if ($request->type === 'PDF' && $request->hasFile('pdf_file')) {
+            // Asegurarnos que existe la carpeta
+            $pdfPath = public_path('pdfTopics');
+            if (!file_exists($pdfPath)) {
+                mkdir($pdfPath, 0755, true);
+            }
 
+            // Procesar el archivo
+            $file = $request->file('pdf_file');
+            $fileName = Str::slug($topic->title) . '-' . time() . '.' . $file->getClientOriginalExtension();
+            $file->move($pdfPath, $fileName);
+
+            // Guardar la ruta en la base de datos
+            $topic->pdf_path = 'pdfTopics/' . $fileName;
+            $topic->save();
+        }
+
+        $response = '';
+        if($topic->type === 'PDF') {
+            $response = 'El PDF se creó con éxito';
+        } else {
+            $response = 'El enlace se creó con éxito';
+        }
+
+        $route = '';
+        if($topic->type === 'PDF') {
+            $route = route('edit-pdf-topic', $topic);
+        } else {
+            $route = route('topics.edit', $topic);
+        }
+
+        return redirect($route)->with('success', $response);
     }
 
     /**
@@ -73,7 +111,20 @@ class TopicController extends Controller
     public function edit(Topic $topic)
     {
         $categories = TopiCategory::orderBy('name')->get();
-        return view('dashboard.topics.edit', compact('topic', 'categories'));
+
+        $view = $topic->type === 'PDF' ? 'dashboard.topics.edit-pdf' : 'dashboard.topics.edit';
+
+        return view($view, compact('topic', 'categories'));
+    }
+
+    public function editPdf(Topic $topic)
+    {
+        if ($topic->type !== 'PDF') {
+            return redirect()->route('topics.edit', $topic);
+        }
+
+        $categories = TopiCategory::orderBy('name')->get();
+        return view('dashboard.topics.edit-pdf', compact('topic', 'categories'));
     }
 
     /**
@@ -101,9 +152,36 @@ class TopicController extends Controller
             $topic->category_id = $request->category_id;
         }
 
+        // Manejar actualización de PDF si es necesario
+        if ($topic->type === 'PDF' && $request->hasFile('pdf_file')) {
+            // Eliminar PDF anterior si existe
+            if ($topic->pdf_path && file_exists(public_path($topic->pdf_path))) {
+                unlink(public_path($topic->pdf_path));
+            }
+
+            // Guardar nuevo PDF
+            $pdfPath = public_path('pdfTopics');
+            if (!file_exists($pdfPath)) {
+                mkdir($pdfPath, 0755, true);
+            }
+
+            $file = $request->file('pdf_file');
+            $fileName = Str::slug($topic->title) . '-' . time() . '.' . $file->getClientOriginalExtension();
+            $file->move($pdfPath, $fileName);
+
+            $topic->pdf_path = 'pdfTopics/' . $fileName;
+        }
+
         $topic->save();
 
-        return redirect()->back()->with('success', 'El enlace se actualizó con éxito');
+        $response = '';
+        if($topic->type === 'PDF') {
+            $response = 'El PDF se actualizó con éxito';
+        } else {
+            $response = 'El enlace se actualizó con éxito';
+        }
+
+        return redirect()->back()->with('success', $response);
     }
 
     /**
@@ -111,8 +189,18 @@ class TopicController extends Controller
      */
     public function destroy(Topic $topic)
     {
+
+        $type = $topic->type;
+
         $topic->delete();
 
-        return redirect()->route('topics.index')->with('success', 'El tema de interés se eliminó con éxito');
+        $route = '';
+        if($type === 'PDF') {
+            $route = route('topics.index') . '?type=PDF';
+        } else {
+            $route = route('topics.index') . '?type=article';
+        }
+
+        return redirect($route)->with('success', 'El tema de interés se eliminó con éxito');
     }
 }

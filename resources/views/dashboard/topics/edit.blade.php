@@ -2,7 +2,7 @@
     <section class="py-16">
         <div class="container">
             <div class="w-8/12 mx-auto">
-                <a href="{{ route('topics.index') }}" class="mb-5 text-sm">
+                <a href="{{ route('topics.index') }}?type={{ request()->get('type') ?? 'article' }}" class="mb-5 text-sm">
                     <i class="fas fa-arrow-left mr-2"></i>
                     Volver al listado de temas de interés
                 </a>

@@ -16,7 +16,10 @@ class TopicsTable extends Component
      */
     public function __construct()
     {
-        $this->topics = \App\Models\Topic::orderBy('published_at', 'desc')->get();
+
+        $type = request()->get('type') ?? 'article';
+
+        $this->topics = \App\Models\Topic::orderBy('published_at', 'desc')->where('type', $type)->get();
     }
 
     /**
