@@ -16,21 +16,15 @@
                 </p>
             </div>
             <div class="flex items-center space-x-4">
+                <a href="https://sites.google.com/centroluken.org/intranet?usp=sharing" 
+                    class="text-white text-sm font-bold hover:underline" target="_blank">
+                    Intranet
+                </a>
+                <span class="text-white">|</span>
                 <a href="{{ route('dashboard') }}" class="text-white text-sm font-bold">
                     Administración
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
-                {{--
-                <a href="#">
-                    <i class="fab fa-facebook-square text-white text-2xl"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-instagram text-white text-2xl"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-linkedin text-white text-2xl"></i>
-                </a>
-                --}}
             </div>
         </div>
     </div>
