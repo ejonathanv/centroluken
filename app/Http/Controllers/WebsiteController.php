@@ -61,7 +61,15 @@ class WebsiteController extends Controller
     public function topicCategory(TopiCategory $category){
         $topics = Topic::where('category_id', $category->id)->latest()->paginate(9);
         // I need all topicCategory that have at least one topic
-        $categories = TopiCategory::whereHas('topics')->get();
+        $categories = TopiCategory::whereHas('topics')
+            ->with(['topics' => function($query) {
+                $query->latest();
+            }])
+            ->get()
+            ->sortByDesc(function($category) {
+                return optional($category->topics->first())->created_at;
+            })
+            ->values();
         $currentCategory = $category;
         return view('website.topics', compact('topics', 'currentCategory', 'categories'));
     }
