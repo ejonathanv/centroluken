@@ -40,7 +40,15 @@ class WebsiteController extends Controller
     }
 
     public function topics(){
-        $topiCategory = TopiCategory::first();
+        $topiCategory = TopiCategory::whereHas('topics')
+            ->with(['topics' => function($query) {
+                $query->latest();
+            }])
+            ->get()
+            ->sortByDesc(function($category) {
+                return optional($category->topics->first())->created_at;
+            })
+            ->first();
         if($topiCategory){
             return redirect()->route('topicCategory', $topiCategory);
         }else{
