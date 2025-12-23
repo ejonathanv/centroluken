@@ -8,11 +8,11 @@
                 </button>
             </form>
             @if(session()->get('locale') == 'es')
-            <img src="{{ asset('img/popup/CommonGround.jpeg') }}" class="w-full" alt="Centro Luken">
+            <img src="{{ asset('img/popup/centroluken_felicesfiestas_2025.png') }}" class="w-full" alt="Centro Luken | Felices Fiestas 2025">
             @elseif(session()->get('locale') == 'en')
-            <img src="{{ asset('img/popup/CommonGround_eng.jpeg') }}" class="w-full" alt="Centro Luken">
+            <img src="{{ asset('img/popup/centroluken_happyholidays2025.png') }}" class="w-full" alt="Centro Luken | Happy Holidays 2025">
             @else
-            <img src="{{ asset('img/popup/CommonGround.jpeg') }}" class="w-full" alt="Centro Luken">
+            <img src="{{ asset('img/popup/centroluken_felicesfiestas_2025.png') }}" class="w-full" alt="Centro Luken | Felices Fiestas 2025">
             @endif
         </div>
     </div>
