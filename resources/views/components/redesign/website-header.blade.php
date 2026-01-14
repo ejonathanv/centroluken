@@ -1,4 +1,4 @@
-<header class="bg-white shadow relative z-50">
+<header class="bg-white shadow relative lg:fixed top-0 left-0 right-0 z-50">
     <!-- Curvas -->
     <div class="bg-primary w-[35%] md:w-[40%] lg:w-[50%] h-full absolute top-0 right-0 z-1">
         <img src="{{ asset('img/redesign/header-curvas.png') }}" 
