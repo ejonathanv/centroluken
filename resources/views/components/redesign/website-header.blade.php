@@ -122,9 +122,23 @@
                         </a>
                     </li>
                     <li class="border-b border-white/20 py-2">
-                        <a href="#" class="text-white font-semibold text-sm hover:text-secondary">
-                            Materiales
-                        </a>
+                        <span class="text-white font-semibold text-sm hover:text-secondary block mb-6">
+                            <span>Materiales</span>
+                        </span>
+                        <div>
+                            <ul class="flex flex-col space-y-4">
+                                <li>
+                                    <a href="#" class="text-secondary font-semibold text-sm">
+                                        Estudios
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-secondary font-semibold text-sm">
+                                        Recursos
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="border-b-2 border-white/20 py-2">
                         <a href="#" class="text-white font-semibold text-sm hover:text-secondary">
