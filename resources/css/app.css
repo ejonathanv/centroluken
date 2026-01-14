@@ -13,6 +13,10 @@ body{
     padding-top: 6.3rem;
 }
 
+body.redesign{
+    padding-top: 0;
+}
+
 h1, h2, h3, h4, h5, h6{
     @apply font-semibold;
     font-family: 'Montserrat', sans-serif;
@@ -352,4 +356,42 @@ label{
     .footerCurves{
         bottom: calc(100% - 2px);
     }
+}
+
+
+/* Redesign Styles */
+.redesign-nav ul li.submenu{
+    position: relative;
+}
+
+.redesign-nav ul li.submenu:hover span{
+    @apply text-secondary;
+}
+
+.redesign-nav ul li.submenu .submenu-content{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 10px;
+    overflow: hidden;
+    border-radius: 0px;
+    width: 200px;
+    @apply shadow-md;
+    transform: translateY(-10px);
+    transition: all 0.2s ease-in-out;
+}
+
+.redesign-nav ul li.submenu:hover .submenu-content{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.redesign-nav ul li.submenu .submenu-content ul li:first-child {
+    @apply border-b border-gray-200;
+}
+.redesign-nav ul li.submenu .submenu-content ul li a{
+    @apply block px-6 py-3 text-sm text-primary hover:text-secondary bg-white font-semibold border-l-4 border-secondary;
 }
