@@ -395,3 +395,19 @@ label{
 .redesign-nav ul li.submenu .submenu-content ul li a{
     @apply block px-6 py-3 text-sm text-primary hover:text-secondary bg-white font-semibold border-l-4 border-secondary;
 }
+
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: all 0.2s ease-in-out;
+    @apply block lg:hidden bg-primary;
+}
+
+.mobile-menu.active{
+    transform: translateX(0);
+}
