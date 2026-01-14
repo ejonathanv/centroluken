@@ -37,7 +37,7 @@
     </head>
     <body class="font-sans text-gray-900 antialiased redesign !bg-white min-h-screen">
         <x-redesign.website-header />
-        <main class="min-h-screen">
+        <main class="min-h-[calc(100vh-209px)]">
             {{ $slot }}
         </main>
         <x-redesign.website-footer />
