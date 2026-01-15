@@ -423,3 +423,16 @@ label{
 .mobile-menu.active{
     transform: translateX(0);
 }
+
+.redesign_slider{
+    @apply w-full h-full bg-gray-900;
+}
+
+.redesign_slider_item{
+    @apply w-full h-[500px] bg-gray-900 flex items-center justify-center bg-cover bg-no-repeat bg-center;
+}
+
+.redesign_slider_item:before{
+    @apply absolute top-0 left-0 bottom-0 w-full h-full bg-gray-900 opacity-30;
+    content: '';
+}

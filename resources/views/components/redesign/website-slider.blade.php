@@ -1,3 +1,36 @@
-<section class="h-[550px] bg-gray-100">
-    
+<section class="h-[500px] bg-gray-100" x-data="{
+    init() {
+        $('.redesign_slider').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            autoplay: true,
+            items: 1,
+            autoplayHoverPause: true,
+        });
+    },
+    prev() {
+        $('.redesign_slider').trigger('prev.owl.carousel');
+    },
+    next() {
+        $('.redesign_slider').trigger('next.owl.carousel');
+    }
+}">
+    <div class="owl-carousel redesign_slider">
+        @for ($i = 1; $i < 10; $i++)
+            @php
+                $image = asset('img/redesign/slides/slide-'.$i.'.jpg');
+            @endphp
+            <div class="redesign_slider_item" 
+                style="background-image: url('{{$image}}');">
+            </div>
+        @endfor
+    </div>
+
+    <a href="#" @click.prevent="prev()" class="absolute left-16 top-1/2 -translate-y-1/2 z-10 text-primary text-xl bg-white rounded-sm p-2 w-10 h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 shaodw-sm hover:shadow-md">
+        <i class="lni lni-arrow-left"></i>
+    </a>
+    <a href="#" @click.prevent="next()" class="absolute right-16 top-1/2 -translate-y-1/2 z-10 text-primary text-xl bg-white rounded-sm p-2 w-10 h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 shadow-sm hover:shadow-md">
+        <i class="lni lni-arrow-right"></i>
+    </a>
 </section>

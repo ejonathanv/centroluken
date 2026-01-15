@@ -32,7 +32,13 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
 
+        <!-- Owl Carousel -->
+        <link rel="stylesheet" href="{{ asset('redesign/owl/css/owl.carousel.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('redesign/owl/css/owl.theme.default.min.css') }}" />
+
         <!-- Scripts -->
+        <script src="{{ asset('redesign/jquery/jquery-3.7.1.js') }}" defer></script>
+        <script src="{{ asset('redesign/owl/js/owl.carousel.min.js') }}" defer></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased redesign !bg-white min-h-screen">
