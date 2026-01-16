@@ -1,4 +1,4 @@
-<section class="h-[500px] bg-gray-100" x-data="{
+<section class="h-[300px] md:h-[500px] bg-gray-100 relative" x-data="{
     init() {
         $('.redesign_slider').owlCarousel({
             loop: true,
@@ -17,9 +17,9 @@
     }
 }">
     <div class="owl-carousel redesign_slider">
-        @for ($i = 1; $i < 10; $i++)
+        @for ($i = 1; $i < 3; $i++)
             @php
-                $image = asset('img/redesign/slides/slide-'.$i.'.jpg');
+                $image = "https://placehold.co/1600x900";
             @endphp
             <div class="redesign_slider_item" 
                 style="background-image: url('{{$image}}');">
@@ -27,10 +27,10 @@
         @endfor
     </div>
 
-    <a href="#" @click.prevent="prev()" class="absolute left-16 top-1/2 -translate-y-1/2 z-10 text-primary text-xl bg-white rounded-sm p-2 w-10 h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 shaodw-sm hover:shadow-md">
-        <i class="lni lni-arrow-left"></i>
+    <a href="#" @click.prevent="prev()" class="absolute left-2 md:left-16 top-1/2 -translate-y-1/2 z-10 text-primary text-xl bg-white rounded-sm p-2 w-10 h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 shaodw-sm hover:shadow-md">
+        <i class="fa-solid fa-arrow-left"></i>
     </a>
-    <a href="#" @click.prevent="next()" class="absolute right-16 top-1/2 -translate-y-1/2 z-10 text-primary text-xl bg-white rounded-sm p-2 w-10 h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 shadow-sm hover:shadow-md">
-        <i class="lni lni-arrow-right"></i>
+    <a href="#" @click.prevent="next()" class="absolute right-2 md:right-16 top-1/2 -translate-y-1/2 z-10 text-primary text-xl bg-white rounded-sm p-2 w-10 h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 shadow-sm hover:shadow-md">
+        <i class="fa-solid fa-arrow-right"></i>
     </a>
 </section>

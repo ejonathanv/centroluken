@@ -55,7 +55,7 @@
                     <li class="submenu">
                         <span href="#" class="text-white font-semibold text-sm cursor-pointer flex items-center space-x-2">
                             <span>Materiales</span>
-                            <i class="lni lni-chevron-down"></i>
+                            <i class="fa-solid fa-angle-down"></i>
                         </span>
                         <div class="submenu-content">
                             <ul>
@@ -86,8 +86,8 @@
                         <a href="#" class="text-white font-semibold text-sm hover:text-secondary relative"
                             style="z-index: 1001;"
                             @click.prevent="toggleMobileMenu()">
-                            <i x-show="!mobileMenu" class="lni lni-menu-hamburger-1 text-2xl md:text-3xl"></i>
-                            <i x-show="mobileMenu" class="lni lni-xmark text-2xl md:text-3xl"></i>
+                            <i x-show="!mobileMenu" class="fa-solid fa-bars text-2xl md:text-3xl"></i>
+                            <i x-show="mobileMenu" class="fa-solid fa-xmark text-2xl md:text-3xl"></i>
                         </a>
                     </li>
                 </ul>
