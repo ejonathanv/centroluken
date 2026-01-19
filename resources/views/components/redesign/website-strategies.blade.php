@@ -1,7 +1,7 @@
-<section class="py-10 md:py-20 !pt-6 bg-white">
+<section class="py-10 lg:py-20 !pt-6 bg-white">
     <div class="container">
-        <div class="w-full md:w-9/12 mx-auto text-center mb-8 md:mb-32">
-            <h2 class="text-primary text-center mb-10 text-xl md:text-3xl mb-6 wow animate__animated animate__fadeInDown">
+        <div class="w-full lg:w-9/12 mx-auto text-center mb-8 lg:mb-32">
+            <h2 class="text-primary text-center mb-10 text-xl lg:text-3xl mb-6 wow animate__animated animate__fadeInDown">
                 Estrategias que transforman
             </h2>
         </div>
