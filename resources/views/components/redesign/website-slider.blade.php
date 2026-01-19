@@ -17,9 +17,9 @@
     }
 }">
     <div class="owl-carousel redesign_slider">
-        @for ($i = 1; $i < 3; $i++)
+        @for ($i = 1; $i < 9; $i++)
             @php
-                $image = "https://placehold.co/1600x900";
+                $image = asset('/redesign/img/slides/slide-'.$i.'.jpg');
             @endphp
             <div class="redesign_slider_item" 
                 style="background-image: url('{{$image}}');">

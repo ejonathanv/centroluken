@@ -10,7 +10,7 @@
     <div class="flex flex-col space-y-10 lg:space-y-24">
         <!-- Estrategia #1 -->
         <div>
-            <x-redesign.website-strategies-item image="https://placehold.co/1600x900">
+            <x-redesign.website-strategies-item image="{{ asset('redesign/img/home/estrategia-1.jpg') }}">
                 <x-slot:title>
                     Estudio técnico: Diagnóstico y gestión del agua en Baja California (2023)
                 </x-slot:title>
@@ -27,7 +27,7 @@
 
         <!-- Estrategia #2 -->
         <div>
-            <x-redesign.website-strategies-item-reverse image="https://placehold.co/1600x900">
+            <x-redesign.website-strategies-item-reverse image="{{ asset('redesign/img/home/estrategia-2.jpg') }}">
                 <x-slot:title>
                     Renovación Distrito de Riego 014 (2024 - )
                 </x-slot:title>
@@ -47,7 +47,7 @@
 
         <!-- Estrategia #3 -->
         <div>
-            <x-redesign.website-strategies-item image="https://placehold.co/1600x900">
+            <x-redesign.website-strategies-item image="{{ asset('redesign/img/home/estrategia-3.jpg') }}">
                 <x-slot:title>
                     Agua para el medio ambiente: una estrategia binacional para el Delta del Río Colorado (2024– )
                 </x-slot:title>
