@@ -1,4 +1,4 @@
-<section class="h-[300px] md:h-[500px] bg-gray-100 relative" x-data="{
+<section class="h-[300px] md:h-[550px] bg-gray-100 relative" x-data="{
     init() {
         $('.redesign_slider').owlCarousel({
             loop: true,
