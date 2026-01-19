@@ -21,7 +21,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="block border-2 py-3 px-6 text-white font-semibold text-sm hover:text-secondary">
+                        <a href="#" class="block border-2 border-white py-3 px-6 text-white font-semibold text-sm hover:text-secondary">
                             Contáctanos
                         </a>
                     </li>

@@ -5,4 +5,5 @@
     <x-redesign.website-what-we-do />
     <x-redesign.website-strategies />
     <x-redesign.website-team />
+    <x-redesign.website-materials />
 </x-redesign.website-layout>
