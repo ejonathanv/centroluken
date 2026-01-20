@@ -6,16 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class WebsiteLayout extends Component
+class WebsitePhilosophyOverview extends Component
 {
-    public $title;
-
     /**
      * Create a new component instance.
      */
-    public function __construct($title = null)
+    public function __construct()
     {
-        $this->title = $title;
+        //
     }
 
     /**
@@ -23,6 +21,6 @@ class WebsiteLayout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('layouts.redesign-website-layout');
+        return view('components.redesign.website-philosophy-overview');
     }
 }

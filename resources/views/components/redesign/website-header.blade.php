@@ -22,7 +22,7 @@
         <div class="flex items-center justify-between">
             <!-- Logo -->
             <div class="w-2/3 lg:w-1/3">
-                <a href="#">
+                <a href="{{ route('redesign.home') }}">
                     <img src="{{ asset('img/centro-luken-logo.svg') }}" 
                         alt="Centro Luken - De Estrategias en Agua y Medio Ambiente"
                         class="h-12 w-auto">
@@ -33,41 +33,41 @@
             <nav class="lg:flex items-center justify-end redesign-nav bg-primary py-8 w-1/3 lg:w-2/3 relative z-2">
                 <ul class="hidden lg:flex items-center space-x-10">
                     <li>
-                        <a href="#" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.home') }}" class="text-white font-semibold text-sm hover:text-secondary">
                             Inicio
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.philosophy') }}" class="text-white font-semibold text-sm hover:text-secondary">
                             Filosofía
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.origin') }}" class="text-white font-semibold text-sm hover:text-secondary">
                             Origen
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.team') }}" class="text-white font-semibold text-sm hover:text-secondary">
                             Equipo
                         </a>
                     </li>
                     <li class="submenu">
-                        <span href="#" class="text-white font-semibold text-sm cursor-pointer flex items-center space-x-2">
+                        <span href="{{ route('redesign.materials') }}" class="text-white font-semibold text-sm cursor-pointer flex items-center space-x-2">
                             <span>Materiales</span>
                             <i class="fa-solid fa-angle-down"></i>
                         </span>
                         <div class="submenu-content">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="{{ route('redesign.studies') }}">
                                         Estudios
                                     </a>
                                 </li>
                             </ul>
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="{{ route('redesign.resources') }}">
                                         Recursos
                                     </a>
                                 </li>
@@ -75,7 +75,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.partnerships') }}" class="text-white font-semibold text-sm hover:text-secondary">
                             Alianzas
                         </a>
                     </li>
@@ -103,22 +103,22 @@
             <nav class="mb-7">
                 <ul class="flex flex-col space-y-4">
                     <li class="border-b-2 border-white/20 py-2">
-                        <a href="#" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.home') }}" class="text-white font-semibold text-sm hover:text-secondary">
                             Inicio
                         </a>
                     </li>
                     <li class="border-b-2 border-white/20 py-2">
-                        <a href="#" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.philosophy') }}" class="text-white font-semibold text-sm hover:text-secondary">
                             Filosofía
                         </a>
                     </li>
                     <li class="border-b-2 border-white/20 py-2">
-                        <a href="#" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.origin') }}" class="text-white font-semibold text-sm hover:text-secondary">
                             Origen
                         </a>
                     </li>
                     <li class="border-b-2 border-white/20 py-2">
-                        <a href="#" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.team') }}" class="text-white font-semibold text-sm hover:text-secondary">
                             Equipo
                         </a>
                     </li>
@@ -129,12 +129,12 @@
                         <div>
                             <ul class="flex flex-col space-y-4">
                                 <li>
-                                    <a href="#" class="text-secondary font-semibold text-sm">
+                                    <a href="{{ route('redesign.studies') }}" class="text-secondary font-semibold text-sm">
                                         Estudios
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-secondary font-semibold text-sm">
+                                    <a href="{{ route('redesign.resources') }}" class="text-secondary font-semibold text-sm">
                                         Recursos
                                     </a>
                                 </li>
@@ -142,7 +142,7 @@
                         </div>
                     </li>
                     <li class="border-b-2 border-white/20 py-2">
-                        <a href="#" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.partnerships') }}" class="text-white font-semibold text-sm hover:text-secondary">
                             Alianzas
                         </a>
                     </li>

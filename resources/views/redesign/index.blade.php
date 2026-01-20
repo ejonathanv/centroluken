@@ -6,4 +6,5 @@
     <x-redesign.website-strategies />
     <x-redesign.website-team />
     <x-redesign.website-materials />
+    <x-redesign.website-strategic-partnerships />
 </x-redesign.website-layout>

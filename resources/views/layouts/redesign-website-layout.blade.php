@@ -25,7 +25,7 @@
         <meta name="msapplication-TileImage" content="{{ asset('img/favicon/ms-icon-144x144.png') }}">
         <meta name="theme-color" content="#ffffff">
 
-        <title>@yield('title', 'Bienvenidos') | {{ config('app.name', 'Centro Luken') }}</title>
+        <title>{{ $title ?? 'Bienvenidos' }} | {{ config('app.name', 'Centro Luken') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -47,7 +47,7 @@
     </head>
     <body class="font-sans text-gray-900 antialiased redesign !bg-white min-h-screen">
         <x-redesign.website-header />
-        <main class="min-h-[calc(100vh-209px)]">
+        <main>
             {{ $slot }}
         </main>
         <x-redesign.website-footer />
