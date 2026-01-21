@@ -1,6 +1,6 @@
 <section class="py-10 lg:py-20 bg-white">
     <div class="container">
-        <div class="w-9/12 mx-auto">
+        <div class="w-full md:w-9/12 mx-auto">
             <h2 class="text-primary text-center mb-10 text-xl lg:text-3xl mb-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
                 Materiales
             </h2>
@@ -8,8 +8,8 @@
                 Conoce nuestros análisis y discusiones más recientes sobre los temas relevantes del sector; y su cobertura en medios de comunicación.
             </p>
 
-            <div class="flex items-stretch bg-primary wow animate__animated animate__flipInX animate__slow">
-                <div class="w-7/12 p-12 text-center flex flex-col items-center justify-between space-y-10">
+            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 items-stretch bg-primary wow animate__animated animate__flipInX animate__slow">
+                <div class="w-full md:w-7/12 p-6 md:p-12 text-center flex flex-col items-center justify-between space-y-10">
                     <h3 class="text-white text-lg lg:text-2xl font-medium">
                         ¿Cómo se define la gobernanza del agua?
                     </h3>
@@ -17,8 +17,8 @@
                         De acuerdo con la OCDE (2015), la gobernanza es el abanico de reglas, prácticas y procesos (formales e informales) políticos, institucionales y administrativos a través de los cuales se toman e implementan decisiones.
                     </p>
                 </div>
-                <div class="w-5/12 p-12 relative">
-                    <div class="absolute top-0 -left-[10px] bottom-0 w-[40px] bg-white bg-opacity-50"></div>
+                <div class="w-full md:w-5/12 p-6 md:p-12 relative border-t-2 border-white md:border-t-0">
+                    <div class="hidden md:block absolute top-0 -left-[10px] bottom-0 w-[40px] bg-white bg-opacity-50"></div>
                     <div class="flex flex-col items-center justify-between text-center h-full">
                         <h3 class="text-white text-lg lg:text-2xl font-medium mb-4">
                             Discusión
