@@ -4,6 +4,7 @@
             <h2 class="text-primary text-center mb-10 text-xl lg:text-3xl mb-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
                 Materiales
             </h2>
+            
             <p class="text-center text-sm lg:text-lg font-medium mb-10">
                 Conoce nuestros análisis y discusiones más recientes sobre los temas relevantes del sector; y su cobertura en medios de comunicación.
             </p>
