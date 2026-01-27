@@ -1,5 +1,5 @@
 @php
-$image = asset('redesign/img/home/conocenos.jpg');
+$image = asset('redesign/img/origin/1000_F_1259994486_m8SFWOFEfViVcRezuAWKKhSMEjCmTKUA.webp');
 @endphp
 <section class="flex flex-col flex-col-reverse md:flex-row items-stretch min-h-[300px] lg:min-h-[500px]">
     <div class="w-full md:w-1/2 bg-primary p-8 flex flex-col items-center justify-center">
