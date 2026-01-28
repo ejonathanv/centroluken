@@ -17,7 +17,7 @@
     }
 }">
     <div class="owl-carousel redesign_slider">
-        @for ($i = 1; $i < 9; $i++)
+        @for ($i = 0; $i < 9; $i++)
             @php
                 $image = asset('/redesign/img/slides/slide-'.$i.'.jpg');
             @endphp

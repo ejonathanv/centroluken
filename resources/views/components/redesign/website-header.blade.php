@@ -74,11 +74,13 @@
                             </ul>
                         </div>
                     </li>
+                    {{--
                     <li>
                         <a href="{{ route('redesign.partnerships') }}" class="text-white font-semibold text-sm hover:text-secondary">
                             Alianzas
                         </a>
                     </li>
+                    --}}
                 </ul>
 
                 <ul class="flex lg:hidden items-center justify-end space-x-4">
@@ -141,11 +143,13 @@
                             </ul>
                         </div>
                     </li>
+                    {{--
                     <li class="border-b-2 border-white/20 py-2">
                         <a href="{{ route('redesign.partnerships') }}" class="text-white font-semibold text-sm hover:text-secondary">
                             Alianzas
                         </a>
                     </li>
+                    --}}
                 </ul>
             </nav>
 

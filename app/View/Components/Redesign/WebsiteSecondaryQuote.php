@@ -6,15 +6,18 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class WebsiteStrategies extends Component
+class WebsiteSecondaryQuote extends Component
 {
-    public $isHome;
+
+
+    public $quote;
+
     /**
      * Create a new component instance.
      */
-    public function __construct($isHome = false)
+    public function __construct($quote)
     {
-        $this->isHome = $isHome;
+        $this->quote = $quote;
     }
 
     /**
@@ -22,6 +25,6 @@ class WebsiteStrategies extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.redesign.website-strategies');
+        return view('components.redesign.website-secondary-quote');
     }
 }

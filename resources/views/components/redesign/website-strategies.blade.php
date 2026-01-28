@@ -1,4 +1,5 @@
-<section class="py-10 lg:py-20 !pt-6 bg-white">
+<section class="py-0 md:py-10 lg:py-20 !md:pt-6 bg-white">
+    @if ($isHome)
     <div class="container">
         <div class="w-full lg:w-9/12 mx-auto text-center mb-8 lg:mb-32">
             <h2 class="text-primary text-center mb-10 text-xl lg:text-3xl mb-6 wow animate__animated animate__fadeInDown">
@@ -6,11 +7,12 @@
             </h2>
         </div>
     </div>
+    @endif
 
     <div class="flex flex-col space-y-10 lg:space-y-24">
         <!-- Estrategia #1 -->
         <div>
-            <x-redesign.website-strategies-item image="{{ asset('redesign/img/home/estrategia-1.jpg') }}">
+            <x-redesign.website-strategies-item image="{{ asset('redesign/img/home/1000_F_1631790913_1tNX7FAUyWUMOoqLR8Rwxs5oXwtQnb4K.webp') }}">
                 <x-slot:title>
                     Estudio técnico: Diagnóstico y gestión del agua en Baja California (2023)
                 </x-slot:title>

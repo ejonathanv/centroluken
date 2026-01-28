@@ -1,5 +1,11 @@
-<footer class="py-16 bg-primary">
-    <div class="container">
+<footer class="py-16 bg-primary relative mt-20 md:mt-36">
+    <img src="{{ asset('redesign/svg/footer-curves.svg') }}" 
+        alt="Centro Luken - Footer Curva"
+        class="hidden md:block absolute left-0 right-0 w-full z-1" style="bottom: 70%">
+    <img src="{{ asset('redesign/svg/footer-curves.svg') }}" 
+        alt="Centro Luken - Footer Curva"
+        class="block md:hidden absolute left-0 right-0 w-full z-1" style="bottom: calc(100% - 10px)">
+    <div class="container relative z-5">
         <div class="flex flex-col md:flex-row items-center justify-center md:justify-between space-y-16 md:space-y-0">
             <div class="w-full md:w-5/12 flex items-center justify-center md:justify-start">
                 <a href="#" class="relative left-[15px] md:left-0">
@@ -29,7 +35,7 @@
             </div>
         </div>
 
-        <p class="text-center md:text-left text-white/50 text-xs font-semibold mt-16">
+        <p class="text-center md:text-left text-white text-xs mt-16">
             © {{ date('Y') }}, {{ env('APP_NAME') }}, Derechos Reservados.
         </p>
     </div>

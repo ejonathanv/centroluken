@@ -6,17 +6,22 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class PageCover extends Component
+class WebsiteResourcesCard extends Component
 {
 
-    public $img;
+    public $title;
+    public $description;
+    public $image;
+
 
     /**
      * Create a new component instance.
      */
-    public function __construct($img)
+    public function __construct($title, $description,$image)
     {
-        $this->img = $img;
+        $this->title = $title;
+        $this->description = $description;
+        $this->image = $image;
     }
 
     /**
@@ -24,6 +29,6 @@ class PageCover extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.redesign.page-cover');
+        return view('components.redesign.website-resources-card');
     }
 }

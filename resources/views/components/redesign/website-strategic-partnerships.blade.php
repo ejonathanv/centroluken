@@ -9,12 +9,21 @@
             </p>
         </div>
 
-        <div class="flex items-center justify-center space-x-5">
-            <div class="w-1/5 flex items-center justify-center wow animate__animated animate__fadeInUp">
-                <img src="{{ asset('redesign/img/partnerships/logo-1.png') }}" class="max-h-[80px] object-contain" alt="">
+        <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 items-center justify-center space-x-0 md:space-x-5 relative left-0 md:-left-5">
+            <div class="w-9/12 md:w-1/5 flex items-center justify-center wow animate__animated animate__fadeInUp">
+                <img src="{{ asset('redesign/img/partnerships/alianza-revive.jpg') }}" class="max-h-[80px] object-contain" alt="Alianza Revive - Centro Luken">
             </div>
-            <div class="w-1/5 flex items-center justify-center wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                <img src="{{ asset('redesign/img/partnerships/logo-2.png') }}" class="max-h-[80px] object-contain" alt="">
+            <div class="w-9/12 md:w-1/5 flex items-center justify-center wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                <img src="{{ asset('redesign/img/partnerships/the-walton-family.jpg') }}" class="max-h-[80px] object-contain" alt="The Walton Family - Centro Luken">
+            </div>
+            <div class="w-9/12 md:w-1/5 flex items-center justify-center wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                <img src="{{ asset('redesign/img/partnerships/bonneville.jpg') }}" class="max-h-[80px] object-contain" alt="Bonneville - Centro Luken">
+            </div>
+            <div class="w-9/12 md:w-1/5 flex items-center justify-center wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                <img src="{{ asset('redesign/img/partnerships/blue-commons.jpg') }}" class="max-h-[80px] object-contain" alt="Blue Commons - Centro Luken">
+            </div>
+            <div class="w-9/12 md:w-1/5 flex items-center justify-center wow animate__animated animate__fadeInUp" data-wow-delay="0.8s">
+                <img src="{{ asset('redesign/img/partnerships/rio-arronte.jpg') }}" class="max-h-[80px] object-contain" alt="Rio Arronte - Centro Luken">
             </div>
         </div>
     </div>

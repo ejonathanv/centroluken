@@ -24,9 +24,11 @@
                         <h3 class="text-white text-lg lg:text-2xl font-medium mb-4">
                             Discusión
                         </h3>
-                        <h3 class="text-white text-lg lg:text-2xl font-medium mb-4">
-                            Legislación en materia de agua
-                        </h3>
+                        <a href="#">
+                            <h3 class="text-white text-lg lg:text-2xl font-medium mb-4 underline hover:text-secondary">
+                                Legislación en materia de agua
+                            </h3>
+                        </a>
                         <h4 class="text-secondary text-sm lg:text-base font-bold">
                             2025-12-09
                         </h4>

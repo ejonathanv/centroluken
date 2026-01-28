@@ -47,9 +47,11 @@
     </head>
     <body class="font-sans text-gray-900 antialiased redesign !bg-white min-h-screen">
         <x-redesign.website-header />
+        
         <main>
             {{ $slot }}
         </main>
+
         <x-redesign.website-footer />
 
         <script>
