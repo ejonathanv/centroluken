@@ -1,6 +1,6 @@
 <section class="py-10 md:py-16 bg-white">
 
-    <div class="container">
+    <div class="block md:hidden container">
         <div class="w-full mb-7 px-4">
             <select name="" id="" class="w-full p-2 border-2 border-secondary rounded-md">
                 <option value="">Todos</option>
