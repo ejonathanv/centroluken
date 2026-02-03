@@ -1,4 +1,4 @@
-<section class="pb-10 lg:pb-20 bg-white">
+<section class="pb-10 lg:pb-20 bg-white mt-28">
     <div class="container">
         <div class="w-full lg:w-9/12 mx-auto">
             <h2 class="text-primary text-center mb-10 text-xl lg:text-3xl mb-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">

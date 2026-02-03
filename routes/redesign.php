@@ -12,6 +12,10 @@ Route::get('/filosofia', [
     WebsiteController::class, 'philosophy'
 ])->name('redesign.philosophy');
 
+Route::get('socio-fundador/{nombre}', [
+    WebsiteController::class, 'founder'
+])->name('founder');
+
 Route::get('/origen', [
     WebsiteController::class, 'origin'
 ])->name('redesign.origin');

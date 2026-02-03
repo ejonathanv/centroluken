@@ -33,22 +33,22 @@
             <nav class="lg:flex items-center justify-end redesign-nav bg-primary py-8 w-1/3 lg:w-2/3 relative z-2">
                 <ul class="hidden lg:flex items-center space-x-10">
                     <li>
-                        <a href="{{ route('redesign.home') }}" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.home') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
                             Inicio
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('redesign.philosophy') }}" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.philosophy') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
                             Filosofía
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('redesign.origin') }}" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.origin') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
                             Origen
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('redesign.team') }}" class="text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('redesign.team') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
                             Equipo
                         </a>
                     </li>
@@ -85,7 +85,7 @@
 
                 <ul class="flex lg:hidden items-center justify-end space-x-4">
                     <li>
-                        <a href="#" class="text-white font-semibold text-sm hover:text-secondary relative"
+                        <a href="#" class="text-white opacity-50 font-semibold text-sm hover:opacity-100 relative"
                             style="z-index: 1001;"
                             @click.prevent="toggleMobileMenu()">
                             <i x-show="!mobileMenu" class="fa-solid fa-bars text-2xl md:text-3xl"></i>

@@ -375,8 +375,12 @@ label{
     position: relative;
 }
 
-.redesign-nav ul li.submenu:hover span{
-    @apply text-secondary;
+.redesign-nav ul li.submenu > span{
+    @apply opacity-50;
+}
+
+.redesign-nav ul li.submenu:hover > span{
+    @apply text-white opacity-100;
 }
 
 .redesign-nav ul li.submenu .submenu-content{
@@ -403,6 +407,7 @@ label{
 .redesign-nav ul li.submenu .submenu-content ul li:first-child {
     @apply border-b border-gray-200;
 }
+
 .redesign-nav ul li.submenu .submenu-content ul li a{
     @apply block px-6 py-3 text-sm text-primary hover:text-secondary bg-white font-semibold border-l-4 border-secondary;
 }
@@ -429,7 +434,7 @@ label{
 }
 
 .redesign_slider_item{
-    @apply w-full h-[300px] md:h-[550px] bg-gray-900 flex items-center justify-center bg-cover bg-no-repeat bg-center;
+    @apply w-full h-[300px] md:h-[80vh] bg-gray-900 flex items-center justify-center bg-cover bg-no-repeat bg-center;
 }
 
 .redesign_slider_item:before{

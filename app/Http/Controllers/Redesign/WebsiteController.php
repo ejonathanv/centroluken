@@ -15,6 +15,15 @@ class WebsiteController extends Controller
         return view('redesign.philosophy');
     }
 
+    public function founder($nombre){
+        $view = 'redesign.founders.' . $nombre;
+        if(view()->exists($view)){
+            return view($view);
+        }else{
+            return redirect()->route('redesign.philosophy');
+        }
+    }
+
     public function origin() {
         return view('redesign.origin');
     }
