@@ -24,7 +24,7 @@
                         <h3 class="text-white text-lg lg:text-2xl font-medium mb-4">
                             Discusión
                         </h3>
-                        <a href="#">
+                        <a href="{{ route('redesign.discusion') }}">
                             <h3 class="text-white text-lg lg:text-2xl font-medium mb-4 underline hover:text-secondary">
                                 Legislación en materia de agua
                             </h3>

@@ -36,6 +36,10 @@ class WebsiteController extends Controller
         return view('redesign.materials');
     }
 
+    public function discusion(){
+        return view('redesign.discusion');
+    }
+
     public function studies() {
         return view('redesign.studies');
     }
