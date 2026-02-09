@@ -17,7 +17,7 @@
             <div class="w-full md:w-7/12 flex items-center justify-center md:justify-end">
                 <ul class="flex flex-col md:flex-row items-center space-x-0 md:space-x-10 space-y-7 md:space-y-0">
                     <li>
-                        <a href="#" class="block text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('login') }}" class="block text-white font-semibold text-sm hover:text-secondary">
                             Administración
                         </a>
                     </li>
