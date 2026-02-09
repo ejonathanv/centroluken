@@ -1,5 +1,5 @@
-<x-guest-layout header="header2">
-    <section class="pt-32">
+<x-redesign.website-layout header="header2">
+    <section class="py-32">
         <div class="container">
             <div class="w-6/12 mx-auto">
 
@@ -50,4 +50,4 @@
             </div>
         </div>
     </section>
-</x-guest-layout>
+</x-redesign.website-layout>

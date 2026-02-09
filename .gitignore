@@ -4,6 +4,7 @@
 /public/hot
 /public/storage
 /public/pdfTopics
+/public/articles
 /storage/*.key
 /vendor
 .env

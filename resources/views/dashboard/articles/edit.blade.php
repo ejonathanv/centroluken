@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-redesign.website-app-layout>
     <section class="py-16">
         <div class="container">
             <div class="w-6/12 mx-auto">
@@ -168,4 +168,29 @@
 
     <section class="section_divider"></section>
     <section class="section_divider"></section>
-</x-app-layout>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof ClassicEditor === 'undefined') return;
+
+            var form = document.querySelector('form');
+            Promise.all([
+                ClassicEditor.create(document.querySelector('#editor'), {
+                    removePlugins: ['CKBox', 'CKFinder', 'EasyImage', 'ImageUpload', 'MediaEmbed'],
+                }),
+                ClassicEditor.create(document.querySelector('#editor_en'), {
+                    removePlugins: ['CKBox', 'CKFinder', 'EasyImage', 'ImageUpload', 'MediaEmbed'],
+                })
+            ]).then(function(editors) {
+                window.articleEditor = editors[0];
+                window.articleEditorEn = editors[1];
+                form.addEventListener('submit', function() {
+                    document.getElementById('postEditor').value = window.articleEditor.getData();
+                    document.getElementById('postEditorEn').value = window.articleEditorEn.getData();
+                });
+            }).catch(function(err) {
+                console.error(err);
+            });
+        });
+    </script>
+</x-redesign.website-app-layout>
