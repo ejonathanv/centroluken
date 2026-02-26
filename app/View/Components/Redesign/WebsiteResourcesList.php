@@ -26,13 +26,17 @@ class WebsiteResourcesList extends Component
 
     public function getAllTopiCategories()
     {
+        $latestTopicSub = Topic::select(DB::raw('MAX(created_at)'))
+            ->whereColumn('category_id', 'topi_categories.id');
+
         return TopiCategory::with(['topics' => function ($query) {
             $query->latest('created_at');
         }])
-            ->withCount(['topics as latest_topic_date' => function ($query) {
-                $query->select(DB::raw('MAX(created_at)'));
-            }])
+            ->addSelect(['latest_topic_date' => $latestTopicSub])
+            ->withCount('topics')
+            ->orderByRaw('latest_topic_date IS NULL')
             ->orderByDesc('latest_topic_date')
+            ->orderByDesc('topics_count')
             ->orderBy('name')
             ->get();
     }

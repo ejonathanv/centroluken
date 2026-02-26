@@ -2,12 +2,14 @@
 
     <div class="block md:hidden container">
         <div class="w-full mb-7 px-4">
-            <select name="" id="" class="w-full p-2 border-2 border-secondary rounded-md">
-                <option value="">Todos</option>
-                @foreach($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                @endforeach
-            </select>
+            <form method="GET" action="{{ request()->url() }}" id="resources-category-form">
+                <select name="category" class="w-full p-2 border-2 border-secondary rounded-md" onchange="this.form.submit()">
+                    <option value="" @selected(!request()->query('category'))>Todos</option>
+                    @foreach($categories as $category)
+                    <option value="{{ $category->id }}" @selected(request()->query('category') == $category->id)>{{ $category->name }}</option>
+                    @endforeach
+                </select>
+            </form>
         </div>
     </div>
 
