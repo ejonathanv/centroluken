@@ -9,14 +9,14 @@ use Illuminate\View\Component;
 class WebsiteResourcesLink extends Component
 {
 
-    public $item;
+    public $category;
 
     /**
      * Create a new component instance.
      */
-    public function __construct($item)
+    public function __construct($category)
     {
-        $this->item = $item;
+        $this->category = $category;
     }
 
     /**

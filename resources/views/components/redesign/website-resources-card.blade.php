@@ -1,5 +1,5 @@
-<div class="px-4 mb-7">
-    <div class="flex flex-col space-y-4 p-4 border-2 border-secondary">
+<div class="px-4 mb-7 h-full">
+    <div class="flex flex-col space-y-4 p-4 border-2 border-secondary h-full">
         <div class="w-full h-[220px] bg-cover bg-center" style="background-image: url('{{ $image }}')"></div>
         <h3 class="text-lg font-medium text-secondary">
             {{ $title }}
