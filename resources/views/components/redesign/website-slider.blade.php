@@ -1,12 +1,30 @@
 <section class="h-[300px] md:h-[80vh] bg-gray-100 relative" x-data="{
     init() {
-        $('.redesign_slider').owlCarousel({
+        const slider = $('.redesign_slider');
+        slider.owlCarousel({
             loop: true,
             margin: 0,
             nav: true,
-            autoplay: true,
+            autoplay: false,
             items: 1,
             autoplayHoverPause: true,
+        });
+        slider.on('changed.owl.carousel', function(e) {
+            slider.find('video').each(function() { this.pause(); });
+            setTimeout(() => {
+                const activeItem = slider.find('.owl-item.active').first();
+                const current = activeItem.find('video')[0];
+                if (current) {
+                    current.currentTime = 0;
+                    current.play().catch(() => {});
+                }
+            }, 50);
+        });
+        this.$nextTick(() => {
+            setTimeout(() => {
+                const first = slider.find('.owl-item.active video')[0];
+                if (first) first.play().catch(() => {});
+            }, 100);
         });
     },
     prev() {
@@ -18,15 +36,17 @@
 }">
     <div class="owl-carousel redesign_slider">
         @php 
-            $imageOne = asset('redesign/img/home/slides/1000_F_1001285177_usjnvA3zRwVjZbD04zMO6HhoBX74n2Zb.webp');
-            $imageTwo = asset('redesign/img/home/slides/1000_F_344077939_A14Tqa3QRye8p4mOWTsDZSK0Anbz6x36.webp');
             $imageThree = asset('redesign/img/home/slides/1000_F_378132525_33pkqaP9X8a6d8qQmDj2Fy6j4UV9E278.webp');
         @endphp 
-        <div class="redesign_slider_item" 
-            style="background-image: url('{{$imageOne}}');">
+        <div class="redesign_slider_item relative overflow-hidden">
+            <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="auto" data-slide-index="0">
+                <source src="{{ asset('videos/video_agua.mp4') }}" type="video/mp4">
+            </video>
         </div>
-        <div class="redesign_slider_item" 
-            style="background-image: url('{{$imageTwo}}');">
+        <div class="redesign_slider_item relative overflow-hidden">
+            <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="auto" data-slide-index="1">
+                <source src="{{ asset('videos/video_remo_agua.mp4') }}" type="video/mp4">
+            </video>
         </div>
         <div class="redesign_slider_item" 
             style="background-image: url('{{$imageThree}}');">

@@ -13,7 +13,7 @@
                 </p>
             </div>
             <div class="w-full md:w-1/2">
-                <img src="{{ asset('redesign/img/philosophy/1000_F_1838827174_Garo8cUhKnj3GQat96l0hDF6QsEu2WEj.webp') }}" 
+                <img src="{{ asset('redesign/img/philosophy/filosofia_banner.jpg') }}" 
                     alt="Filosofía - Centro Luken" 
                     class="w-full h-auto wow animate__animated animate__fadeInRight">
             </div>

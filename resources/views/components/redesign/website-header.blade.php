@@ -61,7 +61,7 @@
                             <ul>
                                 <li>
                                     <a href="{{ route('redesign.studies') }}">
-                                        Estudios
+                                        Proyectos
                                     </a>
                                 </li>
                             </ul>
@@ -132,7 +132,7 @@
                             <ul class="flex flex-col space-y-4">
                                 <li>
                                     <a href="{{ route('redesign.studies') }}" class="text-secondary font-semibold text-sm">
-                                        Estudios
+                                        Proyectos
                                     </a>
                                 </li>
                                 <li>
