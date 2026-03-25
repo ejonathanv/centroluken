@@ -47,7 +47,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased redesign !bg-white min-h-screen">
-        <x-redesign.website-header />
+        <x-redesign.website-header admin="true" />
         
         <main>
             {{ $slot }}

@@ -31,62 +31,108 @@
 
             <!-- Menu de escritorio -->
             <nav class="lg:flex items-center justify-end redesign-nav bg-primary py-8 w-1/3 lg:w-2/3 relative z-2">
-                <ul class="hidden lg:flex items-center space-x-10">
-                    <li>
-                        <a href="{{ route('redesign.home') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
-                            Inicio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('redesign.philosophy') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
-                            Filosofía
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('redesign.origin') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
-                            Origen
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('redesign.team') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
-                            Equipo
-                        </a>
-                    </li>
-                    <li class="submenu">
-                        <span href="{{ route('redesign.materials') }}" class="text-white font-semibold text-sm cursor-pointer flex items-center space-x-2">
-                            <span>Materiales</span>
-                            <i class="fa-solid fa-angle-down"></i>
-                        </span>
-                        <div class="submenu-content">
-                            <ul>
-                                <li>
-                                    <a href="{{ route('redesign.studies') }}">
-                                        Proyectos
+                @if(!$admin)
+                    <ul class="hidden lg:flex items-center space-x-10">
+                        <li>
+                            <a href="{{ route('redesign.home') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('redesign.philosophy') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
+                                Filosofía
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('redesign.origin') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
+                                Origen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('redesign.team') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
+                                Equipo
+                            </a>
+                        </li>
+                        <li class="submenu">
+                            <span href="{{ route('redesign.materials') }}" class="text-white font-semibold text-sm cursor-pointer flex items-center space-x-2">
+                                <span>Materiales</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </span>
+                            <div class="submenu-content">
+                                <ul>
+                                    <li>
+                                        <a href="{{ route('redesign.studies') }}">
+                                            Proyectos
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="{{ route('redesign.resources') }}">
+                                            Recursos
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        {{--
+                        <li>
+                            <a href="{{ route('redesign.partnerships') }}" class="text-white font-semibold text-sm hover:text-secondary">
+                                Alianzas
+                            </a>
+                        </li>
+                        --}}
+                        <li>
+                            <a href="{{ route('redesign.contact') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
+                                Contacto    
+                            </a>
+                        </li>
+                    </ul>
+                @endif
+
+                @if($admin)
+                    <ul class="flex items-center justify-end space-x-7">
+                        <li>
+                            <a href="{{ route('articles.index') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
+                                Artículos
+                            </a>
+                        </li>
+                        <li>
+                            <div class="relative inline-block" x-data="{ open: false }">
+                                <button x-on:click="open = !open" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
+                                    Temas de interés
+                                    <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                                </button>
+                                <div x-show="open" x-on:click.away="open = false" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 text-gray-700">
+                                    <a href="{{ route('topics.index') }}?type=article" class="block px-4 py-2 hover:bg-gray-100">
+                                        Artículos
                                     </a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="{{ route('redesign.resources') }}">
-                                        Recursos
+                                    <a href="{{ route('topics.index') }}?type=pdf" class="block px-4 py-2 hover:bg-gray-100">
+                                        PDF's
                                     </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    {{--
-                    <li>
-                        <a href="{{ route('redesign.partnerships') }}" class="text-white font-semibold text-sm hover:text-secondary">
-                            Alianzas
-                        </a>
-                    </li>
-                    --}}
-                    <li>
-                        <a href="{{ route('redesign.contact') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
-                            Contacto    
-                        </a>
-                    </li>
-                </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="{{ route('discusiones.index') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
+                                Discusiones
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('redesign.home') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
+                                Volver al sitio
+                            </a>
+                        </li>
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST" class="inline-block">
+                                @csrf
+                                <button type="submit" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
+                                    Cerrar sesión
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                @endif
 
                 <ul class="flex lg:hidden items-center justify-end space-x-4">
                     <li>

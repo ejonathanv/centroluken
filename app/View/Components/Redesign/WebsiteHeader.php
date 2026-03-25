@@ -8,12 +8,14 @@ use Illuminate\View\Component;
 
 class WebsiteHeader extends Component
 {
+    public $admin;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($admin = false)
     {
-        //
+        $this->admin = $admin;
     }
 
     /**
