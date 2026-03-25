@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Redesign;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Discusion;
 
 class WebsiteController extends Controller
 {
@@ -36,8 +36,22 @@ class WebsiteController extends Controller
         return view('redesign.materials');
     }
 
-    public function discusion(){
-        return view('redesign.discusion');
+    public function discusionIndex()
+    {
+        $discusion = Discusion::orderByDesc('fecha')->first();
+
+        if (! $discusion) {
+            abort(404);
+        }
+
+        return redirect()->route('redesign.discusion.show', $discusion);
+    }
+
+    public function discusionShow(Discusion $discusion)
+    {
+        $discusion->load('especificaciones');
+
+        return view('redesign.discusion', compact('discusion'));
     }
 
     public function studies() {

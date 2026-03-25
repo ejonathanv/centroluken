@@ -32,6 +32,10 @@
                         </div>
                     </div>
 
+                    <a href="{{ route('discusiones.index') }}" class="opacity-50 @if (request()->routeIs('discusiones*')) !opacity-100 @endif">
+                        Discusiones
+                    </a>
+
                     <a href="{{ route('home') }}" class="opacity-50">
                         Volver al sitio
                     </a>
@@ -126,6 +130,9 @@
         @if($admin)
         <a href="{{ route('dashboard') }}" class="">
             Artículos
+        </a>
+        <a href="{{ route('discusiones.index') }}" class="">
+            Discusiones
         </a>
         <a href="{{ route('home') }}">
             Volver al sitio

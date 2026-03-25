@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\TopicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\DiscusionController;
+use App\Http\Controllers\DiscusionEspecController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\DashboardController;
@@ -49,6 +51,15 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'verified']], fu
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('articles', ArticleController::class);
     Route::resource('topics', TopicController::class);
+    Route::resource('discusiones', DiscusionController::class)
+        ->parameters(['discusiones' => 'discusion'])
+        ->except(['show']);
+    Route::resource('discusiones.especificaciones', DiscusionEspecController::class)
+        ->parameters([
+            'discusiones' => 'discusion',
+            'especificaciones' => 'discusionEspec',
+        ])
+        ->except(['show']);
     Route::get('create-pdf-topic', [TopicController::class, 'createPdf'])->name('create-pdf-topic');
     Route::get('edit-pdf-topic/{topic}', [TopicController::class, 'editPdf'])->name('edit-pdf-topic');
 });

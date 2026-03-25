@@ -2,18 +2,18 @@
 
 namespace App\View\Components\Redesign;
 
+use App\Models\Discusion;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class WebsiteMaterials extends Component
 {
-    /**
-     * Create a new component instance.
-     */
+    public ?Discusion $discusionDestacada;
+
     public function __construct()
     {
-        //
+        $this->discusionDestacada = Discusion::orderByDesc('fecha')->first();
     }
 
     /**

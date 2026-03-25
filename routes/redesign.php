@@ -36,8 +36,12 @@ Route::get('/materiales/recursos', [
 ])->name('redesign.resources');
 
 Route::get('/materiales/discusion', [
-    WebsiteController::class, 'discusion'
+    WebsiteController::class, 'discusionIndex',
 ])->name('redesign.discusion');
+
+Route::get('/materiales/discusion/{discusion:slug}', [
+    WebsiteController::class, 'discusionShow',
+])->name('redesign.discusion.show');
 
 Route::get('/alianzas', [
     WebsiteController::class, 'partnerships'

@@ -24,23 +24,29 @@
                         <h3 class="text-white text-lg lg:text-2xl font-medium mb-4">
                             Discusión
                         </h3>
-                        <a href="{{ route('redesign.discusion') }}">
+                        @if($discusionDestacada)
+                        <a href="{{ route('redesign.discusion.show', $discusionDestacada) }}">
                             <h3 class="text-white text-lg lg:text-2xl font-medium mb-4 underline hover:text-secondary">
-                                Legislación en materia de agua
+                                {{ $discusionDestacada->titulo }}
                             </h3>
                         </a>
                         <h4 class="text-secondary text-sm lg:text-base font-bold">
-                            2025-12-09
+                            {{ $discusionDestacada->fecha->format('Y-m-d') }}
                         </h4>
+                        @else
+                        <p class="text-white text-sm lg:text-base opacity-80">Próximamente</p>
+                        @endif
                     </div>
                 </div>
             </div>
 
+            @if($discusionDestacada)
             <div class="flex justify-center mt-10">
-                <a href="#" class="block border-2 border-primary py-3 px-6 text-primary font-semibold text-sm hover:text-secondary">
+                <a href="{{ route('redesign.discusion.show', $discusionDestacada) }}" class="block border-2 border-primary py-3 px-6 text-primary font-semibold text-sm hover:text-secondary">
                     Leer más
                 </a>
             </div>
+            @endif
         </div>
     </div>
 </section>
