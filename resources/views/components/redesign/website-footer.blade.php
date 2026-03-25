@@ -17,17 +17,17 @@
             <div class="w-full md:w-7/12 flex items-center justify-center md:justify-end">
                 <ul class="flex flex-col md:flex-row items-center space-x-0 md:space-x-10 space-y-7 md:space-y-0">
                     <li>
-                        <a href="{{ route('login') }}" class="block text-white font-semibold text-sm hover:text-secondary">
+                        <a href="{{ route('login') }}" class="block text-white font-semibold text-sm opacity-50 hover:opacity-100">
                             Administración
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="block text-white font-semibold text-sm hover:text-secondary">
+                        <a href="#" class="block text-white font-semibold text-sm opacity-50 hover:opacity-100">
                             Intranet
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="block border-2 border-white py-3 px-6 text-white font-semibold text-sm hover:text-secondary">
+                        <a href="#" class="block border-2 border-white py-3 px-6 text-white font-semibold text-sm opacity-50 hover:opacity-100">
                             Contáctanos
                         </a>
                     </li>

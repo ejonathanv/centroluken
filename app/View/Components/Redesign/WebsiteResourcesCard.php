@@ -12,16 +12,17 @@ class WebsiteResourcesCard extends Component
     public $title;
     public $description;
     public $image;
-
+    public $link;
 
     /**
      * Create a new component instance.
      */
-    public function __construct($title, $description,$image)
+    public function __construct($title, $description,$image, $link)
     {
         $this->title = $title;
         $this->description = $description;
         $this->image = $image;
+        $this->link = $link;
     }
 
     /**

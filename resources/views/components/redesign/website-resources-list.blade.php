@@ -28,7 +28,8 @@
                         <x-redesign.website-resources-card 
                             :title="$topic->title"
                             :description="$topic->description ?? ''"
-                            image="https://placehold.co/600x400"/>
+                            image=""
+                            :link="$topic->url"/>
                     </div>
                 @endforeach
             </div>
