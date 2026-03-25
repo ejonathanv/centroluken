@@ -34,8 +34,8 @@ use App\Http\Controllers\DashboardController;
 // Route::get('/header-2', [WebsiteController::class, 'header2'])->name('header2');
 // Route::get('/quienes-somos', [WebsiteController::class, 'about'])->name('about');
 // Route::get('/quienes-somos/{member}', [WebsiteController::class, 'member'])->name('member');
-// Route::get('/contacto', [WebsiteController::class, 'contact'])->name('contact');
-// Route::post('/contacto', [WebsiteController::class, 'send'])->name('send-message');
+Route::get('/contacto', [WebsiteController::class, 'contact'])->name('contact');
+Route::post('/contacto', [WebsiteController::class, 'send'])->name('send-message');
 
 // Route::get('/blog', [WebsiteController::class, 'blog'])->name('blog');
 // Route::get('/blog/{article:slug}', [WebsiteController::class, 'article'])->name('article');

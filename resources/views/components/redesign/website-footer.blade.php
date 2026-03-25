@@ -22,12 +22,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="block text-white font-semibold text-sm opacity-50 hover:opacity-100">
+                        <a href="https://sites.google.com/centroluken.org/intranet?usp=sharing" target="_blank" class="block text-white font-semibold text-sm opacity-50 hover:opacity-100">
                             Intranet
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="block border-2 border-white py-3 px-6 text-white font-semibold text-sm opacity-50 hover:opacity-100">
+                        <a href="{{ route('redesign.contact') }}" class="block border-2 border-white py-3 px-6 text-white font-semibold text-sm opacity-50 hover:opacity-100">
                             Contáctanos
                         </a>
                     </li>

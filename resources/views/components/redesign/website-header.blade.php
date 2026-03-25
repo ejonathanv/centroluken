@@ -81,6 +81,11 @@
                         </a>
                     </li>
                     --}}
+                    <li>
+                        <a href="{{ route('redesign.contact') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
+                            Contacto    
+                        </a>
+                    </li>
                 </ul>
 
                 <ul class="flex lg:hidden items-center justify-end space-x-4">
