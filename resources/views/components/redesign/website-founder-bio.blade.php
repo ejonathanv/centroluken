@@ -15,11 +15,11 @@
 </section>
 
 <section class="py-20">
-    <div class="container flex items-start space-x-10">
-        <div class="w-7/12">
+    <div class="container flex flex-col md:flex-row items-start space-y-10 md:space-y-0 md:space-x-10">
+        <div class="w-full md:w-7/12">
             <img src="{{ $pictureOne }}" alt="Foto de {{ $name }}">
         </div>
-        <div class="w-5/12">
+        <div class="w-full md:w-5/12">
             <img src="{{ $pictureTwo }}" alt="Foto de {{ $name }}">
             <div class="py-10">
                 {{ $slot }}
