@@ -48,9 +48,11 @@
                 <source src="{{ asset('videos/video_remo_agua.mp4') }}" type="video/mp4">
             </video>
         </div>
+        {{-- Se oculta este slide por el momento
         <div class="redesign_slider_item" 
             style="background-image: url('{{$imageThree}}');">
         </div>
+        --}}
     </div>
 
     <a href="#" @click.prevent="prev()" class="absolute left-2 md:left-16 top-1/2 -translate-y-1/2 z-10 text-primary text-xl bg-white rounded-sm p-2 w-10 h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 shaodw-sm hover:shadow-md">

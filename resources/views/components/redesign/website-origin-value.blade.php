@@ -2,7 +2,7 @@
     <div class="container">
         <div class="flex flex-col md:flex-row items-stretch space-x-0 md:space-x-10 space-y-10 md:space-y-0">
             @php
-            $img = asset('redesign/img/origin/1000_F_828997992_pUW744BTC7ka8GxWdpcdB7tzmya6aHHk.webp');
+            $img = asset('redesign/img/origin/valoranadido.jpg');
             @endphp
             <div class="h-[250px] md:h-auto w-full md:w-1/2 bg-cover bg-center wow animate__animated animate__fadeInLeft"  
                 style="background-image: url('{{ $img }}')">
