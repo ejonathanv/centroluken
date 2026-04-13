@@ -9,7 +9,8 @@
             </h3>
 
             <div>
-                <a href="#" class="inline-block text-center text-white border-2 border-white py-4 px-10 mt-10 hover:bg-white hover:text-secondary transition-colors duration-300 wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">
+                <a href="{{ route('redesign.team') }}" 
+                    class="inline-block text-center text-white border-2 border-white py-4 px-10 mt-10 hover:bg-white hover:text-secondary transition-colors duration-300 wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">
                     Equipo
                 </a>
             </div>

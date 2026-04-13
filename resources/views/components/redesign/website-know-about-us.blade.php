@@ -7,7 +7,8 @@
             Creamos vínculos entre la ciencia, la política y la práctica para influir en la toma de decisiones y promover soluciones innovadoras para la coexistencia armónica de la humanidad con el agua y los recursos naturales.
         </h3>
 
-        <a href="#" class="block text-center text-white border-2 border-white py-4 px-10 mt-16 hover:bg-white hover:text-secondary transition-colors duration-300 wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">
+        <a href="{{ route('redesign.origin') }}" 
+            class="block text-center text-white border-2 border-white py-4 px-10 mt-16 hover:bg-white hover:text-secondary transition-colors duration-300 wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">
             Conócenos
         </a>
     </div>

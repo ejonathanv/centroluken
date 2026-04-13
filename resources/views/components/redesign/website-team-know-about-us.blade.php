@@ -7,7 +7,8 @@
             Desarrollamos estrategias a partir de diagnósticos y análisis para el corto, mediano y largo plazos, con base en elementos de las ciencias del medio físico y social.
         </h3>
 
-        <a href="#" class="block text-center text-white border-2 border-white py-4 px-10 mt-16 hover:bg-white hover:text-secondary transition-colors duration-300 wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">
+        <a href="{{ route('redesign.origin') }}" 
+            class="block text-center text-white border-2 border-white py-4 px-10 mt-16 hover:bg-white hover:text-secondary transition-colors duration-300 wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">
             Conócenos
         </a>
     </div>
