@@ -1,4 +1,4 @@
-<header class="bg-white shadow relative lg:fixed top-0 left-0 right-0 z-50">
+<header class="bg-white shadow relative lg:fixed top-0 left-0 right-0" style="z-index: 101;">
     <!-- Curvas -->
     <div class="bg-primary w-[35%] md:w-[40%] lg:w-[50%] h-full absolute top-0 right-0 z-1">
         <img src="{{ asset('/redesign/img/header-curvas.png') }}" 
@@ -19,7 +19,7 @@
             }
         }
     }">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between relative">
             <!-- Logo -->
             <div class="w-2/3 lg:w-1/3">
                 <a href="{{ route('redesign.home') }}">
@@ -30,29 +30,36 @@
             </div>
 
             <!-- Menu de escritorio -->
-            <nav class="lg:flex items-center justify-end redesign-nav bg-primary py-8 w-1/3 lg:w-2/3 relative z-2">
+            <nav class="lg:flex items-center justify-end redesign-nav bg-primary py-8 w-1/3 lg:w-2/3 relative z-2" x-data="{
+                changeLang: true
+            }">
                 @if(!$admin)
                     <ul class="hidden lg:flex items-center space-x-10">
+                        <!-- Inicio -->
                         <li>
                             <a href="{{ route('redesign.home') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
                                 Inicio
                             </a>
                         </li>
+                        <!-- Filosofia -->
                         <li>
                             <a href="{{ route('redesign.philosophy') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
                                 Filosofía
                             </a>
                         </li>
+                        <!-- Origen -->
                         <li>
                             <a href="{{ route('redesign.origin') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
                                 Origen
                             </a>
                         </li>
+                        <!-- Equipo -->
                         <li>
                             <a href="{{ route('redesign.team') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
                                 Equipo
                             </a>
                         </li>
+                        <!-- Materiales -->
                         <li class="submenu">
                             <span href="{{ route('redesign.materials') }}" class="text-white font-semibold text-sm cursor-pointer flex items-center space-x-2">
                                 <span>Materiales</span>
@@ -75,6 +82,7 @@
                                 </ul>
                             </div>
                         </li>
+                        <!-- Alianzas -->
                         {{--
                         <li>
                             <a href="{{ route('redesign.partnerships') }}" class="text-white font-semibold text-sm hover:text-secondary">
@@ -82,9 +90,16 @@
                             </a>
                         </li>
                         --}}
+                        <!-- Contacto -->
                         <li>
                             <a href="{{ route('redesign.contact') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
                                 Contacto    
+                            </a>
+                        </li>
+                        <!-- Seleccionar idioma -->
+                        <li>
+                            <a href="#" class="text-white opacity-50 font-semibold text-sm hover:opacity-100" @click.prevent="changeLang = !changeLang">
+                                <i class="fa fa-globe"></i>
                             </a>
                         </li>
                     </ul>
@@ -144,6 +159,32 @@
                         </a>
                     </li>
                 </ul>
+
+                <template x-if="changeLang">
+                    <div class="fixed bg-gray-900 bg-opacity-50 w-full top-0 left-0 right-0 bottom-0 flex items-center justify-center z-10">
+                        <div class="container">
+                            <div class="bg-white bg-opacity-90 rounded-lg shadow-lg p-6 w-5/12 mx-auto">
+                                <h3 class="text-center mb-16">Selecciona tu idioma</h3>
+                                <div class="flex items-center justify-center space-x-7">
+                                    <a href="#" class="flex items-center space-x-2 text-lg font-bold opacity-50 hover:opacity-100 text-primary">
+                                        <img src="{{ asset('img/mexico_flag.png') }}" alt="Centro Luken - México" class="w-7 h-auto">
+                                        <span>Español</span>
+                                    </a>
+                                    <a href="#" class="flex items-center space-x-2 text-lg font-bold opacity-50 hover:opacity-100 text-primary">
+                                        <img src="{{ asset('img/usa_flag.png') }}" alt="Centro Luken - USA" class="w-7 h-auto">
+                                        <span>English</span>
+                                    </a>
+                                </div>
+                                <div class="flex items-center justify-center mt-10">
+                                    <a href="#" class="text-xs font-bold text-gray-500 flex items-center space-x-2" @click.prevent="changeLang = false">
+                                        <i class="fa fa-times fa-sm"></i>
+                                        <span>Cerrar</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
             </nav>
         </div>
 
