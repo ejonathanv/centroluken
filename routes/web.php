@@ -12,12 +12,15 @@ use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\DashboardController;
 
 
-// We need to set a route to define the locale we want to use. 
-// Route::get('/setlocale/{locale}', function ($locale) {
-//     App::setLocale($locale);
-//     session()->put('locale', $locale);
-//     return redirect()->back();
-// })->name('set-locale');
+Route::get('/setlocale/{locale}', function (string $locale) {
+    if (! in_array($locale, ['es', 'en'], true)) {
+        abort(400);
+    }
+    App::setLocale($locale);
+    session()->put('locale', $locale);
+
+    return redirect()->back();
+})->name('set-locale');
 
 // Necesitamos una ruta para correr las migraciones de forma manual:
 // Route::get('/migrate', function () {
