@@ -24,6 +24,9 @@ return [
     ],
 
     'mobile' => [
+        'language' => 'Language',
+        'locale_es' => 'ES',
+        'locale_en' => 'EN',
         'copyright' => ':year :app, All rights reserved.',
     ],
 

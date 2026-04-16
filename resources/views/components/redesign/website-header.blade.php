@@ -245,6 +245,28 @@
                 </ul>
             </nav>
 
+            @if(!$admin)
+                <div class="mb-8 border-t border-white/15 pt-6">
+                    <p class="text-white/40 text-[11px] font-semibold uppercase tracking-wider mb-3">
+                        {{ __('2026/header.mobile.language') }}
+                    </p>
+                    <div class="inline-flex rounded-lg border border-white/20 p-0.5 bg-black/10" role="group" aria-label="{{ __('2026/header.mobile.language') }}">
+                        <a href="{{ route('set-locale', 'es') }}"
+                            title="{{ __('2026/header.modal.spanish') }}"
+                            class="min-w-[3.25rem] px-3 py-2 rounded-md text-xs font-semibold text-center transition
+                                {{ app()->getLocale() === 'es' ? 'bg-white/20 text-white shadow-sm' : 'text-white/45 hover:text-white' }}">
+                            Español
+                        </a>
+                        <a href="{{ route('set-locale', 'en') }}"
+                            title="{{ __('2026/header.modal.english') }}"
+                            class="min-w-[3.25rem] px-3 py-2 rounded-md text-xs font-semibold text-center transition
+                                {{ app()->getLocale() === 'en' ? 'bg-white/20 text-white shadow-sm' : 'text-white/45 hover:text-white' }}">
+                            English
+                        </a>
+                    </div>
+                </div>
+            @endif
+
             <p class="text-white/50 text-xs font-semibold">
                 © {{ __('2026/header.mobile.copyright', ['year' => date('Y'), 'app' => config('app.name')]) }}
             </p>
