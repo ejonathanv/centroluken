@@ -9,7 +9,7 @@
 
         <a href="{{ route('redesign.origin') }}" 
             class="block text-center text-white border-2 border-white py-4 px-10 mt-16 hover:bg-white hover:text-secondary transition-colors duration-300 wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">
-            Conócenos
+            {{ __('2026/about.team.cta.know_about_us') }}
         </a>
     </div>
     <div class="min-h-[250px] md:min-h-0 w-full md:w-1/2 bg-cover bg-center relative overflow-hidden" style="background-image: url('{{ $image }}')">

@@ -1,7 +1,7 @@
 <section class="bg-primary text-white py-10 md:py-20 text-center">
     <div class="container">
         <h2>
-            Colaboradores
+            {{ __('2026/about.team.sections.collaborators') }}
         </h2>
     </div>
 </section>
