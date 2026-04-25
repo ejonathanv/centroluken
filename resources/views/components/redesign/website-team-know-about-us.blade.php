@@ -4,7 +4,7 @@
 <section class="flex flex-col flex-col-reverse md:flex-row items-stretch min-h-[300px] lg:min-h-[500px]">
     <div class="w-full md:w-1/2 bg-secondary p-8 flex flex-col items-center justify-center">
         <h3 class="text-white text-lg lg:text-2xl text-center font-medium wow animate__animated animate__fadeInRight">
-            Desarrollamos estrategias a partir de diagnósticos y análisis para el corto, mediano y largo plazos, con base en elementos de las ciencias del medio físico y social.
+            {{ __('2026/about.slogan') }}
         </h3>
 
         <a href="{{ route('redesign.origin') }}" 

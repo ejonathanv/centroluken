@@ -2,7 +2,7 @@
     <div class="container">
         <div class="w-9/12 mx-auto">
             <h2>
-                Somos un equipo de especialistas con más de 30 años de experiencia en la gestión del agua y los recursos naturales.
+                {{ __('2026/about.cover.title') }}
             </h2>
         </div>
     </div>
