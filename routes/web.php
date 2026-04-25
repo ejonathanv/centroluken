@@ -43,8 +43,8 @@ Route::post('/contacto', [WebsiteController::class, 'send'])->name('send-message
 // Route::get('/blog', [WebsiteController::class, 'blog'])->name('blog');
 // Route::get('/blog/{article:slug}', [WebsiteController::class, 'article'])->name('article');
 // Route::get('/temas-de-interes', [WebsiteController::class, 'topics'])->name('topics');
-// Route::get('/temas-de-interes/{category}', [WebsiteController::class, 'topicCategory'])->name('topicCategory');
-// Route::get('/articulo-pdf/{topic}', [WebsiteController::class, 'viewPdfTopic'])->name('view-pdf-topic');
+Route::get('/temas-de-interes/{category}', [WebsiteController::class, 'topicCategory'])->name('topicCategory');
+Route::get('/articulo-pdf/{topic}', [WebsiteController::class, 'viewPdfTopic'])->name('view-pdf-topic');
 // Route::view('/biografias', 'website.members');
 
 // Rutas para rediseño 2026

@@ -4,7 +4,7 @@
     $locale = session()->has('locale') ? session()->get('locale') : config('app.locale');
 @endphp
 
-<x-guest-layout header="header2">
+<x-redesign.website-layout header="header2">
 
     <section class="py-10 md:py-24">
         @isset($currentCategory)
@@ -105,4 +105,4 @@
     <section class="section_divider"></section>
     <section class="section_divider"></section>
 
-</x-guest-layout>
+</x-redesign.website-layout>

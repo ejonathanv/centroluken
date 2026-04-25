@@ -24,12 +24,20 @@
         <div class="w-full md:w-2/3">
             <div class="flex flex-stretch flex-col md:flex-row flex-wrap">
                 @foreach($topics as $topic)
+                    @php
+                        $link = null;
+                        if($topic->type === 'article'){
+                            $link = $topic->url;
+                        }else{
+                            $link = route('view-pdf-topic', $topic);
+                        }
+                    @endphp
                     <div class="w-full md:w-1/2 mb-5">
                         <x-redesign.website-resources-card 
                             :title="$topic->title"
                             :description="$topic->description ?? ''"
                             image=""
-                            :link="$topic->url"/>
+                            :link="$link"/>
                     </div>
                 @endforeach
             </div>

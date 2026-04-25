@@ -1,4 +1,4 @@
-<x-guest-layout header="header2">
+<x-redesign.website-layout header="header2">
 <section class="py-10 md:py-24">
         <div class="container">
             <div class="w-10/12 md:w-7/12 mx-auto text-center">
@@ -12,4 +12,4 @@
             </div>
         </div>
     </section>
-</x-guest-layout>
+</x-redesign.website-layout>

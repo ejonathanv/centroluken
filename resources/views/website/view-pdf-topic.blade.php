@@ -1,9 +1,9 @@
-@section('title', 'Blog')
+@section('title', 'PDF del tema de interés')
 
-<x-guest-layout header="header2">
+<x-redesign.website-layout header="header2">
     <section class="py-10 md:pt-24 md:pb-16">
         <div class="container">
-            <a href="{{ route('topicCategory', $topic->category) }}" class="mb-5 text-sm text-secondary">
+            <a href="{{ route('redesign.resources') }}" class="mb-5 text-sm text-secondary">
                 <i class="fas fa-arrow-left mr-2"></i>
                 Volver al listado de temas de interés
             </a>
@@ -40,4 +40,4 @@
     <section class="section_divider"></section>
     <section class="section_divider"></section>
 
-</x-guest-layout>
+</x-redesign.website-layout>

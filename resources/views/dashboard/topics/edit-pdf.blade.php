@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-redesign.website-app-layout>
     <section class="py-16">
         <div class="container">
             <div class="w-8/12 mx-auto">
@@ -192,5 +192,4 @@
 
     <section class="section_divider"></section>
     <section class="section_divider"></section>
-
-</x-app-layout> 
+</x-redesign.website-app-layout> 
