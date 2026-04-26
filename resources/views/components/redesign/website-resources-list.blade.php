@@ -4,7 +4,7 @@
         <div class="w-full mb-7 px-4">
             <form method="GET" action="{{ request()->url() }}" id="resources-category-form">
                 <select name="category" class="w-full p-2 border-2 border-secondary rounded-md" onchange="this.form.submit()">
-                    <option value="" @selected(!request()->query('category'))>Todos</option>
+                    <option value="" @selected(!request()->query('category'))>{{ __('2026/materials.resources.all') }}</option>
                     @foreach($categories as $category)
                     <option value="{{ $category->id }}" @selected(request()->query('category') == $category->id)>{{ $category->name }}</option>
                     @endforeach

@@ -2,10 +2,10 @@
     <div class="container">
         <div class="w-full md:w-10/12 lg:w-8/12 mx-auto text-center mb-24">
             <h1 class="text-primary title mb-10 !leading-tight wow animate__animated animate__fadeInDown">
-                Somos una organización estratégica
+                {{ __('2026/philosophy.intro.title') }}
             </h1>
             <h3 class="text-primary font-medium leading-relaxed">
-                Dedicada a diseñar e implementar soluciones para una gestión justa, eficiente y sostenible del agua y el medio ambiente.
+                {{ __('2026/philosophy.intro.subtitle') }}
             </h3>
         </div>
     </div>
@@ -13,10 +13,10 @@
     <div class="flex flex-col md:flex-row items-stretch space-x-0 md:space-x-10 space-y-10 md:space-y-0 justify-between px-4 md:px-16">
         <div class="w-full md:w-6/12 lg:w-3/12 wow animate__animated animate__fadeInLeft text-center lg:text-left">
             <h3 class="text-xl font-bold mb-4 text-primary">
-                Misión
+                {{ __('2026/philosophy.intro.mission_title') }}
             </h3>
             <p class="text-sm lg:text-sm">
-                Crear estrategias que aseguren a las generaciones presentes y futuras el acceso al agua en cantidad suficiente y calidad adecuada para el consumo humano, la actividad económica y la salud de los ecosistemas.
+                {{ __('2026/philosophy.intro.mission_text') }}
             </p>
         </div>
         <div class="hidden lg:block w-6/12 relative wow animate__animated animate__fadeInUp">
@@ -26,10 +26,10 @@
         </div>
         <div class="w-full md:w-6/12 lg:w-3/12 wow animate__animated animate__fadeInRight text-center lg:text-left">
             <h3 class="text-xl font-bold mb-4 text-primary">
-                Visión
+                {{ __('2026/philosophy.intro.vision_title') }}
             </h3>
             <p class="text-sm lg:text-sm">
-                Ser una organización referente en soluciones creativas e integrales para el manejo del agua y el medio ambiente, que construye puentes entre la ciencia, la política y la práctica para facilitar decisiones informadas hacia un mundo más consciente y responsable.
+                {{ __('2026/philosophy.intro.vision_text') }}
             </p>
         </div>
     </div>

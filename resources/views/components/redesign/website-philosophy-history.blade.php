@@ -3,18 +3,18 @@
         <div class="flex flex-col md:flex-row items-center space-x-0 md:space-x-10 space-y-10 md:space-y-0">
             <div class="w-full md:w-1/2 flex flex-col space-y-7 text-center">
                 <p class="text-sm lg:text-xl">
-                    Nuestro centro fue fundado por especialistas con más de 30 años de experiencia en la gestión del agua y el medio ambiente. 
+                    {{ __('2026/philosophy.history.p1') }}
                 </p>
                 <p class="text-sm lg:text-xl">
-                    Desde nuestra creación, sumamos ese conocimiento acumulado para impulsar soluciones estratégicas que combinan ciencia, acción y colaboración. 
+                    {{ __('2026/philosophy.history.p2') }}
                 </p>
                 <p class="text-sm lg:text-xl">
-                    Trabajamos por la preservación, el uso responsable y la gobernanza equitativa del agua, en alianza con actores públicos, privados y comunitarios.
+                    {{ __('2026/philosophy.history.p3') }}
                 </p>
             </div>
             <div class="w-full md:w-1/2">
                 <img src="{{ asset('redesign/img/philosophy/filosofia_banner.jpg') }}" 
-                    alt="Filosofía - Centro Luken" 
+                    alt="{{ __('2026/philosophy.meta_title') }} - Centro Luken" 
                     class="w-full h-auto wow animate__animated animate__fadeInRight">
             </div>
         </div>

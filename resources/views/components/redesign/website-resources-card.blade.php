@@ -10,7 +10,7 @@
             {{ $description }}
         </p>
         <a href="{{ $link }}" target="_blank" class="text-sm font-bold text-secondary">
-            Leer más
+            {{ __('2026/materials.resources.read_more') }}
         </a>
     </div>
 </div>

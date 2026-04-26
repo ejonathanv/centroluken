@@ -10,15 +10,15 @@
             <div class="w-full md:w-1/2">
                 <div class="p-8 border-2 border-secondary flex flex-col space-y-7">
                     <p class="text-lg text-primary">
-                        Combinamos rigor técnico, compromiso social y capacidad de implementación. No tomamos cualquier encargo: trabajamos en causas donde podemos generar un cambio real.
+                        {{ __('2026/origin.value.p1') }}
                     </p>
 
                     <p class="text-lg text-primary">
-                        Diseñamos estrategias viables y sostenibles en agua y medio ambiente, y acompañamos su ejecución con inteligencia política, sensibilidad territorial y enfoque colaborativo.
+                        {{ __('2026/origin.value.p2') }}
                     </p>
 
                     <h class="text-2xl text-secondary font-medium">
-                        Nuestro valor añadido es convertir conocimiento en acción, construyendo puentes entre ciencia, política y práctica.
+                        {{ __('2026/origin.value.highlight') }}
                         </h3>
                 </div>
             </div>

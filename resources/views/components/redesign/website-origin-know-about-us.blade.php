@@ -1,7 +1,7 @@
 <section class="bg-primary py-10 lg:py-16">
     <div class="container flex flex-col space-y-10">
         <h2 class="text-center text-white text-lg lg:text-3xl leading-relaxed wow animate__animated animate__fadeInUp">
-            Buscamos la preservación, administración responsable y aprovechamiento del agua y los recursos naturales en alianza con entidades públicas y privadas.
+            {{ __('2026/origin.closing.title') }}
         </h2>
 
         {{--

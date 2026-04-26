@@ -7,7 +7,7 @@ return [
     'slogan' => 'Desarrollamos estrategias a partir de diagnósticos y análisis para el corto, mediano y largo plazos, con base en elementos de las ciencias del medio físico y social.',
     'team' => [
         'cta' => [
-            'know_about_us' => 'Conocenos',
+            'know_about_us' => 'Conócenos',
         ],
         'sections' => [
             'founding_partners' => 'Socios fundadores',

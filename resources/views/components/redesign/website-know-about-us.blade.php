@@ -4,12 +4,12 @@
 <section class="flex flex-col flex-col-reverse md:flex-row items-stretch min-h-[300px] lg:min-h-[500px]">
     <div class="w-full md:w-1/2 bg-secondary p-8 flex flex-col items-center justify-center">
         <h3 class="text-white text-lg lg:text-2xl text-center font-medium wow animate__animated animate__fadeInRight">
-            Creamos vínculos entre la ciencia, la política y la práctica para influir en la toma de decisiones y promover soluciones innovadoras para la coexistencia armónica de la humanidad con el agua y los recursos naturales.
+            {{ __('2026/home.about.description') }}
         </h3>
 
         <a href="{{ route('redesign.origin') }}" 
             class="block text-center text-white border-2 border-white py-4 px-10 mt-16 hover:bg-white hover:text-secondary transition-colors duration-300 wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">
-            Conócenos
+            {{ __('2026/home.about.cta') }}
         </a>
     </div>
     <div class="min-h-[250px] md:min-h-0 w-full md:w-1/2 bg-cover bg-center relative overflow-hidden" style="background-image: url('{{ $image }}')">

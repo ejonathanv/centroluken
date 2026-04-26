@@ -1,10 +1,13 @@
-<x-redesign.website-layout title="Filosofía">
+<x-redesign.website-layout :title="__('2026/philosophy.meta_title')">
     <x-redesign.website-founder-bio 
-        name="Héctor M. Arias Rojo"
+        :name="__('2026/about.team.partners.three.name')"
         pictureOne="{{ asset('redesign/img/philosophy/founder-3.jpg') }}"
         pictureTwo="https://placehold.co/600x400">
-        
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo hic a debitis maiores reprehenderit molestias consequuntur minus placeat quisquam. Itaque aliquid temporibus corrupti iusto laboriosam quae ipsa saepe provident impedit.
+        @foreach (trans('2026/about.team.partners.three.bio') as $paragraph)
+            <p class="{{ $loop->last ? '' : 'mb-10' }}">
+                {{ $paragraph }}
+            </p>
+        @endforeach
 
     </x-redesign.website-founder-bio>
     <x-redesign.website-materials />

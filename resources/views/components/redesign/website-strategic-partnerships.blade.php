@@ -2,10 +2,10 @@
     <div class="container">
         <div class="w-full lg:w-9/12 mx-auto">
             <h2 class="text-primary text-center mb-10 text-xl lg:text-3xl mb-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                Alianzas estratégicas
+                {{ __('2026/home.partnerships.title') }}
             </h2>
             <p class="text-center text-sm lg:text-lg font-medium mb-32 sm:mb-40">
-                Trabajamos en alianza con organizaciones que comparten nuestro compromiso con una gestión justa, eficiente y sostenible del agua. 
+                {{ __('2026/home.partnerships.description') }}
             </p>
         </div>
 

@@ -4,7 +4,7 @@ $image = asset('redesign/img/origin/origen_sobrenuestronombre.jpg');
 <section class="flex flex-col flex-col-reverse md:flex-row items-stretch min-h-[300px] lg:min-h-[500px]">
     <div class="w-full md:w-1/2 bg-primary p-8 flex flex-col items-center justify-center">
         <h3 class="text-white text-lg lg:text-2xl text-center font-medium wow animate__animated animate__fadeInRight">
-            Creamos vínculos entre la ciencia, la política y la práctica para influir en la toma de decisiones y promover soluciones innovadoras para la coexistencia armónica de la humanidad con el agua y los recursos naturales.
+            {{ __('2026/origin.about.description') }}
         </h3>
 
         {{--

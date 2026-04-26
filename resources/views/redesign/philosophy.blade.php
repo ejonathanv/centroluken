@@ -1,4 +1,4 @@
-<x-redesign.website-layout title="Filosofía">
+<x-redesign.website-layout :title="__('2026/philosophy.meta_title')">
     <x-redesign.website-intro-philosophy />
     <x-redesign.website-philosophy-overview />
     <x-redesign.website-philosophy-values />

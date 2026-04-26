@@ -17,8 +17,8 @@
                 --}}
 
                 <div class="h-[375px] bg-gray-100 mb-6 bg-cover bg-center" style="background-image: url('{{ $founderOne }}');"></div>
-                <h3 class="text-base lg:text-xl font-medium mb-2">Carlos A. de la Parra Rentería</h3>
-                <p class="font-bold text-xs">Socio fundador</p>
+                <h3 class="text-base lg:text-xl font-medium mb-2">{{ __('2026/about.team.partners.one.name') }}</h3>
+                <p class="font-bold text-xs">{{ __('2026/philosophy.directors.role') }}</p>
             </div>
 
             <!-- Héctor I. Peterson Villalobos -->
@@ -29,8 +29,8 @@
                 --}}
 
                 <div class="h-[375px] bg-gray-100 mb-6 bg-cover bg-center" style="background-image: url('{{ $founderTwo }}');"></div>
-                <h3 class="text-base lg:text-xl font-medium mb-2">Héctor I. Peterson Villalobos</h3>
-                <p class="font-bold text-xs">Socio fundador</p>
+                <h3 class="text-base lg:text-xl font-medium mb-2">{{ __('2026/about.team.partners.two.name') }}</h3>
+                <p class="font-bold text-xs">{{ __('2026/philosophy.directors.role') }}</p>
             </div>
 
             <!-- Héctor M. Arias Rojo -->
@@ -41,8 +41,8 @@
                 --}}
 
                 <div class="h-[375px] bg-gray-100 mb-6 bg-cover bg-center" style="background-image: url('{{ $founderThree }}');"></div>
-                <h3 class="text-base lg:text-xl font-medium mb-2">Héctor M. Arias Rojo</h3>
-                <p class="font-bold text-xs">Socio fundador</p>
+                <h3 class="text-base lg:text-xl font-medium mb-2">{{ __('2026/about.team.partners.three.name') }}</h3>
+                <p class="font-bold text-xs">{{ __('2026/philosophy.directors.role') }}</p>
             </div>
 
             <!-- Martín A. Delgado Saldívar -->
@@ -53,8 +53,8 @@
                 --}}
 
                 <div class="h-[375px] bg-gray-100 mb-6 bg-cover bg-center" style="background-image: url('{{ $founderFour }}');"></div>
-                <h3 class="text-base lg:text-xl font-medium mb-2">Martín A. Delgado Saldívar</h3>
-                <p class="font-bold text-xs">Socio fundador</p>
+                <h3 class="text-base lg:text-xl font-medium mb-2">{{ __('2026/about.team.partners.four.name') }}</h3>
+                <p class="font-bold text-xs">{{ __('2026/philosophy.directors.role') }}</p>
             </div>
 
             <!-- Roberto Fernando Salmón Castelo (QEPD) -->
@@ -65,8 +65,8 @@
                 --}}
 
                 <div class="h-[375px] bg-gray-100 mb-6 bg-cover bg-center" style="background-image: url('{{ $founderFive }}');"></div>
-                <h3 class="text-base lg:text-xl font-medium mb-2">Roberto Fernando Salmón Castelo (QEPD)</h3>
-                <p class="font-bold text-xs">Socio fundador</p>
+                <h3 class="text-base lg:text-xl font-medium mb-2">{{ __('2026/about.team.partners.five.name') }}</h3>
+                <p class="font-bold text-xs">{{ __('2026/philosophy.directors.role') }}</p>
             </div>
         </div>
     </div>

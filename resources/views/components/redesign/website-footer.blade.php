@@ -1,16 +1,16 @@
 <footer class="py-16 bg-primary relative mt-20 md:mt-36">
     <img src="{{ asset('redesign/svg/footer-curves.svg') }}" 
-        alt="Centro Luken - Footer Curva"
+        alt="{{ __('2026/footer.curves_alt') }}"
         class="hidden md:block absolute left-0 right-0 w-full z-1" style="bottom: 70%">
     <img src="{{ asset('redesign/svg/footer-curves.svg') }}" 
-        alt="Centro Luken - Footer Curva"
+        alt="{{ __('2026/footer.curves_alt') }}"
         class="block md:hidden absolute left-0 right-0 w-full z-1" style="bottom: calc(100% - 10px)">
     <div class="container relative z-5">
         <div class="flex flex-col md:flex-row items-center justify-center md:justify-between space-y-16 md:space-y-0">
             <div class="w-full md:w-5/12 flex items-center justify-center md:justify-start">
                 <a href="#" class="relative left-[15px] md:left-0">
                     <img src="{{ asset('img/centro-luken-logo-oscuro.svg') }}" 
-                        alt="Centro Luken - De Estrategias en Agua y Medio Ambiente"
+                        alt="{{ __('2026/footer.logo_alt') }}"
                         class="h-14 w-auto">
                 </a>
             </div>
@@ -18,17 +18,17 @@
                 <ul class="flex flex-col md:flex-row items-center space-x-0 md:space-x-10 space-y-7 md:space-y-0">
                     <li>
                         <a href="{{ route('login') }}" class="block text-white font-semibold text-sm opacity-50 hover:opacity-100">
-                            Administración
+                            {{ __('2026/footer.admin') }}
                         </a>
                     </li>
                     <li>
                         <a href="https://sites.google.com/centroluken.org/intranet?usp=sharing" target="_blank" class="block text-white font-semibold text-sm opacity-50 hover:opacity-100">
-                            Intranet
+                            {{ __('2026/footer.intranet') }}
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('redesign.contact') }}" class="block border-2 border-white py-3 px-6 text-white font-semibold text-sm opacity-50 hover:opacity-100">
-                            Contáctanos
+                            {{ __('2026/footer.contact') }}
                         </a>
                     </li>
                 </ul>
@@ -36,7 +36,7 @@
         </div>
 
         <p class="text-center md:text-left text-white text-xs mt-16">
-            © {{ date('Y') }}, {{ env('APP_NAME') }}, Derechos Reservados.
+            © {{ date('Y') }}, {{ env('APP_NAME') }}, {{ __('2026/footer.copyright') }}
         </p>
     </div>
 </footer>

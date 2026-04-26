@@ -9,7 +9,7 @@
             </div>
             <div class="w-full lg:w-1/2">
                 <div class="flex flex-col space-y-3 mb-10">
-                    <p class="text-primary text-center text-3xl font-semibold">Discusión</p>
+                    <p class="text-primary text-center text-3xl font-semibold">{{ __('2026/discussion.title') }}</p>
                     <h1 class="text-center text-2xl lg:text-3xl font-medium text-gray-900">{{ $discusion->titulo }}</h1>
                     <p class="text-center text-lg text-gray-600">{{ $discusion->fecha->format('Y-m-d') }}</p>
                 </div>
@@ -21,7 +21,7 @@
                 <div class="mt-8 flex justify-center lg:justify-start">
                     <a href="{{ asset($discusion->pdf_path) }}" download
                         class="inline-flex items-center border-2 border-primary py-3 px-6 text-primary font-semibold text-sm hover:text-secondary hover:border-secondary transition-colors">
-                        Descargar PDF
+                        {{ __('2026/discussion.download_pdf') }}
                     </a>
                 </div>
                 @endif
@@ -32,7 +32,7 @@
     @if($discusion->mostrar_solo_pdf && $discusion->pdf_path)
     <section class="py-8 bg-white">
         <div class="container">
-            <iframe src="{{ asset($discusion->pdf_path) }}" class="w-full min-h-[80vh] border-0 rounded" title="PDF discusión"></iframe>
+            <iframe src="{{ asset($discusion->pdf_path) }}" class="w-full min-h-[80vh] border-0 rounded" title="{{ __('2026/discussion.pdf_title') }}"></iframe>
         </div>
     </section>
     @else

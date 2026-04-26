@@ -3,7 +3,7 @@
     <div class="container">
         <div class="w-full lg:w-9/12 mx-auto text-center mb-8 lg:mb-32">
             <h2 class="text-primary text-center mb-10 text-xl lg:text-3xl mb-6 wow animate__animated animate__fadeInDown">
-                Estrategias que transforman
+                {{ __('2026/home.strategies.title') }}
             </h2>
         </div>
     </div>
@@ -14,14 +14,14 @@
         <div>
             <x-redesign.website-strategies-item image="{{ asset('redesign/img/home/proyectos_diagnosticoygestion.jpg') }}">
                 <x-slot:title>
-                    Estudio técnico: Diagnóstico y gestión del agua en Baja California (2023)
+                    {{ __('2026/home.strategies.one.title') }}
                 </x-slot:title>
                 <x-slot:description>
                     <p class="text-sm lg:text-lg mb-4">
-                        Desarrollamos un estudio estratégico para el Gobierno del Estado de Baja California, enfocado en identificar oportunidades de inversión en el sistema de agua potable y saneamiento. 
+                        {{ __('2026/home.strategies.one.p1') }}
                     </p>
                     <p class="text-sm lg:text-lg">
-                        El diagnóstico incorporó criterios de eficiencia, sostenibilidad financiera y justicia ambiental, y orientó la planeación de acciones de mitigación y adaptación al cambio climático con impacto social y fiscal.
+                        {{ __('2026/home.strategies.one.p2') }}
                     </p>
                 </x-slot:description>
             </x-redesign.website-strategies-item>
@@ -31,17 +31,17 @@
         <div>
             <x-redesign.website-strategies-item-reverse image="{{ asset('redesign/img/home/estrategia-2.jpg') }}">
                 <x-slot:title>
-                    Renovación Distrito de Riego 014 (2024 - )
+                    {{ __('2026/home.strategies.two.title') }}
                 </x-slot:title>
                 <x-slot:description>
                     <p class="text-sm lg:text-lg mb-4">
-                        Agricultura regenerativa: Acompañamos a productores del Valle de Mexicali dispuestos a transformar su manera de cultivar, desarrollando herramientas técnicas y conocimiento especializado para facilitar la reconversión de uso del suelo.
+                        {{ __('2026/home.strategies.two.p1') }}
                     </p>
                     <p class="text-sm lg:text-lg mb-4">
-                        Promovemos prácticas de agricultura de conservación y sistemas productivos con menor demanda hídrica, orientados a fortalecer la resiliencia del territorio ante el cambio climático.
+                        {{ __('2026/home.strategies.two.p2') }}
                     </p>
                     <p class="text-sm lg:text-lg">
-                        Modelo agrovitivoltaico: Como parte de este esfuerzo, impulsamos el diseño e implementación de un modelo agrovitivoltaico pionero: una unidad piloto que integra prácticas agroecológicas con la generación de energía solar. Este enfoque permite reducir el consumo de agua, diversificar ingresos, y avanzar hacia un sistema agrícola regenerativo y sostenible.
+                        {{ __('2026/home.strategies.two.p3') }}
                     </p>
                 </x-slot:description>
             </x-redesign.website-strategies-item>
@@ -51,17 +51,17 @@
         <div>
             <x-redesign.website-strategies-item image="{{ asset('redesign/img/home/estrategia-3.jpg') }}">
                 <x-slot:title>
-                    Agua para el medio ambiente: una estrategia binacional para el Delta del Río Colorado (2024– )
+                    {{ __('2026/home.strategies.three.title') }}
                 </x-slot:title>
                 <x-slot:description>
                     <p class="text-sm lg:text-lg mb-4">
-                        Diseñamos una estrategia integral para asegurar un caudal ecológico permanente en el Delta del Río Colorado como base para la conservación a largo plazo de sus ecosistemas.
+                        {{ __('2026/home.strategies.three.p1') }}
                     </p>
                     <p class="text-sm lg:text-lg mb-4">
-                        La propuesta busca ser incorporada en el próximo acuerdo binacional entre México y Estados Unidos a través de una nueva acta de la Comisión Internacional de Límites y Aguas (CILA).
+                        {{ __('2026/home.strategies.three.p2') }}
                     </p>
                     <p class="text-sm lg:text-lg">
-                        Además del componente ambiental, la estrate- gia fortalece la gobernanza compartida del agua entre ambos países, articulando actores institucio- nales, científicos y de la sociedad civil.
+                        {{ __('2026/home.strategies.three.p3') }}
                     </p>
                 </x-slot:description>
             </x-redesign.website-strategies-item>
