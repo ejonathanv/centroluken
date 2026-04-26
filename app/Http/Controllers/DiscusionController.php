@@ -90,9 +90,12 @@ class DiscusionController extends Controller
     protected function assignDiscusionAttributes(Request $request, Discusion $discusion): void
     {
         $discusion->titulo = $request->titulo;
+        $discusion->titulo_en = $request->titulo_en;
         $discusion->fecha = $request->fecha;
         $discusion->descripcion = $request->descripcion ?? '';
+        $discusion->descripcion_en = $request->descripcion_en ?? '';
         $discusion->resumen = $request->resumen ?? '';
+        $discusion->resumen_en = $request->resumen_en ?? '';
         $discusion->mostrar_solo_pdf = $request->boolean('mostrar_solo_pdf');
     }
 

@@ -15,7 +15,9 @@ class UpdateDiscusionEspecRequest extends FormRequest
     {
         return [
             'titulo' => 'required|string|max:255',
+            'titulo_en' => 'nullable|string|max:255',
             'descripcion' => 'nullable|string',
+            'descripcion_en' => 'nullable|string',
             'orden' => 'required|integer|min:0',
         ];
     }

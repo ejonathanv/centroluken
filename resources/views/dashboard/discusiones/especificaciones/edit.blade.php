@@ -22,6 +22,14 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Título (inglés)</label>
+                        <input type="text" class="form-control" name="titulo_en" value="{{ old('titulo_en', $discusionEspec->titulo_en) }}">
+                        @error('titulo_en')
+                            <span class="text-xs text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
                         <label>Orden</label>
                         <input type="number" class="form-control" name="orden" value="{{ old('orden', $discusionEspec->orden) }}" min="0">
                         @error('orden')
@@ -34,6 +42,15 @@
                         <input type="hidden" name="descripcion" id="post_descripcion" value="{{ old('descripcion', $discusionEspec->descripcion) }}">
                         <div id="editor_descripcion">{!! old('descripcion', $discusionEspec->descripcion) !!}</div>
                         @error('descripcion')
+                            <span class="text-xs text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label>Descripción (inglés)</label>
+                        <input type="hidden" name="descripcion_en" id="post_descripcion_en" value="{{ old('descripcion_en', $discusionEspec->descripcion_en) }}">
+                        <div id="editor_descripcion_en">{!! old('descripcion_en', $discusionEspec->descripcion_en) !!}</div>
+                        @error('descripcion_en')
                             <span class="text-xs text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
@@ -54,11 +71,17 @@
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof ClassicEditor === 'undefined') return;
             var form = document.getElementById('espec-form');
-            ClassicEditor.create(document.querySelector('#editor_descripcion'), {
-                removePlugins: ['CKBox', 'CKFinder', 'EasyImage', 'ImageUpload', 'MediaEmbed'],
-            }).then(function(editor) {
+            Promise.all([
+                ClassicEditor.create(document.querySelector('#editor_descripcion'), {
+                    removePlugins: ['CKBox', 'CKFinder', 'EasyImage', 'ImageUpload', 'MediaEmbed'],
+                }),
+                ClassicEditor.create(document.querySelector('#editor_descripcion_en'), {
+                    removePlugins: ['CKBox', 'CKFinder', 'EasyImage', 'ImageUpload', 'MediaEmbed'],
+                }),
+            ]).then(function(editors) {
                 form.addEventListener('submit', function() {
-                    document.getElementById('post_descripcion').value = editor.getData();
+                    document.getElementById('post_descripcion').value = editors[0].getData();
+                    document.getElementById('post_descripcion_en').value = editors[1].getData();
                 });
             }).catch(function(err) { console.error(err); });
         });

@@ -50,6 +50,14 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Título (inglés)</label>
+                        <input type="text" class="form-control" name="titulo_en" value="{{ old('titulo_en', $discusion->titulo_en) }}">
+                        @error('titulo_en')
+                            <span class="text-xs text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
                         <label>Fecha de la discusión</label>
                         <input type="date" name="fecha" class="form-control" value="{{ old('fecha', $discusion->fecha->format('Y-m-d')) }}">
                         @error('fecha')
@@ -67,10 +75,28 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Descripción (inglés)</label>
+                        <input type="hidden" name="descripcion_en" id="post_descripcion_en" value="{{ old('descripcion_en', $discusion->descripcion_en) }}">
+                        <div id="editor_descripcion_en">{!! old('descripcion_en', $discusion->descripcion_en) !!}</div>
+                        @error('descripcion_en')
+                            <span class="text-xs text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
                         <label>Resumen</label>
                         <input type="hidden" name="resumen" id="post_resumen" value="{{ old('resumen', $discusion->resumen) }}">
                         <div id="editor_resumen">{!! old('resumen', $discusion->resumen) !!}</div>
                         @error('resumen')
+                            <span class="text-xs text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label>Resumen (inglés)</label>
+                        <input type="hidden" name="resumen_en" id="post_resumen_en" value="{{ old('resumen_en', $discusion->resumen_en) }}">
+                        <div id="editor_resumen_en">{!! old('resumen_en', $discusion->resumen_en) !!}</div>
+                        @error('resumen_en')
                             <span class="text-xs text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
@@ -140,13 +166,21 @@
                 ClassicEditor.create(document.querySelector('#editor_descripcion'), {
                     removePlugins: ['CKBox', 'CKFinder', 'EasyImage', 'ImageUpload', 'MediaEmbed'],
                 }),
+                ClassicEditor.create(document.querySelector('#editor_descripcion_en'), {
+                    removePlugins: ['CKBox', 'CKFinder', 'EasyImage', 'ImageUpload', 'MediaEmbed'],
+                }),
                 ClassicEditor.create(document.querySelector('#editor_resumen'), {
+                    removePlugins: ['CKBox', 'CKFinder', 'EasyImage', 'ImageUpload', 'MediaEmbed'],
+                }),
+                ClassicEditor.create(document.querySelector('#editor_resumen_en'), {
                     removePlugins: ['CKBox', 'CKFinder', 'EasyImage', 'ImageUpload', 'MediaEmbed'],
                 })
             ]).then(function(editors) {
                 form.addEventListener('submit', function() {
                     document.getElementById('post_descripcion').value = editors[0].getData();
-                    document.getElementById('post_resumen').value = editors[1].getData();
+                    document.getElementById('post_descripcion_en').value = editors[1].getData();
+                    document.getElementById('post_resumen').value = editors[2].getData();
+                    document.getElementById('post_resumen_en').value = editors[3].getData();
                 });
             }).catch(function(err) { console.error(err); });
         });

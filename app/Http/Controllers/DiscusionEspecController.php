@@ -26,7 +26,9 @@ class DiscusionEspecController extends Controller
         $espec = new DiscusionEspec();
         $espec->discusion_id = $discusion->id;
         $espec->titulo = $request->titulo;
+        $espec->titulo_en = $request->titulo_en;
         $espec->descripcion = $request->descripcion ?? '';
+        $espec->descripcion_en = $request->descripcion_en ?? '';
         $espec->orden = $request->orden;
         $espec->save();
 
@@ -50,7 +52,9 @@ class DiscusionEspecController extends Controller
         $this->guardEspecBelongsToDiscusion($discusion, $discusionEspec);
 
         $discusionEspec->titulo = $request->titulo;
+        $discusionEspec->titulo_en = $request->titulo_en;
         $discusionEspec->descripcion = $request->descripcion ?? '';
+        $discusionEspec->descripcion_en = $request->descripcion_en ?? '';
         $discusionEspec->orden = $request->orden;
         $discusionEspec->save();
 

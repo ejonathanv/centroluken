@@ -10,10 +10,13 @@ class Discusion extends Model
     protected $fillable = [
         'foto_portada',
         'titulo',
+        'titulo_en',
         'slug',
         'fecha',
         'descripcion',
+        'descripcion_en',
         'resumen',
+        'resumen_en',
         'pdf_path',
         'mostrar_solo_pdf',
     ];

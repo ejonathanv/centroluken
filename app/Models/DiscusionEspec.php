@@ -12,7 +12,9 @@ class DiscusionEspec extends Model
     protected $fillable = [
         'discusion_id',
         'titulo',
+        'titulo_en',
         'descripcion',
+        'descripcion_en',
         'orden',
     ];
 

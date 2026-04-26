@@ -16,9 +16,12 @@ class UpdateDiscusionRequest extends FormRequest
     {
         return [
             'titulo' => 'required|string|max:255',
+            'titulo_en' => 'nullable|string|max:255',
             'fecha' => 'required|date',
             'descripcion' => 'nullable|string',
+            'descripcion_en' => 'nullable|string',
             'resumen' => 'nullable|string',
+            'resumen_en' => 'nullable|string',
             'foto_portada' => 'nullable|image',
             'pdf_file' => 'nullable|file|mimes:pdf|max:51200',
             'mostrar_solo_pdf' => 'sometimes|boolean',
