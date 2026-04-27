@@ -1,4 +1,11 @@
 <section class="py-10 lg:py-20 bg-white">
+    @php
+        $isEnglish = app()->getLocale() === 'en';
+        $discusionTitulo = $discusionDestacada
+            ? (($isEnglish && $discusionDestacada->titulo_en) ? $discusionDestacada->titulo_en : $discusionDestacada->titulo)
+            : null;
+    @endphp
+
     <div class="container">
         <div class="w-full md:w-9/12 mx-auto">
             <h2 class="text-primary text-center mb-10 text-xl lg:text-3xl mb-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
@@ -27,7 +34,7 @@
                         @if($discusionDestacada)
                         <a href="{{ route('redesign.discusion.show', $discusionDestacada) }}">
                             <h3 class="text-white text-lg lg:text-2xl font-medium mb-4 underline hover:text-secondary">
-                                {{ $discusionDestacada->titulo }}
+                                {{ $discusionTitulo }}
                             </h3>
                         </a>
                         <h4 class="text-secondary text-sm lg:text-base font-bold">
