@@ -1,3 +1,7 @@
+@php
+    $locale = app()->getLocale();
+@endphp
+
 <section class="py-10 md:py-16 bg-white">
 
     <div class="block md:hidden container">
@@ -6,7 +10,9 @@
                 <select name="category" class="w-full p-2 border-2 border-secondary rounded-md" onchange="this.form.submit()">
                     <option value="" @selected(!request()->query('category'))>{{ __('2026/materials.resources.all') }}</option>
                     @foreach($categories as $category)
-                    <option value="{{ $category->id }}" @selected(request()->query('category') == $category->id)>{{ $category->name }}</option>
+                    <option value="{{ $category->id }}" @selected(request()->query('category') == $category->id)>
+                        {{ $locale === 'en' ? ($category->name_en ?? $category->name) : $category->name }}
+                    </option>
                     @endforeach
                 </select>
             </form>
@@ -31,11 +37,15 @@
                         }else{
                             $link = route('view-pdf-topic', $topic);
                         }
+                        $title = $locale === 'en' ? ($topic->title_en ?? $topic->title) : $topic->title;
+                        $description = $locale === 'en'
+                            ? ($topic->description_en ?? $topic->description ?? '')
+                            : ($topic->description ?? '');
                     @endphp
                     <div class="w-full md:w-1/2 mb-5">
                         <x-redesign.website-resources-card 
-                            :title="$topic->title"
-                            :description="$topic->description ?? ''"
+                            :title="$title"
+                            :description="$description"
                             image=""
                             :link="$link"/>
                     </div>
