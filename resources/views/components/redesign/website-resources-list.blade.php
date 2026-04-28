@@ -53,7 +53,7 @@
             </div>
             @if($topics->total() > $topics->perPage())
                 <div class="mt-8">
-                    {{ $topics->links() }}
+                    {{ $topics->appends(request()->except('page'))->links() }}
                 </div>
             @endif
         </div>
