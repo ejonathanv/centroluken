@@ -28,7 +28,7 @@
             </nav>
         </div>
         <div class="w-full md:w-2/3">
-            <div class="flex flex-stretch flex-col md:flex-row flex-wrap">
+            <div class="flex flex-stretch flex-col md:flex-row flex-wrap"> 
                 @foreach($topics as $topic)
                     @php
                         $link = null;
@@ -51,6 +51,10 @@
                     </div>
                 @endforeach
             </div>
+        <div class="mt-8">
+            {{ $topics->links() }}
+        </div>
+   
         </div>
     </div>
 </section>
