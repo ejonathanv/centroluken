@@ -36,6 +36,10 @@ class WebsiteController extends Controller
         return view('redesign.materials');
     }
 
+    public function discusiones() {
+        return view('redesign.discusiones');
+    }
+
     public function discusionIndex()
     {
         $discusion = Discusion::orderByDesc('fecha')->first();

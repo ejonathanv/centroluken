@@ -18,9 +18,11 @@
 
             <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 items-stretch bg-primary wow animate__animated animate__flipInX animate__slow">
                 <div class="w-full md:w-7/12 p-6 md:p-12 text-center flex flex-col items-center justify-between space-y-10">
-                    <h3 class="text-white text-lg lg:text-2xl font-medium">
-                        {{ __('2026/home.materials.featured.title') }}
-                    </h3>
+                    <a href="https://centroluken.org/articulo-pdf/42">
+                        <h3 class="text-white text-lg lg:text-2xl font-medium underline hover:text-secondary">
+                            {{ __('2026/home.materials.featured.title') }}
+                        </h3>
+                    </a>
                     <p class="text-white text-sm lg:text-base">
                         {{ __('2026/home.materials.featured.description') }}
                     </p>
@@ -32,14 +34,19 @@
                             {{ __('2026/home.materials.discussion.title') }}
                         </h3>
                         @if($discusionDestacada)
-                        <a href="{{ route('redesign.discusion.show', $discusionDestacada) }}">
-                            <h3 class="text-white text-lg lg:text-2xl font-medium mb-4 underline hover:text-secondary">
-                                {{ $discusionTitulo }}
-                            </h3>
-                        </a>
-                        <h4 class="text-secondary text-sm lg:text-base font-bold">
-                            {{ $discusionDestacada->fecha->format('Y-m-d') }}
-                        </h4>
+                            <a href="{{ route('redesign.discusion.show', $discusionDestacada) }}">
+                                <h3 class="text-white text-lg lg:text-2xl font-medium mb-4 underline hover:text-secondary">
+                                    {{ $discusionTitulo }}
+                                </h3>
+                            </a>
+                            <h4 class="text-secondary text-sm lg:text-base font-bold">
+                                {{ $discusionDestacada->fecha->format('Y-m-d') }}
+                            </h4>
+                            <div class="mt-4">
+                                <a href="{{ route('redesign.discusion.show', $discusionDestacada) }}" class="text-white text-sm lg:text-base underline hover:text-secondary">
+                                    {{ __('2026/home.materials.discussion.read_more') }}
+                                </a>
+                            </div>
                         @else
                         <p class="text-white text-sm lg:text-base opacity-80">{{ __('2026/home.materials.discussion.coming_soon') }}</p>
                         @endif
@@ -49,8 +56,8 @@
 
             @if($discusionDestacada)
             <div class="flex justify-center mt-10">
-                <a href="{{ route('redesign.discusion.show', $discusionDestacada) }}" class="block border-2 border-primary py-3 px-6 text-primary font-semibold text-sm hover:text-secondary">
-                    {{ __('2026/home.materials.discussion.read_more') }}
+                <a href="{{ route('redesign.discusiones') }}" class="block border-2 border-primary py-3 px-6 text-primary font-semibold text-sm hover:text-secondary">
+                    Ver otras discusiones
                 </a>
             </div>
             @endif
