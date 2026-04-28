@@ -20,10 +20,14 @@
         <h3 class="text-lg font-medium text-secondary mb-3 group-hover:text-primary transition-colors">
             {{ $titulo }}
         </h3>
-        @if($extracto !== '')
-            <p class="text-sm text-gray-600 line-clamp-3 grow">
-                {{ $extracto }}
-            </p>
+        @if($isEnglish == 'en')
+            <span class="text-sm text-gray-600">
+                {!! $discusion->descripcion_en !!}
+            </span>
+        @else
+            <span class="text-sm text-gray-600">
+                {!! $discusion->descripcion !!}
+            </span>
         @endif
         <span class="mt-4 text-sm font-bold text-secondary group-hover:text-primary transition-colors">
             {{ __('2026/discussion.list.read_more') }}
