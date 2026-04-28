@@ -7,37 +7,46 @@ use App\Models\Discusion;
 
 class WebsiteController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         return view('redesign.index');
     }
 
-    public function philosophy() {  
+    public function philosophy()
+    {
         return view('redesign.philosophy');
     }
 
-    public function founder($nombre){
-        $view = 'redesign.founders.' . $nombre;
-        if(view()->exists($view)){
+    public function founder($nombre)
+    {
+        $view = 'redesign.founders.'.$nombre;
+        if (view()->exists($view)) {
             return view($view);
-        }else{
+        } else {
             return redirect()->route('redesign.philosophy');
         }
     }
 
-    public function origin() {
+    public function origin()
+    {
         return view('redesign.origin');
     }
 
-    public function team() {
+    public function team()
+    {
         return view('redesign.team');
     }
 
-    public function materials() {
+    public function materials()
+    {
         return view('redesign.materials');
     }
 
-    public function discusiones() {
-        return view('redesign.discusiones');
+    public function discusiones()
+    {
+        $discusiones = Discusion::orderByDesc('fecha')->paginate(9);
+
+        return view('redesign.discusiones', compact('discusiones'));
     }
 
     public function discusionIndex()
@@ -58,19 +67,23 @@ class WebsiteController extends Controller
         return view('redesign.discusion', compact('discusion'));
     }
 
-    public function studies() {
+    public function studies()
+    {
         return view('redesign.studies');
     }
-    
-    public function resources() {
+
+    public function resources()
+    {
         return view('redesign.resources');
     }
 
-    public function partnerships() {
+    public function partnerships()
+    {
         return view('redesign.partnerships');
     }
 
-    public function contact() {
+    public function contact()
+    {
         return view('redesign.contact');
     }
 }

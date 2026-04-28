@@ -1,6 +1,6 @@
 <x-redesign.website-layout header="header2">
     <section class="py-32">
-        <div class="container">
+        <div class="container relative" style="z-index: 101;">
             <div class="w-6/12 mx-auto">
 
                 <h3>

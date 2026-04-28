@@ -57,7 +57,7 @@
             @if($discusionDestacada)
             <div class="flex justify-center mt-10">
                 <a href="{{ route('redesign.discusiones') }}" class="block border-2 border-primary py-3 px-6 text-primary font-semibold text-sm hover:text-secondary">
-                    Ver otras discusiones
+                    {{ __('2026/discussion.list.see_others') }}
                 </a>
             </div>
             @endif
