@@ -51,10 +51,11 @@
                     </div>
                 @endforeach
             </div>
-        <div class="mt-8">
-            {{ $topics->links() }}
-        </div>
-   
+            @if($topics->total() > $topics->perPage())
+                <div class="mt-8">
+                    {{ $topics->links() }}
+                </div>
+            @endif
         </div>
     </div>
 </section>
