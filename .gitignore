@@ -5,6 +5,8 @@
 /public/storage
 /public/pdfTopics
 /public/articles
+/public/opiniones
+/public/discusiones
 /storage/*.key
 /vendor
 .env
