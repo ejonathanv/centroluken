@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Redesign;
 
 use App\Http\Controllers\Controller;
 use App\Models\Discusion;
+use App\Models\Opinion;
 
 class WebsiteController extends Controller
 {
@@ -65,6 +66,18 @@ class WebsiteController extends Controller
         $discusion->load('especificaciones');
 
         return view('redesign.discusion', compact('discusion'));
+    }
+
+    public function opinions()
+    {
+        $opiniones = Opinion::orderByDesc('updated_at')->paginate(6);
+
+        return view('redesign.opinions.index', compact('opiniones'));
+    }
+
+    public function opinion(Opinion $opinion)
+    {
+        return view('redesign.opinions.show', compact('opinion'));
     }
 
     public function studies()
