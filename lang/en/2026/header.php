@@ -36,6 +36,7 @@ return [
         'topics_articles' => 'Articles',
         'topics_pdfs' => 'PDFs',
         'discussions' => 'Discussions',
+        'opinions' => 'Opinions',
         'back_to_site' => 'Back to site',
         'logout' => 'Log out',
     ],

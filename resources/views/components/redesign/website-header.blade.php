@@ -129,6 +129,11 @@
                             </div>
                         </li>
                         <li>
+                            <a href="{{ route('opinions.index') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
+                                {{ __('2026/header.admin.opinions') }}
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{ route('discusiones.index') }}" class="text-white opacity-50 font-semibold text-sm hover:opacity-100">
                                 {{ __('2026/header.admin.discussions') }}
                             </a>

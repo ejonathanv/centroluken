@@ -1,16 +1,16 @@
 <?php
 
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Artisan;
-use App\Http\Controllers\TopicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DiscusionController;
 use App\Http\Controllers\DiscusionEspecController;
+use App\Http\Controllers\OpinionController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TopicController;
 use App\Http\Controllers\WebsiteController;
-use App\Http\Controllers\DashboardController;
-
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/setlocale/{locale}', function (string $locale) {
     if (! in_array($locale, ['es', 'en'], true)) {
@@ -50,7 +50,7 @@ Route::get('/articulo-pdf/{topic}', [WebsiteController::class, 'viewPdfTopic'])-
 // Rutas para rediseño 2026
 require __DIR__.'/redesign.php';
 
-Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'verified']], function(){
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'verified']], function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('articles', ArticleController::class);
     Route::resource('topics', TopicController::class);
@@ -65,6 +65,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'verified']], fu
         ->except(['show']);
     Route::get('create-pdf-topic', [TopicController::class, 'createPdf'])->name('create-pdf-topic');
     Route::get('edit-pdf-topic/{topic}', [TopicController::class, 'editPdf'])->name('edit-pdf-topic');
+    Route::resource('opinions', OpinionController::class)->except(['show']);
 });
 
 Route::middleware('auth')->group(function () {
