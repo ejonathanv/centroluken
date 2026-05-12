@@ -6,7 +6,7 @@
 
 <div class="py-32">
     <div class="container flex items-center justify-center flex-col">
-        <div class="flex flex-wrap items-start justify-between mb-16 w-full">
+        <div class="flex flex-wrap items-center md:items-start justify-center md:justify-between mb-16 w-full space-y-10 md:space-y-0">
             @foreach($opinions as $opinion)
                 <div class="w-full max-w-xs sm:w-1/2 lg:w-1/3 flex flex-col items-center justify-center space-y-8">
                     <a href="{{ route('redesign.opinion', $opinion) }}" class="relative inline-block">
