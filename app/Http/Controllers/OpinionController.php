@@ -75,8 +75,19 @@ class OpinionController extends Controller
     protected function assignOpinionAttributes(Request $request, Opinion $opinion): void
     {
         $opinion->title = $request->title;
+        $opinion->title_en = $request->filled('title_en') ? $request->title_en : null;
         $opinion->body = $request->body ?? '';
+        $opinion->body_en = $this->nullableHtmlBody($request->input('body_en'));
         $opinion->url = $request->filled('url') ? $request->url : null;
+    }
+
+    protected function nullableHtmlBody(?string $html): ?string
+    {
+        if ($html === null || trim(strip_tags($html)) === '') {
+            return null;
+        }
+
+        return $html;
     }
 
     protected function uniqueSlug(string $base, ?int $ignoreId = null): string

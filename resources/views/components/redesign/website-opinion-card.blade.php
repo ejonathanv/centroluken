@@ -1,9 +1,9 @@
 @props(['opinion'])
 
 @php
-    $extracto = \Illuminate\Support\Str::limit(strip_tags((string) $opinion->body), 150);
+    $isEnglish = app()->getLocale() === 'en';
+    $titulo = $isEnglish && $opinion->title_en ? $opinion->title_en : $opinion->title;
 @endphp
-
 
 <div class="w-full max-w-xs sm:w-1/2 lg:w-1/3 flex flex-col items-center justify-center space-y-8 md:pb-10">
     <a href="{{ route('redesign.opinion', $opinion) }}" class="relative inline-block">
@@ -15,6 +15,6 @@
         </div>
     </a>
 
-    <h4 class="text-center text-lg font-medium px-2">{{ $opinion->title }}</h4>
+    <h4 class="text-center text-lg font-medium px-2">{{ $titulo }}</h4>
 </div>
 

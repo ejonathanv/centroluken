@@ -11,7 +11,9 @@ class Opinion extends Model
 
     protected $fillable = [
         'title',
+        'title_en',
         'body',
+        'body_en',
         'slug',
         'cover',
         'url',

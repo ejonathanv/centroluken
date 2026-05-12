@@ -7,5 +7,6 @@ return [
         'subtitle' => 'Opinions',
         'read_more' => 'Read more',
         'empty' => 'No opinions have been published yet.',
+        'see_others' => 'See other opinions',
     ],
 ];

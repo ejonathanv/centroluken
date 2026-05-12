@@ -38,10 +38,27 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Título (inglés)</label>
+                        <input type="text" class="form-control" name="title_en" value="{{ old('title_en') }}">
+                        @error('title_en')
+                            <span class="text-xs text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
                         <label>Cuerpo</label>
                         <input type="hidden" name="body" id="post_body" value="{{ old('body') }}">
                         <div id="editor_body">{!! old('body') !!}</div>
                         @error('body')
+                            <span class="text-xs text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cuerpo (inglés)</label>
+                        <input type="hidden" name="body_en" id="post_body_en" value="{{ old('body_en') }}">
+                        <div id="editor_body_en">{!! old('body_en') !!}</div>
+                        @error('body_en')
                             <span class="text-xs text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
@@ -70,11 +87,17 @@
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof ClassicEditor === 'undefined') return;
             var form = document.getElementById('opinion-form');
-            ClassicEditor.create(document.querySelector('#editor_body'), {
-                removePlugins: ['CKBox', 'CKFinder', 'EasyImage', 'ImageUpload', 'MediaEmbed'],
-            }).then(function(editor) {
+            Promise.all([
+                ClassicEditor.create(document.querySelector('#editor_body'), {
+                    removePlugins: ['CKBox', 'CKFinder', 'EasyImage', 'ImageUpload', 'MediaEmbed'],
+                }),
+                ClassicEditor.create(document.querySelector('#editor_body_en'), {
+                    removePlugins: ['CKBox', 'CKFinder', 'EasyImage', 'ImageUpload', 'MediaEmbed'],
+                }),
+            ]).then(function(editors) {
                 form.addEventListener('submit', function() {
-                    document.getElementById('post_body').value = editor.getData();
+                    document.getElementById('post_body').value = editors[0].getData();
+                    document.getElementById('post_body_en').value = editors[1].getData();
                 });
             }).catch(function(err) { console.error(err); });
         });

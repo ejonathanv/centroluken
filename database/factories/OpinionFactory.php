@@ -18,7 +18,9 @@ class OpinionFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence,
+            'title_en' => $this->faker->optional(0.7)->sentence,
             'body' => $this->faker->paragraphs(3, true),
+            'body_en' => $this->faker->optional(0.7)->paragraphs(3, true),
             'slug' => $this->faker->unique()->slug,
             'cover' => $this->faker->optional()->imageUrl(),
             'url' => $this->faker->optional()->url,

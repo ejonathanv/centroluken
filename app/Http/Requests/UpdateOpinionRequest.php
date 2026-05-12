@@ -15,7 +15,9 @@ class UpdateOpinionRequest extends FormRequest
     {
         return [
             'title' => 'required|string|max:500',
+            'title_en' => 'nullable|string|max:500',
             'body' => 'required|string',
+            'body_en' => 'nullable|string',
             'url' => 'nullable|url|max:2048',
             'cover_image' => 'nullable|image',
             'remove_cover' => 'sometimes|boolean',

@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('opinions', function (Blueprint $table) {
             $table->id();
             $table->text('title');
+            $table->text('title_en')->nullable();
             $table->text('body');
+            $table->text('body_en')->nullable();
             $table->string('slug')->unique();
             $table->string('cover')->nullable();
             $table->string('url')->nullable();
