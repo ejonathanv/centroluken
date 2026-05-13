@@ -2,7 +2,7 @@
 
 return [
     'title' => 'Opinión',
-    'external_link' => 'Ver enlace externo',
+    'external_link' => 'Abrir enlace externo',
     'list' => [
         'subtitle' => 'Opiniones',
         'read_more' => 'Leer más',
