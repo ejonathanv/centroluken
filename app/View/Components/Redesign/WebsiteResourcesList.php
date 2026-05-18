@@ -2,17 +2,17 @@
 
 namespace App\View\Components\Redesign;
 
-use Closure;
 use App\Models\Topic;
 use App\Models\TopiCategory;
-use Illuminate\View\Component;
-use Illuminate\Support\Facades\DB;
+use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\DB;
+use Illuminate\View\Component;
 
 class WebsiteResourcesList extends Component
 {
-
     public $categories;
+
     public $topics;
 
     /**
@@ -45,17 +45,18 @@ class WebsiteResourcesList extends Component
     {
         $selectedCategory = request()->query('category');
 
-        if (!$selectedCategory) {
+        if (! $selectedCategory) {
             $category = $this->categories->first();
-            return $category ? $category->topics()->paginate(10) : collect();
+
+            return $category ? $category->topics()->latest('created_at')->paginate(10) : collect();
         }
 
         $category = TopiCategory::find($selectedCategory);
-        if (!$category) {
+        if (! $category) {
             return collect();
         }
 
-        return $category->topics()->paginate(10);
+        return $category->topics()->latest('created_at')->paginate(10);
     }
 
     /**
