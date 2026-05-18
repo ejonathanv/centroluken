@@ -13,6 +13,7 @@
             @foreach($opinions as $opinion)
                 @php
                     $titulo = $listLocaleEn && $opinion->title_en ? $opinion->title_en : $opinion->title;
+                    $autor = $opinion->author ? $opinion->author : $titulo;
                 @endphp
                 <div class="w-full max-w-xs sm:w-1/2 lg:w-1/3 flex flex-col items-center justify-center space-y-8">
                     <a href="{{ route('redesign.opinion', $opinion) }}" class="relative inline-block">
@@ -24,7 +25,7 @@
                         </div>
                     </a>
 
-                    <h4 class="text-center text-lg font-medium px-2">{{ $titulo }}</h4>
+                    <h4 class="text-center text-lg font-medium px-2">{{ $autor }}</h4>
                 </div>
             @endforeach
         </div>
