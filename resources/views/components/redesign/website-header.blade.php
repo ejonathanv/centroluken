@@ -80,6 +80,13 @@
                                         </a>
                                     </li>
                                 </ul>
+                                <ul>
+                                    <li>
+                                        <a href="{{ route('redesign.opinions') }}">
+                                            {{ __('2026/header.nav.opinions') }}
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
                         <!-- Alianzas -->
@@ -235,6 +242,11 @@
                                 <li>
                                     <a href="{{ route('redesign.resources') }}" class="text-secondary font-semibold text-sm">
                                         {{ __('2026/header.nav.resources') }}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('redesign.opinions') }}" class="text-secondary font-semibold text-sm">
+                                        {{ __('2026/header.nav.opinions') }}
                                     </a>
                                 </li>
                             </ul>

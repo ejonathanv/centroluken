@@ -11,6 +11,7 @@ return [
         'materials' => 'Materials',
         'projects' => 'Projects',
         'resources' => 'Resources',
+        'opinions' => 'Opinions',
         'contact' => 'Contact',
     ],
 
