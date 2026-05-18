@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 
 class Opinion extends Model
 {
@@ -28,4 +29,14 @@ class Opinion extends Model
         'on_homepage' => 'boolean',
         'position' => 'integer',
     ];
+
+    public static function distinctAuthors(): Collection
+    {
+        return static::query()
+            ->whereNotNull('author')
+            ->where('author', '!=', '')
+            ->distinct()
+            ->orderBy('author')
+            ->pluck('author');
+    }
 }

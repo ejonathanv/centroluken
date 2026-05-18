@@ -19,6 +19,13 @@
                 <div class="flex flex-col space-y-3 mb-10">
                     <p class="text-primary text-left text-3xl font-semibold">{{ __('2026/opinion.title') }}</p>
                     <h1 class="text-left text-2xl lg:text-3xl font-medium text-gray-900">{{ $titulo }}</h1>
+
+                    @if($opinion->author)
+                    <p class="text-left text-sm text-gray-500">{{ $opinion->author }}</p>
+                    @endif
+                    @if($opinion->date_published)
+                    <p class="text-left text-sm text-gray-500">{{ $opinion->date_published->format('d/m/Y') }}</p>
+                    @endif
                 </div>
                 <div class="opinion-body prose prose-lg max-w-none text-gray-800 text-left">
                     {!! $cuerpo !!}

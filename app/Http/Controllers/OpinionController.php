@@ -17,7 +17,9 @@ class OpinionController extends Controller
 
     public function create()
     {
-        return view('dashboard.opinions.create');
+        $existingAuthors = Opinion::distinctAuthors();
+
+        return view('dashboard.opinions.create', compact('existingAuthors'));
     }
 
     public function store(StoreOpinionRequest $request)
@@ -38,7 +40,9 @@ class OpinionController extends Controller
 
     public function edit(Opinion $opinion)
     {
-        return view('dashboard.opinions.edit', compact('opinion'));
+        $existingAuthors = Opinion::distinctAuthors();
+
+        return view('dashboard.opinions.edit', compact('opinion', 'existingAuthors'));
     }
 
     public function update(UpdateOpinionRequest $request, Opinion $opinion)

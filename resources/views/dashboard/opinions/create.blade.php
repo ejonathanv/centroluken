@@ -71,13 +71,7 @@
                         @enderror
                     </div>
 
-                    <div class="form-group">
-                        <label>Autor (opcional)</label>
-                        <input type="text" class="form-control" name="author" value="{{ old('author') }}">
-                        @error('author')
-                            <span class="text-xs text-red-500">{{ $message }}</span>
-                        @enderror
-                    </div>
+                    @include('dashboard.opinions.partials.author-field', ['authorValue' => ''])
 
                     <div class="form-group">
                         <label>Fecha de publicación (opcional)</label>
