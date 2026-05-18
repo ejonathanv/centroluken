@@ -17,5 +17,15 @@ class Opinion extends Model
         'slug',
         'cover',
         'url',
+        'author',
+        'date_published',
+        'on_homepage',
+        'position',
+    ];
+
+    protected $casts = [
+        'date_published' => 'date',
+        'on_homepage' => 'boolean',
+        'position' => 'integer',
     ];
 }

@@ -4,6 +4,8 @@
         <tr>
             <th>Título</th>
             <th>Slug</th>
+            <th>Home</th>
+            <th>Posición</th>
             <th>URL</th>
             <th>Acciones</th>
         </tr>
@@ -21,6 +23,20 @@
             </td>
             <td class="text-sm text-gray-600">{{ $opinion->slug }}</td>
             <td>
+                @if($opinion->on_homepage)
+                <span class="badge badge-success">Sí</span>
+                @else
+                <span class="badge badge-secondary">No</span>
+                @endif
+            </td>
+            <td class="text-sm text-gray-600">
+                @if($opinion->on_homepage && in_array($opinion->position, [1, 2, 3]))
+                {{ $opinion->position }}
+                @else
+                —
+                @endif
+            </td>
+            <td>
                 @if($opinion->url)
                 <a href="{{ $opinion->url }}" target="_blank" rel="noopener noreferrer" class="text-secondary underline text-sm">Enlace</a>
                 @else
@@ -33,7 +49,7 @@
         </tr>
         @empty
         <tr>
-            <td colspan="4" class="text-gray-500">No hay opiniones creadas.</td>
+            <td colspan="6" class="text-gray-500">No hay opiniones creadas.</td>
         </tr>
         @endforelse
     </tbody>

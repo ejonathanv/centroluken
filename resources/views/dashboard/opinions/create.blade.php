@@ -71,6 +71,46 @@
                         @enderror
                     </div>
 
+                    <div class="form-group">
+                        <label>Autor (opcional)</label>
+                        <input type="text" class="form-control" name="author" value="{{ old('author') }}">
+                        @error('author')
+                            <span class="text-xs text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fecha de publicación (opcional)</label>
+                        <input type="date" class="form-control" name="date_published" value="{{ old('date_published') }}">
+                        @error('date_published')
+                            <span class="text-xs text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <input type="hidden" name="on_homepage" value="0">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" name="on_homepage" value="1" id="on_homepage" {{ old('on_homepage') ? 'checked' : '' }}>
+                            <span class="text-sm">Mostrar en el home</span>
+                        </label>
+                        @error('on_homepage')
+                            <span class="text-xs text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group" id="position-group" style="{{ old('on_homepage') ? '' : 'display: none;' }}">
+                        <label>Posición en el home</label>
+                        <select class="form-control" name="position" id="position">
+                            <option value="">Seleccionar posición</option>
+                            <option value="1" {{ old('position') == '1' ? 'selected' : '' }}>1</option>
+                            <option value="2" {{ old('position') == '2' ? 'selected' : '' }}>2</option>
+                            <option value="3" {{ old('position') == '3' ? 'selected' : '' }}>3</option>
+                        </select>
+                        @error('position')
+                            <span class="text-xs text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+
                     <button class="btn btn-primary btn-block mt-4" type="submit">
                         <i class="fas fa-save mr-2"></i>
                         Guardar
@@ -85,6 +125,24 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            var onHomepage = document.getElementById('on_homepage');
+            var positionGroup = document.getElementById('position-group');
+            var positionSelect = document.getElementById('position');
+
+            function togglePositionField() {
+                if (onHomepage.checked) {
+                    positionGroup.style.display = '';
+                    positionSelect.disabled = false;
+                } else {
+                    positionGroup.style.display = 'none';
+                    positionSelect.disabled = true;
+                    positionSelect.value = '';
+                }
+            }
+
+            onHomepage.addEventListener('change', togglePositionField);
+            togglePositionField();
+
             if (typeof ClassicEditor === 'undefined') return;
             var form = document.getElementById('opinion-form');
             Promise.all([

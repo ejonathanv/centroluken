@@ -79,6 +79,15 @@ class OpinionController extends Controller
         $opinion->body = $request->body ?? '';
         $opinion->body_en = $this->nullableHtmlBody($request->input('body_en'));
         $opinion->url = $request->filled('url') ? $request->url : null;
+        $opinion->author = $request->filled('author') ? $request->author : null;
+        $opinion->date_published = $request->filled('date_published') ? $request->date_published : null;
+        $opinion->on_homepage = $request->boolean('on_homepage');
+
+        if ($opinion->on_homepage) {
+            $opinion->position = (int) $request->position;
+        } else {
+            $opinion->position = 0;
+        }
     }
 
     protected function nullableHtmlBody(?string $html): ?string

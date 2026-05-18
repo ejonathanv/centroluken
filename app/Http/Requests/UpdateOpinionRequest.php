@@ -2,10 +2,14 @@
 
 namespace App\Http\Requests;
 
+use App\Http\Requests\Concerns\ValidatesOpinionHomepage;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Validator;
 
 class UpdateOpinionRequest extends FormRequest
 {
+    use ValidatesOpinionHomepage;
+
     public function authorize(): bool
     {
         return true;
@@ -21,6 +25,17 @@ class UpdateOpinionRequest extends FormRequest
             'url' => 'nullable|url|max:2048',
             'cover_image' => 'nullable|image',
             'remove_cover' => 'sometimes|boolean',
+            'author' => 'nullable|string|max:255',
+            'date_published' => 'nullable|date',
+            'on_homepage' => 'sometimes|boolean',
+            'position' => 'nullable|integer|in:1,2,3',
         ];
+    }
+
+    public function withValidator(Validator $validator): void
+    {
+        $validator->after(function (Validator $validator) {
+            $this->validateOpinionHomepage($validator, $this->route('opinion')->id);
+        });
     }
 }

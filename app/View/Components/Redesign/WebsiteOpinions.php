@@ -29,8 +29,10 @@ class WebsiteOpinions extends Component
     }
 
     public function get_last_opinions(){
-        $opinions = Opinion::latest()->take(3)->get();
-
-        return $opinions;
+        return Opinion::where('on_homepage', true)
+            ->whereIn('position', [1, 2, 3])
+            ->orderBy('position')
+            ->take(3)
+            ->get();
     }
 }
