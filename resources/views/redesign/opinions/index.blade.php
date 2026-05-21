@@ -11,9 +11,11 @@
                     {{ __('2026/opinion.list.empty') }}
                 </p>
             @else
-                <div class="flex flex-wrap items-center md:items-start justify-center md:justify-between mb-16 w-full space-y-10 md:space-y-0">
+                <div class="flex flex-stretch flex-col md:flex-row flex-wrap">
                     @foreach($opiniones as $opinion)
-                    <x-redesign.website-opinion-card :opinion="$opinion" />
+                        <div class="w-full md:w-1/2 mb-5">
+                            <x-redesign.website-opinion-list-card :opinion="$opinion" />
+                        </div>
                     @endforeach
                 </div>
 
