@@ -70,7 +70,7 @@ class WebsiteController extends Controller
 
     public function opinions()
     {
-        $opiniones = Opinion::orderByDesc('updated_at')->paginate(6);
+        $opiniones = Opinion::orderByDesc('date_published')->paginate(6);
 
         return view('redesign.opinions.index', compact('opiniones'));
     }
