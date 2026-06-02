@@ -6,6 +6,6 @@
     <x-redesign.website-strategies :isHome="true" />
     <x-redesign.website-team />
     <x-redesign.website-materials />
-    <x-redesign.website-opinions />
+    {{-- <x-redesign.website-opinions /> --}}
     <x-redesign.website-strategic-partnerships />
 </x-redesign.website-layout>
