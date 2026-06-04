@@ -252,6 +252,11 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="{{ route('redesign.discusiones') }}" class="text-secondary font-semibold text-sm">
+                                        {{ __('2026/header.nav.discussions') }}
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="{{ route('redesign.opinions') }}" class="text-secondary font-semibold text-sm">
                                         {{ __('2026/header.nav.opinions') }}
                                     </a>
