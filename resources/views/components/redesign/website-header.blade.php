@@ -82,6 +82,13 @@
                                 </ul>
                                 <ul>
                                     <li>
+                                        <a href="{{ route('redesign.discusiones') }}">
+                                            {{ __('2026/header.nav.discussions') }}
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
                                         <a href="{{ route('redesign.opinions') }}">
                                             {{ __('2026/header.nav.opinions') }}
                                         </a>

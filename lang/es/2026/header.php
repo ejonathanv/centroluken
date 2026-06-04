@@ -11,6 +11,7 @@ return [
         'materials' => 'Materiales',
         'projects' => 'Proyectos',
         'resources' => 'Recursos',
+        'discussions' => 'Discusiones',
         'opinions' => 'Opiniones',
         'contact' => 'Contacto',
     ],

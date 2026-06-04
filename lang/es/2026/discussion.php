@@ -6,7 +6,7 @@ return [
     'pdf_title' => 'PDF discusión',
     'list' => [
         'title' => 'Discusiones',
-        'subtitle' => 'Análisis y reflexiones recientes sobre los temas relevantes del sector',
+        'subtitle' => 'Discusiones más recientes',
         'read_more' => 'Leer más',
         'empty' => 'Aún no hay discusiones publicadas.',
         'see_others' => 'Ver otras discusiones',
