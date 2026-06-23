@@ -10,7 +10,7 @@ return [
     ],
     'what_we_do' => [
         'title' => '¿Qué hacemos?',
-        'description' => 'Somos una organización estratégica dedicada a diseñar e implementar soluciones para una gestión justa, eficiente y sostenible del agua y el medio ambiente. Trabajamos como agentes de cambio, combinando análisis riguroso, compromiso social y acción práctica.',
+        'description' => 'Somos una organización estratégica dedicada a diseñar e implementar soluciones basadas en la naturaleza para una gestión justa, eficiente y sostenible del agua y el medio ambiente. Trabajamos como agentes de cambio, combinando análisis riguroso, compromiso social y acción práctica.',
         'science' => [
             'title' => 'Ciencia',
             'description' => 'Conocimiento riguroso y basado en evidencia científica para abordar desafíos ambientales.',

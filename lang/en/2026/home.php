@@ -10,7 +10,7 @@ return [
     ],
     'what_we_do' => [
         'title' => 'What we do',
-        'description' => 'We are a strategic organization dedicated to designing and implementing solutions for just, efficient, and sustainable water and environmental management. We work as agents of change, combining rigorous analysis, social commitment, and practical action.',
+        'description' => 'We are a strategic organization dedicated to designing and implementing nature-based solutions for just, efficient, and sustainable water and environmental management. We work as agents of change, combining rigorous analysis, social commitment, and practical action.',
         'science' => [
             'title' => 'Science',
             'description' => 'Rigorous, evidence-based knowledge to address environmental challenges.',

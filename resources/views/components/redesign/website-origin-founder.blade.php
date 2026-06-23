@@ -11,10 +11,9 @@
                 </p>
             </div>
             <div class="w-full md:w-1/2 flex justify-end relative">
-                <img src="{{ asset('redesign/img/origin/gaston-luken-aguilar.jpg') }}" 
-                    alt="{{ __('2026/origin.founder.image_alt') }}" 
-                    class="hidden md:block w-auto h-[450px] object-cover absolute -left-14 bottom-0 top-0 opacity-30">
-                <img src="{{ asset('redesign/img/origin/gaston-luken-aguilar.jpg') }}" 
+                <div class="hidden md:block w-1/2 h-[450px] object-cover absolute -left-10 bottom-0 top-0 bg-primary"></div>
+               
+                <img src="{{ asset('redesign/img/origin/gaston-luken-aguilar_2.jpg') }}" 
                     alt="{{ __('2026/origin.founder.image_alt') }}" 
                     class="w-auto h-[450px] object-cover relative z-10 wow animate__animated animate__fadeInLeft">
             </div>
