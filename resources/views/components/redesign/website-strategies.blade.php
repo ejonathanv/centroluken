@@ -34,6 +34,11 @@
                     {{ __('2026/home.strategies.two.title') }}
                 </x-slot:title>
                 <x-slot:description>
+                    @if (Lang::has('2026/home.strategies.two.intro') && filled(__('2026/home.strategies.two.intro')))
+                    <p class="text-sm lg:text-lg mb-4">
+                        {{ __('2026/home.strategies.two.intro') }}
+                    </p>
+                    @endif
                     <p class="text-sm lg:text-lg mb-4">
                         {{ __('2026/home.strategies.two.p1') }}
                     </p>
@@ -54,6 +59,11 @@
                     {{ __('2026/home.strategies.three.title') }}
                 </x-slot:title>
                 <x-slot:description>
+                    @if (Lang::has('2026/home.strategies.three.intro') && filled(__('2026/home.strategies.three.intro')))
+                    <p class="text-sm lg:text-lg mb-4">
+                        {{ __('2026/home.strategies.three.intro') }}
+                    </p>
+                    @endif
                     <p class="text-sm lg:text-lg mb-4">
                         {{ __('2026/home.strategies.three.p1') }}
                     </p>
