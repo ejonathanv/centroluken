@@ -85,6 +85,14 @@ return [
                     'She has participated in significant regional projects and binational studies on desalination. And various master plans for water management in Sonora, Zacatecas, and Quintana Roo. She has extensive guilder experience, was president of the College of Architects of Tijuana (2008-2010), and founded the Society of Urbanism of the Metropolitan Area of Tijuana.',
                 ],
             ],
+            'four' => [
+                'name' => 'Samanta Abundis',
+                'role' => 'Collaborator',
+                'bio' => [
+                    "She holds a Bachelor's degree in International Relations from the University of Guadalajara and a Master's degree in Integrated Environmental Management from El Colegio de la Frontera Norte (El Colef). She has ten years of experience managing and implementing environmental and sustainable development projects, with an emphasis on environmental governance, water management, climate change adaptation, and financing mechanisms.",
+                    'She has collaborated with public institutions, international organizations, the private sector, and civil society organizations. During her tenure at the National Forestry Commission (CONAFOR), she coordinated research, development, and innovation projects to strengthen the Mexican forestry sector, promoting international cooperation and fostering ties between the public sector and academia. Her expertise focuses on building strategic alliances and coordinating multidisciplinary teams to develop solutions that promote sustainability and climate resilience.',
+                ],
+            ],
         ],
     ],
 ];

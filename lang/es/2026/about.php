@@ -84,6 +84,14 @@ return [
                     'Ha participado en importantes proyectos regionales y en estudios binacionales sobre desalinización, así como en diversos planes maestros para el manejo del agua en Sonora, Zacatecas y Quintana Roo. Fue secretaria de Desarrollo Territorial, Urbano y Ambiental de Tijuana en el XXIII Ayuntamiento durante 2019-2021. Tiene amplia trayectoria gremial, fue presidente del Colegio de Arquitectos de Tijuana (2008-2010), y fundadora de la Sociedad de Urbanismo de la Zona Metropolitana de Tijuana.',
                 ],
             ],
+            'four' => [
+                'name' => 'Samanta Abundis',
+                'role' => 'Colaboradora',
+                'bio' => [
+                    'Licenciada en Relaciones Internacionales por la Universidad de Guadalajara y Maestra en Administración Integral del Ambiente por El Colegio de la Frontera Norte (El Colef). Cuenta con diez años de experiencia en la gestión e implementación de proyectos ambientales y de desarrollo sostenible, con énfasis en gobernanza ambiental, gestión del agua, adaptación al cambio climático y mecanismos de financiamiento.',
+                    'Ha colaborado con instituciones públicas, organismos internacionales, el sector privado y organizaciones de la sociedad civil. Durante su trayectoria en la Comisión Nacional Forestal (CONAFOR) coordinó proyectos de investigación, desarrollo e innovación para el fortalecimiento del sector forestal mexicano, impulsando la cooperación internacional y la vinculación entre el sector público y la academia. Su experiencia se centra en la articulación de alianzas estratégicas y equipos multidisciplinarios para desarrollar soluciones que promuevan la sostenibilidad y la resiliencia climática.',
+                ],
+            ],
         ],
     ],
 ];
