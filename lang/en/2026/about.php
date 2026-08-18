@@ -93,6 +93,22 @@ return [
                     'She has collaborated with public institutions, international organizations, the private sector, and civil society organizations. During her tenure at the National Forestry Commission (CONAFOR), she coordinated research, development, and innovation projects to strengthen the Mexican forestry sector, promoting international cooperation and fostering ties between the public sector and academia. Her expertise focuses on building strategic alliances and coordinating multidisciplinary teams to develop solutions that promote sustainability and climate resilience.',
                 ],
             ],
+            'five' => [
+                'name' => 'Allin Delgado',
+                'role' => 'Collaborator',
+                'bio' => [
+                    'She holds a degree in Law from the Universidad del Valle de Atemajac. She has more than 15 years of experience in the research, defense, and promotion of human rights, as well as in institutional relations and project coordination. She has collaborated with the National Human Rights Commission (CNDH); the State Human Rights Commission of Sonora; the Mexican Commission for Refugee Assistance (COMAR); and the Ministry of the Interior (SEGOB), and has conducted social work and directed projects in Mexico, Brazil, and Cambodia.',
+                    'Her career has focused on the protection of vulnerable individuals and groups, institutional strengthening, and the creation of equitable environments. At Centro Luken, she serves as Head of Governance and Corporate Responsibility, where she drives the development of policies, procedures, and legal frameworks, and the consolidation of ethical, transparent, and socially responsible management practices.',
+                ],
+            ],
+            'six' => [
+                'name' => 'Alfonso Camberos',
+                'role' => 'Collaborator',
+                'bio' => [
+                    'Architect and Master in Comprehensive Environmental Management, specializing in landscape analysis, spatial planning, cartographic design, and Geographic Information Systems (GIS). His professional trajectory integrates urban planning, conservation, environmental management, and spatial analysis, with experience in urban, regional, and watershed-scale projects. He has participated in initiatives related to integrated water management in the Tijuana River Basin, spatial and agricultural analysis in Irrigation District 014–Colorado River, and urban development and land-use planning programs in Baja California.',
+                    'Currently, he collaborates with Centro Luken, Estrategias en Agua y Medio Ambiente, where he develops territorial strategies for sustainable water management, articulating landscape, geographic information, public policy, and long-term planning.',
+                ],
+            ],
         ],
     ],
 ];

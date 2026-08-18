@@ -1,5 +1,5 @@
 @php
-    $collaborators = ['one', 'two', 'three', 'four'];
+    $collaborators = ['one', 'two', 'three', 'four', 'five', 'six'];
 @endphp
 <section class="bg-white py-10 md:py-20">
     <div class="flex flex-col md:flex-row flex-wrap items-start justify-center w-full">

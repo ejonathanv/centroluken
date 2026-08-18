@@ -92,6 +92,22 @@ return [
                     'Ha colaborado con instituciones públicas, organismos internacionales, el sector privado y organizaciones de la sociedad civil. Durante su trayectoria en la Comisión Nacional Forestal (CONAFOR) coordinó proyectos de investigación, desarrollo e innovación para el fortalecimiento del sector forestal mexicano, impulsando la cooperación internacional y la vinculación entre el sector público y la academia. Su experiencia se centra en la articulación de alianzas estratégicas y equipos multidisciplinarios para desarrollar soluciones que promuevan la sostenibilidad y la resiliencia climática.',
                 ],
             ],
+            'five' => [
+                'name' => 'Allin Delgado',
+                'role' => 'Colaboradora',
+                'bio' => [
+                    'Licenciada en Derecho por la Universidad del Valle de Atemajac. Cuenta con más de 15 años de experiencia en la investigación, defensa y promoción de los derechos humanos, así como en vinculación institucional y coordinación de proyectos. Ha colaborado con la Comisión Nacional de los Derechos Humanos; la Comisión Estatal de Derechos Humanos de Sonora; la Comisión Mexicana de Ayuda a Refugiados y la Secretaría de Gobernación; además de desarrollar trabajo social y dirigir proyectos en México, Brasil y Camboya.',
+                    'Su trayectoria se ha enfocado en la protección de personas y grupos en situación de vulnerabilidad, el fortalecimiento institucional y la construcción de entornos equitativos. En Centro Luken se desempeña como Encargada de Gobernanza y Responsabilidad Corporativa, desde donde impulsa el desarrollo de políticas, procedimientos y marcos jurídicos, así como la consolidación de prácticas de gestión ética, transparentes y socialmente responsables.',
+                ],
+            ],
+            'six' => [
+                'name' => 'Alfonso Camberos',
+                'role' => 'Colaborador',
+                'bio' => [
+                    'Arquitecto y Maestro en Administración Integral del Ambiente, especializado en análisis del paisaje, planeación territorial, diseño de cartografía y Sistemas de Información Geográfica (SIG). Su trayectoria profesional integra urbanismo, conservación, gestión ambiental y análisis espacial, con experiencia en proyectos de escala urbana, regional y de cuenca. Ha participado en iniciativas relacionadas con la gestión integral del agua en la Cuenca del Río Tijuana, el análisis territorial y agrícola del Distrito de Riego 014–Río Colorado, así como en programas de desarrollo urbano y ordenamiento territorial en Baja California.',
+                    'Actualmente colabora con Centro Luken, Estrategias en Agua y Medio Ambiente, donde desarrolla estrategias territoriales para la gestión sostenible del agua, articulando paisaje, información geográfica, política pública y planeación de largo plazo.',
+                ],
+            ],
         ],
     ],
 ];
