@@ -69,7 +69,7 @@
                         <span class="w-3 h-3 bg-primary shrink-0 mt-1.5" aria-hidden="true"></span>
                         <span>{{ $especTitulo }}</span>
                     </h3>
-                    <div class="discusion-espec prose max-w-none text-gray-700 pl-6">
+                    <div class="discusion-espec prose max-w-none text-gray-700 pl-6 [&_a]:text-secondary [&_a]:underline [&_a]:break-words">
                         {!! $especDescripcion !!}
                     </div>
                 </div>
@@ -77,6 +77,12 @@
             </div>
         </div>
     </section>
+    <script>
+        document.querySelectorAll('.discusion-espec a[href]').forEach(function (link) {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
     @endif
     @endif
 
